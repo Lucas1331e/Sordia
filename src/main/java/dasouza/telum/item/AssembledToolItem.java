@@ -285,19 +285,6 @@ public class AssembledToolItem extends Item {
                 }
             }
 
-            // Enderman Ability: Ender Ambush (Teleports player behind target, deals 1.0 Ender Pearl fall damage)
-            int endermanLvl = data.getMaterialLevel(PartMaterial.ENDERMAN);
-            if (endermanLvl >= 1 && attacker instanceof Player player) {
-                Vec3 targetLook = target.getLookAngle();
-                Vec3 behindPos = target.position().subtract(targetLook.scale(2.0));
-                if (player.level() instanceof ServerLevel serverLevel) {
-                    player.teleportTo(serverLevel, behindPos.x, behindPos.y, behindPos.z, Set.of(), target.getYRot(), target.getXRot(), true);
-                    player.hurt(player.damageSources().fall(), 1.0f);
-                    serverLevel.sendParticles(ParticleTypes.PORTAL, player.getX(), player.getY() + 1.0, player.getZ(), 15, 0.3, 0.5, 0.3, 0.1);
-                    serverLevel.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0f, 1.0f);
-                }
-            }
-
             // Skeleton Ability: Fragile Precision (+3.0 crit damage, extra durability loss)
             int skeletonLvl = data.getMaterialLevel(PartMaterial.SKELETON);
             if (skeletonLvl >= 1 && attacker instanceof Player player) {
@@ -673,7 +660,7 @@ public class AssembledToolItem extends Item {
 
         // 1. Tool Type Header
         tooltip.accept(Component.translatable(data.toolType().getTranslationKey())
-                .withStyle(ChatFormatting.GOLD));
+                .withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));
 
         // If SHIFT is NOT held, show prompt to hold shift
         if (!ClientTooltipHelper.isShiftDown()) {
@@ -682,17 +669,19 @@ public class AssembledToolItem extends Item {
             return;
         }
 
-        // 2. Material Abilities Section (Placed right under tool name)
+        tooltip.accept(Component.literal(" §8────────────────────────"));
+
+        // 2. Material Abilities Section
         boolean hasAbilities = false;
         for (PartMaterial mat : PartMaterial.values()) {
             int lvl = data.getMaterialLevel(mat);
             if (lvl >= 1) {
                 if (!hasAbilities) {
-                    tooltip.accept(Component.empty());
-                    tooltip.accept(Component.translatable("tooltip.telum.abilities").withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));
+                    tooltip.accept(Component.translatable("tooltip.telum.abilities").withStyle(ChatFormatting.YELLOW, ChatFormatting.BOLD));
                     hasAbilities = true;
                 }
-                String romanLvl = getRomanLevel(lvl);
+                boolean isMultiLevel = (mat == PartMaterial.SULFUR || mat == PartMaterial.BLAZE || mat == PartMaterial.DIAMOND || mat == PartMaterial.GOLD || mat == PartMaterial.NETHERITE);
+                String romanLvl = isMultiLevel ? " " + getRomanLevel(lvl) : "";
                 tooltip.accept(Component.translatable("ability.telum." + mat.getMaterialName(), romanLvl)
                         .withStyle(getMaterialColor(mat)));
             }
@@ -705,17 +694,41 @@ public class AssembledToolItem extends Item {
             addPartTooltip(tooltip, part);
         }
 
-        // 4. Tool Stats Summary
-        tooltip.accept(Component.empty());
-        tooltip.accept(Component.translatable("tooltip.telum.stats").withStyle(ChatFormatting.GRAY));
-        tooltip.accept(Component.translatable("tooltip.telum.durability", data.durability())
-                .withStyle(ChatFormatting.DARK_GREEN));
-        tooltip.accept(Component.translatable("tooltip.telum.attack_damage", String.format("%.1f", data.attackDamage()))
-                .withStyle(ChatFormatting.DARK_RED));
-        tooltip.accept(Component.translatable("tooltip.telum.mining_speed", String.format("%.1f", data.miningSpeed()))
-                .withStyle(ChatFormatting.BLUE));
-        tooltip.accept(Component.translatable("tooltip.telum.mining_level", data.miningLevel())
-                .withStyle(ChatFormatting.DARK_AQUA));
+        tooltip.accept(Component.literal(" §8────────────────────────"));
+
+        // 4. Compact 2-Column Tool Stats Summary with Icons & Material Mining Level Name
+        String miningLevelName = getMiningLevelName(data.miningLevel());
+        float attackSpeedVal = 4.0f + data.attackSpeed();
+
+        // Row 1: ⚔ Daño | ⚡ Vel. Ataque
+        Component row1 = Component.literal("  ⚔ Daño: ")
+                .append(Component.literal(String.format("%.1f", data.attackDamage())).withStyle(ChatFormatting.RED))
+                .append(Component.literal("    ⚡ Vel. Ataque: "))
+                .append(Component.literal(String.format("%.1f", attackSpeedVal)).withStyle(ChatFormatting.YELLOW));
+        tooltip.accept(row1);
+
+        // Row 2: ⛏ Minado | ◆ Nivel
+        Component row2 = Component.literal("  ⛏ Minado: ")
+                .append(Component.literal(String.format("%.1fx", data.miningSpeed())).withStyle(ChatFormatting.AQUA))
+                .append(Component.literal("   ◆ Nivel: "))
+                .append(Component.literal(miningLevelName).withStyle(ChatFormatting.GOLD));
+        tooltip.accept(row2);
+
+        // Row 3: ✚ Durabilidad
+        Component row3 = Component.literal("  ✚ Durabilidad: ")
+                .append(Component.literal(String.valueOf(data.durability())).withStyle(ChatFormatting.GREEN));
+        tooltip.accept(row3);
+    }
+
+    private static String getMiningLevelName(int level) {
+        return switch (level) {
+            case 0 -> "Madera / Oro (0)";
+            case 1 -> "Piedra / Cobre (1)";
+            case 2 -> "Hierro (2)";
+            case 3 -> "Diamante (3)";
+            case 4 -> "Netherita (4)";
+            default -> "Nivel " + level;
+        };
     }
 
     private String getRomanLevel(int level) {
@@ -746,7 +759,7 @@ public class AssembledToolItem extends Item {
 
             boolean canCreeperRiptide = headMat == PartMaterial.CREEPER;
             boolean canWindRiptide = headMat == PartMaterial.WIND && (player.isCreative() || countWindCharges(player) >= 2);
-            boolean canBlazeRiptide = headMat == PartMaterial.BLAZE && (player.isOnFire() || player.isInLava());
+            boolean canBlazeRiptide = headMat == PartMaterial.BLAZE && (player.isCreative() || player.isOnFire() || player.isInLava());
             boolean canSkulkRiptide = headMat == PartMaterial.SKULK && (player.isCreative() || player.totalExperience >= 5 || player.experienceLevel > 0);
             boolean canStandardRiptide = (headMat == null || (headMat != PartMaterial.WIND && headMat != PartMaterial.BLAZE && headMat != PartMaterial.SKULK && headMat != PartMaterial.CREEPER)) && inWater;
 
@@ -788,7 +801,7 @@ public class AssembledToolItem extends Item {
 
                 boolean canCreeperRiptide = headMat == PartMaterial.CREEPER;
                 boolean canWindRiptide = headMat == PartMaterial.WIND && (player.isCreative() || countWindCharges(player) >= 2);
-                boolean canBlazeRiptide = headMat == PartMaterial.BLAZE && (player.isOnFire() || player.isInLava());
+                boolean canBlazeRiptide = headMat == PartMaterial.BLAZE && (player.isCreative() || player.isOnFire() || player.isInLava());
                 boolean canSkulkRiptide = headMat == PartMaterial.SKULK && (player.isCreative() || player.totalExperience >= 5 || player.experienceLevel > 0);
                 boolean canStandardRiptide = (headMat == null || (headMat != PartMaterial.WIND && headMat != PartMaterial.BLAZE && headMat != PartMaterial.SKULK && headMat != PartMaterial.CREEPER)) && inWater;
 
@@ -884,6 +897,9 @@ public class AssembledToolItem extends Item {
             case CREEPER -> ChatFormatting.GREEN;
             case ENDERMAN -> ChatFormatting.DARK_PURPLE;
             case SULFUR -> ChatFormatting.YELLOW;
+            case AMETHYST -> ChatFormatting.LIGHT_PURPLE;
+            case GREED -> ChatFormatting.GOLD;
+            case EMERALD -> ChatFormatting.GREEN;
         };
     }
 

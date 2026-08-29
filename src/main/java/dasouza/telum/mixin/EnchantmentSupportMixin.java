@@ -31,23 +31,42 @@ public abstract class EnchantmentSupportMixin {
                     String path = tagKey.location().getPath();
 
                     // Sweeping Edge & Sword specific enchantments are ONLY valid on SWORD modular tools
-                    if ((path.contains("sweeping") || path.contains("sword")) && data.toolType() != ToolType.SWORD) {
-                        cir.setReturnValue(false);
+                    if (path.contains("sweeping") || path.contains("sword")) {
+                        if (data.toolType() != ToolType.SWORD) {
+                            cir.setReturnValue(false);
+                        } else {
+                            cir.setReturnValue(true);
+                        }
                         return;
                     }
 
                     // Trident specific enchantments (Riptide, Loyalty, Channeling, Impaling) are ONLY valid on TRIDENT modular tools
-                    if (path.contains("trident") && data.toolType() != ToolType.TRIDENT) {
-                        cir.setReturnValue(false);
+                    if (path.contains("trident")) {
+                        if (data.toolType() != ToolType.TRIDENT) {
+                            cir.setReturnValue(false);
+                        } else {
+                            cir.setReturnValue(true);
+                        }
                         return;
                     }
 
-                    // Mining enchantments (Efficiency, Fortune, Silk Touch) are NOT valid on TRIDENT
-                    if (path.contains("mining") && data.toolType() == ToolType.TRIDENT) {
-                        cir.setReturnValue(false);
+                    // Mining enchantments (Efficiency, Fortune, Silk Touch) are NOT valid on TRIDENT but valid on all other tools
+                    if (path.contains("mining") || path.contains("pickaxe") || path.contains("axe") || path.contains("shovel") || path.contains("hoe")) {
+                        if (data.toolType() == ToolType.TRIDENT) {
+                            cir.setReturnValue(false);
+                        } else {
+                            cir.setReturnValue(true);
+                        }
+                        return;
+                    }
+
+                    // General durability / enchantable tags
+                    if (path.contains("durability") || path.contains("enchantable") || path.contains("vanishable")) {
+                        cir.setReturnValue(true);
                     }
                 }
             }
         }
     }
+
 }

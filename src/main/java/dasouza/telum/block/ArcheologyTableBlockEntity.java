@@ -227,6 +227,10 @@ public class ArcheologyTableBlockEntity extends BlockEntity {
             case CREEPER -> new int[]{COLOR_GREEN, COLOR_GREEN, COLOR_BLACK};
             case ENDERMAN -> new int[]{COLOR_CYAN, COLOR_CYAN, 0x160C26};
             case SULFUR -> new int[]{COLOR_YELLOW, COLOR_YELLOW, COLOR_YELLOW};
+            case AMETHYST -> new int[]{0xC067F8, 0xC067F8, COLOR_GRAY};
+            case GREED -> new int[]{COLOR_YELLOW, COLOR_YELLOW, 0xFFD700};
+            case EMERALD -> new int[]{COLOR_GREEN, COLOR_GREEN, 0x55FF55};
+            default -> new int[]{COLOR_GRAY, COLOR_GRAY, COLOR_GRAY};
         };
     }
 

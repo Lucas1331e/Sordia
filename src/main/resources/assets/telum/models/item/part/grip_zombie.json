@@ -1,4 +1,4 @@
-﻿{
+{
   "parent": "minecraft:item/handheld",
   "textures": {
     "layer0": "telum:item/part/grip_zombie"

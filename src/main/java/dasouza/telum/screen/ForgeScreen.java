@@ -17,8 +17,6 @@ public class ForgeScreen extends AbstractContainerScreen<ForgeScreenHandler> {
     private static final Identifier TEXTURE =
             Identifier.fromNamespaceAndPath("telum", "textures/gui/forge.png");
 
-    private static final String[] TOOL_ICONS = {"PIC", "ESP", "HAC", "PAL", "AZA"};
-
     public ForgeScreen(ForgeScreenHandler handler, Inventory playerInv, Component title) {
         super(handler, playerInv, title);
         this.titleLabelY = 6;
@@ -57,7 +55,7 @@ public class ForgeScreen extends AbstractContainerScreen<ForgeScreenHandler> {
         // Main GUI background
         gfx.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, x, y, 0.0f, 0.0f, this.imageWidth, this.imageHeight, 256, 256);
 
-        // Render 6 Tool Type Selector Buttons on the left margin
+        // Render 6 Tool Type Selector Buttons on the left margin using the square texture from UV (176, 20 / 42)
         int currentToolIndex = this.menu.getSelectedToolIndex();
 
         for (int i = 0; i < 6; i++) {
@@ -65,11 +63,8 @@ public class ForgeScreen extends AbstractContainerScreen<ForgeScreenHandler> {
             int btnY = y + 2 + i * 23;
             boolean isSelected = (i == currentToolIndex);
 
-            int bgFill = isSelected ? 0xFF555560 : 0xFF333338;
-            int border = isSelected ? 0xFFFFD740 : 0xFF666666;
-
-            gfx.fill(btnX, btnY, btnX + 20, btnY + 20, bgFill);
-            gfx.outline(btnX, btnY, 20, 20, border);
+            // Render Square Button Texture from UV (176, 20) or (176, 42)
+            gfx.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, btnX, btnY, 176.0f, isSelected ? 42.0f : 20.0f, 20, 20, 256, 256);
 
             // Tool Item Logo Icon
             net.minecraft.world.item.Item toolItem = switch (i) {
@@ -84,7 +79,7 @@ public class ForgeScreen extends AbstractContainerScreen<ForgeScreenHandler> {
             gfx.item(new net.minecraft.world.item.ItemStack(toolItem), btnX + 2, btnY + 2);
         }
 
-        // Render dark part silhouettes in empty grid slots for the active tool pattern
+        // Render ONLY the active slots needed for the selected tool, with slot square texture (176, 0)
         ToolType selectedTool = this.menu.getSelectedToolType();
         Map<Integer, Identifier> silhouettes = getSilhouettesForTool(selectedTool);
 
@@ -95,8 +90,11 @@ public class ForgeScreen extends AbstractContainerScreen<ForgeScreenHandler> {
 
                 int slotRow = slotIdx / 3;
                 int slotCol = slotIdx % 3;
-                int slotX = x + 30 + slotCol * 18;
-                int slotY = y + 17 + slotRow * 18;
+                int slotX = x + 30 + slotCol * 18 - 1;
+                int slotY = y + 17 + slotRow * 18 - 1;
+
+                // Render Slot Background Square (18x18 from UV 176, 0)
+                gfx.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, slotX, slotY, 176.0f, 0.0f, 18, 18, 256, 256);
 
                 // Only draw silhouette if the slot is currently empty
                 if (this.menu.getSlot(slotIdx).getItem().isEmpty()) {

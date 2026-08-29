@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "telum:item/part/blaze_eye"
+    "layer0": "telum:item/part/eye_generic_blaze"
   }
 }

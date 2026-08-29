@@ -1,4 +1,4 @@
-{
+﻿{
     "parent":  "minecraft:block/sculk_shrieker",
     "textures":  {
                      "bottom":  "telum:block/sculk_temporal_bottom",
@@ -7,4 +7,6 @@
                      "inner_top":  "telum:block/sculk_temporal_inner_top",
                      "particle":  "telum:block/sculk_temporal_top"
                  }
+,
+  "render_type": "minecraft:translucent"
 }

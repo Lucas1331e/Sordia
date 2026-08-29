@@ -41,15 +41,84 @@ public class ToolPartItem extends Item {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        ToolPartData data = getPartData(stack);
+        String key = "item.telum." + data.partType().getPartName() + "_" + data.material().getMaterialName();
+        return Component.translatable(key);
+    }
+
+    @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flag) {
         super.appendHoverText(stack, context, display, tooltip, flag);
 
         ToolPartData data = getPartData(stack);
+        PartMaterial mat = data.material();
+        ChatFormatting matColor = getMaterialColor(mat);
 
-        tooltip.accept(Component.translatable(data.partType().getTranslationKey())
-                .withStyle(ChatFormatting.GRAY));
+        // Header: Tipo: <PartType>  |  Material: <Material>
+        Component header = Component.literal(" §8Tipo: ")
+                .append(Component.translatable(data.partType().getTranslationKey()).withStyle(ChatFormatting.GRAY))
+                .append(Component.literal("  |  Material: "))
+                .append(Component.translatable(mat.getTranslationKey()).withStyle(matColor));
+        tooltip.accept(header);
 
-        ChatFormatting matColor = switch (data.material()) {
+        // Ability section
+        tooltip.accept(Component.literal(" §8────────────────────────"));
+        boolean isMultiLevel = (mat == PartMaterial.SULFUR || mat == PartMaterial.BLAZE || mat == PartMaterial.DIAMOND || mat == PartMaterial.GOLD || mat == PartMaterial.NETHERITE || mat == PartMaterial.EMERALD);
+        String romanLvl = isMultiLevel ? " I" : "";
+        tooltip.accept(Component.literal("  ✦ ")
+                .append(Component.translatable("ability.telum." + mat.getMaterialName(), romanLvl).withStyle(matColor)));
+
+        tooltip.accept(Component.literal(" §8────────────────────────"));
+
+        // Calculation Weights & Multipliers
+        float dmgWeight = dasouza.telum.tool.ToolStatsCalculator.getDamageWeight(data.partType());
+        float durWeight = dasouza.telum.tool.ToolStatsCalculator.getDurabilityWeight(data.partType());
+        float spdWeight = dasouza.telum.tool.ToolStatsCalculator.getSpeedWeight(data.partType());
+
+        float durMult = mat.getDurabilityMultiplier();
+        if (data.partType() == PartType.EYE && durMult < 1.0f) {
+            durMult = 1.0f; // Eye durability exemption!
+        }
+
+        // Row 1: ✚ Durabilidad
+        Component durRow = Component.literal("  ✚ Durabilidad: ")
+                .append(Component.literal(String.format("%.2fx", durMult)).withStyle(ChatFormatting.GREEN))
+                .append(Component.literal(String.format(" §8(Aporte: %.0f%%)", durWeight * 100)));
+        tooltip.accept(durRow);
+
+        // Row 2: ⚔ Daño
+        Component dmgRow = Component.literal("  ⚔ Daño:         ")
+                .append(Component.literal(String.format("%.2fx", mat.getDamageMultiplier())).withStyle(ChatFormatting.RED))
+                .append(Component.literal(String.format(" §8(Aporte: %.0f%%)", dmgWeight * 100)));
+        tooltip.accept(dmgRow);
+
+        // Row 3: ⚡ Velocidad
+        Component spdRow = Component.literal("  ⚡ Velocidad:    ")
+                .append(Component.literal(String.format("%.2fx", mat.getMiningSpeedMultiplier())).withStyle(ChatFormatting.YELLOW))
+                .append(Component.literal(String.format(" §8(Aporte: %.0f%%)", spdWeight * 100)));
+        tooltip.accept(spdRow);
+
+        // Row 4: ◆ Nivel
+        String miningLevelName = getMiningLevelName(mat.getMiningLevel());
+        Component levelRow = Component.literal("  ◆ Nivel:        ")
+                .append(Component.literal(miningLevelName).withStyle(ChatFormatting.GOLD));
+        tooltip.accept(levelRow);
+    }
+
+    private static String getMiningLevelName(int level) {
+        return switch (level) {
+            case 0 -> "Madera / Oro (0)";
+            case 1 -> "Piedra / Cobre (1)";
+            case 2 -> "Hierro (2)";
+            case 3 -> "Diamante (3)";
+            case 4 -> "Netherita (4)";
+            default -> "Nivel " + level;
+        };
+    }
+
+    private ChatFormatting getMaterialColor(PartMaterial mat) {
+        return switch (mat) {
             case WOOD -> ChatFormatting.WHITE;
             case STONE -> ChatFormatting.DARK_GRAY;
             case COPPER -> ChatFormatting.GOLD;
@@ -67,29 +136,9 @@ public class ToolPartItem extends Item {
             case CREEPER -> ChatFormatting.GREEN;
             case ENDERMAN -> ChatFormatting.DARK_PURPLE;
             case SULFUR -> ChatFormatting.YELLOW;
+            case AMETHYST -> ChatFormatting.LIGHT_PURPLE;
+            case GREED -> ChatFormatting.GOLD;
+            case EMERALD -> ChatFormatting.GREEN;
         };
-
-        tooltip.accept(Component.translatable(data.material().getTranslationKey())
-                .withStyle(matColor));
-
-        float dmgWeight = dasouza.telum.tool.ToolStatsCalculator.getDamageWeight(data.partType());
-        float durWeight = dasouza.telum.tool.ToolStatsCalculator.getDurabilityWeight(data.partType());
-        float spdWeight = dasouza.telum.tool.ToolStatsCalculator.getSpeedWeight(data.partType());
-
-        float durMult = data.material().getDurabilityMultiplier();
-        if (data.partType() == PartType.EYE && durMult < 1.0f) {
-            durMult = 1.0f; // Eye durability exemption!
-        }
-
-        tooltip.accept(Component.empty());
-        tooltip.accept(Component.translatable("tooltip.telum.durability_mult",
-                        String.format("%.2fx (Weight: %.0f%%)", durMult, durWeight * 100))
-                .withStyle(ChatFormatting.DARK_GREEN));
-        tooltip.accept(Component.translatable("tooltip.telum.damage_mult",
-                        String.format("%.2fx (Weight: %.0f%%)", data.material().getDamageMultiplier(), dmgWeight * 100))
-                .withStyle(ChatFormatting.DARK_RED));
-        tooltip.accept(Component.translatable("tooltip.telum.mining_speed_mult",
-                        String.format("%.2fx (Weight: %.0f%%)", data.material().getMiningSpeedMultiplier(), spdWeight * 100))
-                .withStyle(ChatFormatting.BLUE));
     }
 }

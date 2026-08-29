@@ -1,8 +1,10 @@
-{
+﻿{
     "parent":  "minecraft:block/slab",
     "textures":  {
                      "bottom":  "telum:block/yellow_marmol_bricks",
                      "side":  "telum:block/yellow_marmol_bricks",
                      "top":  "telum:block/yellow_marmol_bricks"
                  }
+,
+  "render_type": "minecraft:translucent"
 }

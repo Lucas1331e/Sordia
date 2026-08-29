@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "telum:item/temporal_recall_potion"
+    "layer0": "telum:item/clock_bottle"
   }
 }

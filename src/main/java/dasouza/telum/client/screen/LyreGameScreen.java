@@ -129,21 +129,14 @@ public class LyreGameScreen extends Screen {
             this.isComposerMode = false;
             this.targetSong = new int[]{0, 4, 3, 2, 1, 0};
             this.songTitle = "Canción del Sculk";
-            knownSongs.add(new SongEntry("Canción del Sculk", new int[]{0, 4, 3, 2, 1, 0}, dasouza.telum.item.LyreItem.SCULK_SONG_MAGIC_ID, encodeSong(List.of(0, 4, 3, 2, 1, 0))));
         } else {
             this.isComposerMode = false;
 
             if (dasouza.telum.client.ClientSongRepertoire.hasLearnedSongId("backtime_song")) {
                 knownSongs.add(new SongEntry("Canción del Tiempo", TRANSFORMATION_SONGS[0], 0, encodeSong(List.of(2, 1, 0, 2, 1, 0))));
             }
-            if (dasouza.telum.client.ClientSongRepertoire.hasLearnedSongId("chest_song")) {
-                knownSongs.add(new SongEntry("Canción de los Ecos", TRANSFORMATION_SONGS[1], 0, encodeSong(List.of(0, 1, 2, 0, 1, 2))));
-            }
             if (dasouza.telum.client.ClientSongRepertoire.hasLearnedSongId("bed_song")) {
                 knownSongs.add(new SongEntry("Canción de Retorno", TRANSFORMATION_SONGS[2], dasouza.telum.item.LyreItem.RETURN_SONG_MAGIC_ID, encodeSong(List.of(1, 2, 3, 1, 2, 3))));
-            }
-            if (dasouza.telum.client.ClientSongRepertoire.hasLearnedSongId("sculk_song")) {
-                knownSongs.add(new SongEntry("Canción del Sculk", new int[]{0, 4, 3, 2, 1, 0}, dasouza.telum.item.LyreItem.SCULK_SONG_MAGIC_ID, encodeSong(List.of(0, 4, 3, 2, 1, 0))));
             }
             if (dasouza.telum.client.ClientSongRepertoire.hasLearnedSongId("dawn_song")) {
                 knownSongs.add(new SongEntry("Canción del Amanecer", new int[]{4, 3, 4, 3, 0, 1}, dasouza.telum.item.LyreItem.DAWN_SONG_MAGIC_ID, encodeSong(List.of(4, 3, 4, 3, 0, 1))));
@@ -306,7 +299,7 @@ public class LyreGameScreen extends Screen {
         int buttonY = this.height - 45;
         spawnNoteParticles(buttonX, buttonY, NOTE_COLORS[noteIndex][0], 8);
 
-        float noteStaffY = staffBottom - 10 - (noteIndex * 12);
+        float noteStaffY = staffTop + (4 - noteIndex) * 14;
         playedVisuals.add(new PlayedNoteVisual(staffRight - 30, noteStaffY, noteIndex, 80));
 
         keyPressAnim[noteIndex] = 5;
@@ -462,9 +455,9 @@ public class LyreGameScreen extends Screen {
 
             int nx = (int) vis.x;
             int ny = (int) vis.y;
-            gfx.outline(nx - 5, ny - 5, 10, 10, colorWithAlpha);
 
-            gfx.text(font, "♪", nx - 3, ny - 12, colorWithAlpha, true);
+            // Render musical note symbol centered directly on the staff line
+            gfx.text(font, "♪", nx - 3, ny - 4, colorWithAlpha, true);
         }
 
         if (feedbackTicks > 0) {

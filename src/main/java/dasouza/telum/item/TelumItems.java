@@ -294,6 +294,16 @@ public final class TelumItems {
                     }
                 }
             }
+            if (path.contains("bastion")) {
+                for (PartType partType : PartType.values()) {
+                    ToolPartItem nethPart = getPartItem(partType, PartMaterial.NETHERITE);
+                    if (nethPart != null) {
+                        tableBuilder.withPool(LootPool.lootPool()
+                                .add(LootItem.lootTableItem(nethPart).setWeight(3))
+                        );
+                    }
+                }
+            }
             if (path.contains("end_city")) {
                 tableBuilder.withPool(LootPool.lootPool()
                         .add(LootItem.lootTableItem(net.minecraft.world.item.Items.DRAGON_BREATH).setWeight(30))
@@ -341,11 +351,13 @@ public final class TelumItems {
                 } else if (entity instanceof AbstractSkeleton) {
                     partToDrop = getPartItem(PartType.HANDLE, PartMaterial.SKELETON);
                 } else if (entity instanceof Zombie) {
-                    partToDrop = getPartItem(PartType.GRIP, PartMaterial.ZOMBIE);
+                    partToDrop = getPartItem(PartType.HEAD, PartMaterial.ZOMBIE);
                 } else if (entity instanceof Creeper) {
                     partToDrop = getPartItem(PartType.HEAD, PartMaterial.CREEPER);
                 } else if (entity instanceof EnderMan) {
-                    partToDrop = getPartItem(PartType.HANDLE, PartMaterial.ENDERMAN);
+                    partToDrop = getPartItem(PartType.EYE, PartMaterial.ENDERMAN);
+                } else if (entity instanceof net.minecraft.world.entity.monster.piglin.PiglinBrute) {
+                    partToDrop = getPartItem(PartType.HEAD, PartMaterial.GREED);
                 }
 
                 if (partToDrop != null) {
@@ -363,11 +375,13 @@ public final class TelumItems {
 
     public static boolean isPartTypeAllowed(PartMaterial material, PartType partType) {
         return switch (material) {
-            case SPIDER -> partType == PartType.EYE;
+            case SPIDER -> partType == PartType.EYE || partType == PartType.HANDLE;
             case SKELETON -> partType == PartType.HANDLE;
-            case ZOMBIE -> partType == PartType.GRIP;
+            case ZOMBIE -> partType == PartType.HEAD;
             case CREEPER -> partType == PartType.HEAD;
-            case ENDERMAN -> partType == PartType.HANDLE;
+            case ENDERMAN -> partType == PartType.EYE;
+            case AMETHYST -> partType == PartType.HEAD;
+            case GREED -> partType == PartType.HEAD;
             default -> true;
         };
     }

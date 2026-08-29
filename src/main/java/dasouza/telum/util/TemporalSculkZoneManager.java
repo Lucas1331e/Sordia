@@ -716,11 +716,11 @@ public final class TemporalSculkZoneManager {
         // Restore protected chests and spawners so player loot is not destroyed
         protectedBlocks.forEach((pos, state) -> level.setBlock(pos, state, 3));
 
-        // Replace leftover Structure Blocks / Jigsaws / Structure Voids with Temporal Deepslate Bricks
+        // Replace leftover Structure Blocks / Jigsaws / Structure Voids with Deepslate Bricks
         BlockPos.betweenClosedStream(box).forEach(pos -> {
             BlockState state = level.getBlockState(pos);
             if (state.is(Blocks.STRUCTURE_BLOCK) || state.is(Blocks.JIGSAW) || state.is(Blocks.STRUCTURE_VOID)) {
-                level.setBlock(pos, TelumBlocks.TEMPORAL_DEEPSLATE_BRICK.defaultBlockState(), 3);
+                level.setBlock(pos, Blocks.DEEPSLATE_BRICKS.defaultBlockState(), 3);
             }
         });
     }
@@ -753,13 +753,10 @@ public final class TemporalSculkZoneManager {
         if (state.is(TelumBlocks.MARMOL_BRICK_STAIRS)) return TelumBlocks.YELLOW_MARMOL_BRICK_STAIRS.defaultBlockState();
         if (state.is(TelumBlocks.MARMOL_BRICK_WALL)) return TelumBlocks.YELLOW_MARMOL_BRICK_WALL.defaultBlockState();
 
-        if (state.is(Blocks.DEEPSLATE) || state.is(Blocks.COBBLED_DEEPSLATE) ||
-            state.is(Blocks.POLISHED_DEEPSLATE) || state.is(Blocks.DEEPSLATE_BRICKS) ||
-            state.is(Blocks.DEEPSLATE_TILES)) {
-            float r = rng.nextFloat();
-            if (r < 0.35f) return TelumBlocks.DEEPSLATE_TEMPORAL_POLISHED.defaultBlockState();
-            if (r < 0.70f) return TelumBlocks.DEEPSLATE_TEMPORAL_TILES.defaultBlockState();
-            return TelumBlocks.TEMPORAL_DEEPSLATE_BRICK.defaultBlockState();
+        if (state.is(Blocks.DEEPSLATE_BRICKS)) return TelumBlocks.TEMPORAL_DEEPSLATE_BRICK.defaultBlockState();
+        if (state.is(Blocks.DEEPSLATE_TILES)) return TelumBlocks.DEEPSLATE_TEMPORAL_TILES.defaultBlockState();
+        if (state.is(Blocks.POLISHED_DEEPSLATE) || state.is(Blocks.DEEPSLATE) || state.is(Blocks.COBBLED_DEEPSLATE)) {
+            return TelumBlocks.DEEPSLATE_TEMPORAL_POLISHED.defaultBlockState();
         }
         return null;
     }

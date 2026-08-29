@@ -10,17 +10,17 @@ import java.util.List;
  */
 public enum ToolType implements StringRepresentable {
     PICKAXE("pickaxe", PartType.HANDLE, PartType.EYE, PartType.HEAD,
-            3.0f, -2.8f, 6.0f),
+            1.5f, -2.8f, 6.0f),
     SWORD("sword", PartType.GRIP, PartType.EYE, PartType.BLADE,
-            6.0f, -2.4f, 1.0f),
+            3.0f, -2.4f, 1.0f),
     AXE("axe", PartType.HANDLE, PartType.GRIP, PartType.HEAD,
-            7.0f, -3.2f, 5.0f),
+            5.0f, -3.2f, 5.0f),
     SHOVEL("shovel", PartType.HANDLE, PartType.GRIP, PartType.HEAD,
-            3.5f, -3.0f, 5.0f),
+            1.5f, -3.0f, 5.0f),
     HOE("hoe", PartType.HANDLE, PartType.EYE, PartType.HEAD,
-            1.0f, -1.0f, 4.0f),
+            0.5f, -1.0f, 4.0f),
     TRIDENT("trident", PartType.HANDLE, PartType.EYE, PartType.HEAD,
-            7.0f, -2.9f, 1.0f);
+            5.0f, -2.9f, 1.0f);
 
     public static final Codec<ToolType> CODEC = StringRepresentable.fromEnum(ToolType::values);
 

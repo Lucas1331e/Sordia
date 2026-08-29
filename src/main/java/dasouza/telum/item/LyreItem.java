@@ -1,6 +1,7 @@
 package dasouza.telum.item;
 
 import dasouza.telum.network.OpenLyreScreenPayload;
+import dasouza.telum.util.PlayerSongManager;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
@@ -54,6 +55,10 @@ public class LyreItem extends Item {
 
     @Override
     public InteractionResult use(Level level, Player player, net.minecraft.world.InteractionHand hand) {
+        if (PlayerSongManager.getLearnedSongIds(player.getUUID()).isEmpty()) {
+            return InteractionResult.FAIL;
+        }
+
         if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer) {
             ServerPlayNetworking.send(serverPlayer,
                     new OpenLyreScreenPayload(
@@ -74,22 +79,32 @@ public class LyreItem extends Item {
 
         if (player == null) return InteractionResult.PASS;
 
-        // 1. Shift + Right Click on Echo Barrel with Lyre: Open 6-note Composer Mode!
-        if (player.isShiftKeyDown() && state.is(dasouza.telum.block.TelumBlocks.ECHO_BARREL)) {
-            if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer) {
-                int sourceId = Block.getId(state);
-                ServerPlayNetworking.send(serverPlayer,
-                        new OpenLyreScreenPayload(
-                                pos.getX(), pos.getY(), pos.getZ(),
-                                sourceId, dasouza.telum.block.EchoBarrelBlock.ECHO_BARREL_TUNING_MAGIC_ID
-                        )
-                );
+        // 1. Shift + Right Click on Echo Barrel with Lyre: Must have learned "chest_song"
+        if (state.is(dasouza.telum.block.TelumBlocks.ECHO_BARREL)) {
+            if (!PlayerSongManager.hasLearnedSong(player.getUUID(), "chest_song")) {
+                return InteractionResult.FAIL;
             }
-            return InteractionResult.SUCCESS;
+
+            if (player.isShiftKeyDown()) {
+                if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer) {
+                    int sourceId = Block.getId(state);
+                    ServerPlayNetworking.send(serverPlayer,
+                            new OpenLyreScreenPayload(
+                                    pos.getX(), pos.getY(), pos.getZ(),
+                                    sourceId, dasouza.telum.block.EchoBarrelBlock.ECHO_BARREL_TUNING_MAGIC_ID
+                            )
+                    );
+                }
+                return InteractionResult.SUCCESS;
+            }
         }
 
-        // 2. Normal Click with Lyre when player has a bound Echo Barrel: Play that specific song to summon projection!
+        // 2. Normal Click with Lyre when player has a bound Echo Barrel: Requires "chest_song"
         if (dasouza.telum.util.EchoBarrelManager.hasBoundBarrel(player.getUUID())) {
+            if (!PlayerSongManager.hasLearnedSong(player.getUUID(), "chest_song")) {
+                return InteractionResult.FAIL;
+            }
+
             BlockPos projPos = pos.relative(context.getClickedFace());
             if (level.getBlockState(projPos).isAir()) {
                 if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer) {
@@ -109,7 +124,12 @@ public class LyreItem extends Item {
         boolean isLectern = (targetBlock == Blocks.LECTERN || targetBlock == dasouza.telum.block.TelumBlocks.MARMOL_LECTERN);
 
         if (isLectern) {
-            if (!dasouza.telum.util.PlayerSongManager.hasLearnedSong(player.getUUID(), "sculk_song")) {
+            if (!PlayerSongManager.hasLearnedSong(player.getUUID(), "sculk_song")) {
+                return InteractionResult.FAIL;
+            }
+
+            var activeZone = dasouza.telum.util.TemporalSculkZoneManager.getZoneForPlayer(player.getUUID());
+            if (activeZone != null && !activeZone.lecternPos.equals(pos)) {
                 return InteractionResult.FAIL;
             }
 
@@ -142,27 +162,35 @@ public class LyreItem extends Item {
         }
 
         Block resultBlock = getTransformationResult(targetBlock);
+        if (resultBlock != null) {
+            if (!PlayerSongManager.hasLearnedSong(player.getUUID(), "backtime_song")) {
+                return InteractionResult.FAIL;
+            }
 
-        // Fallback: Open general Lyre screen for any block
-        if (resultBlock == null) {
             if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer) {
+                int sourceId = Block.getId(targetBlock.defaultBlockState());
+                int resultId = Block.getId(resultBlock.defaultBlockState());
                 ServerPlayNetworking.send(serverPlayer,
                         new OpenLyreScreenPayload(
                                 pos.getX(), pos.getY(), pos.getZ(),
-                                0, 0
+                                sourceId, resultId
                         )
                 );
             }
             return InteractionResult.SUCCESS;
         }
 
+        // Must have learned at least 1 song to open general Lyre screen
+        if (PlayerSongManager.getLearnedSongIds(player.getUUID()).isEmpty()) {
+            return InteractionResult.FAIL;
+        }
+
+        // Fallback: Open general Lyre screen for any block
         if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer) {
-            int sourceId = Block.getId(targetBlock.defaultBlockState());
-            int resultId = Block.getId(resultBlock.defaultBlockState());
             ServerPlayNetworking.send(serverPlayer,
                     new OpenLyreScreenPayload(
                             pos.getX(), pos.getY(), pos.getZ(),
-                            sourceId, resultId
+                            0, 0
                     )
             );
         }

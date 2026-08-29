@@ -1,7 +1,9 @@
-{
+﻿{
     "parent":  "minecraft:block/cube_column",
     "textures":  {
                      "end":  "telum:block/yellow_marmol_pillar_top",
                      "side":  "telum:block/yellow_marmol_pillar"
                  }
+,
+  "render_type": "minecraft:translucent"
 }

@@ -1,7 +1,7 @@
 {
 	"required": true,
 	"package": "dasouza.telum.mixin",
-	"compatibilityLevel": "JAVA_25",
+	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"EnderDragonDropMixin",
 		"SuspiciousEndStoneMixin",
@@ -15,20 +15,24 @@
 		"PlayerAttackStrengthMixin",
 		"LivingEntityFireDamageMixin",
 		"BlockAutoSmeltMixin",
+		"BlockLootMixin",
 		"SulfurCubeTemporalMixin",
 		"EntityDamageIndicatorMixin",
 		"TextDisplayLifespanMixin",
 		"NonFallingBrushableMixin",
 		"EnchantmentSupportMixin",
+		"EnchantmentHelperMixin",
 		"OverworldBiomeBuilderMixin",
 		"ZombieVillagerEquipmentMixin",
 		"NoteBlockMixin",
-		"ItemEntityMixin"
+		"ItemEntityMixin",
+		"EntityEndermanLootMixin"
 	],
 	"client": [
 		"client.SpinAttackEffectLayerMixin",
 		"client.GuiMixin",
-		"client.SulfurCubeRendererMixin"
+		"client.SulfurCubeRendererMixin",
+		"client.ItemInHandRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -15,23 +15,26 @@ import net.minecraft.util.StringRepresentable;
  * - Netherite: Highest damage of ALL (2.2x), high durability (2.5x - lower than diamond), faster than usual (1.6x speed).
  */
 public enum PartMaterial implements StringRepresentable {
-    WOOD("wood",           0, 0.3f, 0.7f, 1.3f, 1.3f, 0xA0795B),
-    STONE("stone",         1, 0.7f, 1.0f, 1.0f, 1.0f, 0x737373),
-    COPPER("copper",       1, 0.9f, 1.1f, 1.4f, 1.4f, 0xE77C56),
-    PRISMARINE("prismarine", 1, 0.85f, 1.05f, 1.2f, 1.2f, 0x368C86),
-    SKULK("skulk",         3, 0.18f, 1.3f, 1.6f, 1.6f, 0x0D6272),
-    WIND("wind",           1, 0.25f, 0.9f, 2.2f, 2.2f, 0x9CE5F2),
-    IRON("iron",           2, 1.4f, 1.3f, 1.2f, 1.2f, 0xD8D8D8),
+    WOOD("wood",           0, 0.3f, 1.0f, 1.3f, 1.3f, 0xA0795B),
+    STONE("stone",         1, 0.7f, 1.33f, 1.0f, 1.0f, 0x737373),
+    COPPER("copper",       1, 0.9f, 1.4f, 1.4f, 1.4f, 0xE77C56),
+    PRISMARINE("prismarine", 2, 0.85f, 1.4f, 1.2f, 1.2f, 0x368C86),
+    SKULK("skulk",         3, 0.18f, 1.5f, 1.6f, 1.6f, 0x0D6272),
+    WIND("wind",           2, 0.25f, 1.3f, 2.2f, 2.2f, 0x9CE5F2),
+    IRON("iron",           2, 1.4f, 1.67f, 1.2f, 1.2f, 0xD8D8D8),
     GOLD("gold",           0, 0.2f, 1.0f, 2.5f, 2.5f, 0xFDF55F),
-    DIAMOND("diamond",     3, 3.0f, 1.8f, 1.8f, 1.8f, 0x4AEDD9),
-    NETHERITE("netherite", 4, 2.5f, 2.2f, 1.6f, 1.6f, 0x4D4345),
-    BLAZE("blaze",         3, 0.7f, 1.4f, 1.5f, 1.5f, 0xFF7A00),
-    SPIDER("spider",       2, 0.8f, 1.2f, 1.4f, 1.4f, 0x6B1A24),
-    SKELETON("skeleton",   2, 0.6f, 1.3f, 1.6f, 1.6f, 0xC4C4C4),
-    ZOMBIE("zombie",       2, 1.2f, 1.5f, 0.9f, 0.9f, 0x486B38),
+    DIAMOND("diamond",     3, 3.0f, 2.0f, 1.8f, 1.8f, 0x4AEDD9),
+    NETHERITE("netherite", 4, 2.5f, 2.33f, 1.6f, 1.6f, 0x4D4345),
+    BLAZE("blaze",         3, 0.7f, 1.7f, 1.5f, 1.5f, 0xFF7A00),
+    SPIDER("spider",       2, 0.8f, 1.5f, 1.4f, 1.4f, 0x6B1A24),
+    SKELETON("skeleton",   2, 0.6f, 1.4f, 1.6f, 1.6f, 0xC4C4C4),
+    ZOMBIE("zombie",       2, 1.2f, 1.4f, 0.9f, 0.9f, 0x486B38),
     CREEPER("creeper",     2, 0.5f, 1.6f, 1.1f, 1.1f, 0x36B044),
-    ENDERMAN("enderman",   3, 0.9f, 1.4f, 1.5f, 1.5f, 0x160C26),
-    SULFUR("sulfur",       2, 0.9f, 1.3f, 1.4f, 1.4f, 0xE5C158);
+    ENDERMAN("enderman",   3, 0.9f, 1.7f, 1.5f, 1.5f, 0x160C26),
+    SULFUR("sulfur",       2, 0.9f, 1.5f, 1.4f, 1.4f, 0xE5C158),
+    AMETHYST("amethyst",   2, 1.3f, 1.4f, 1.2f, 1.2f, 0xC067F8),
+    GREED("greed",         3, 1.8f, 1.8f, 1.2f, 1.2f, 0xFFD700),
+    EMERALD("emerald",     3, 1.5f, 1.8f, 1.4f, 1.4f, 0x55FF55);
 
     public static final Codec<PartMaterial> CODEC = StringRepresentable.fromEnum(PartMaterial::values);
 

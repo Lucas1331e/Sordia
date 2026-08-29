@@ -1,6 +1,8 @@
-{
+﻿{
     "parent":  "minecraft:block/template_wall_side_tall",
     "textures":  {
                      "wall":  "telum:block/yellow_marmol_block"
                  }
+,
+  "render_type": "minecraft:translucent"
 }

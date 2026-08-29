@@ -2,6 +2,7 @@ package dasouza.telum.block;
 
 import dasouza.telum.item.LyreItem;
 import dasouza.telum.network.OpenLyreScreenPayload;
+import dasouza.telum.util.PlayerSongManager;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -50,6 +51,11 @@ public class EchoBarrelBlock extends Block implements EntityBlock {
 
     private InteractionResult handleInteraction(Level level, BlockPos pos, Player player, ItemStack stack) {
         if (stack.getItem() instanceof LyreItem) {
+            // Require player to have learned chest_song (Canción de los Ecos)
+            if (!PlayerSongManager.hasLearnedSong(player.getUUID(), "chest_song")) {
+                return InteractionResult.FAIL;
+            }
+
             if (!level.isClientSide() && player instanceof ServerPlayer serverPlayer) {
                 int sourceId = Block.getId(state(pos, level));
                 ServerPlayNetworking.send(serverPlayer,
@@ -79,7 +85,7 @@ public class EchoBarrelBlock extends Block implements EntityBlock {
     @Override
     public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         if (!level.isClientSide()) {
-            dasouza.telum.util.PlayerSongManager.removeSongByPos(pos);
+            PlayerSongManager.removeSongByPos(pos);
             if (player instanceof ServerPlayer serverPlayer) {
                 dasouza.telum.network.TelumNetworking.syncSongsToPlayer(serverPlayer);
             }

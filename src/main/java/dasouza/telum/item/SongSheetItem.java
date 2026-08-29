@@ -2,7 +2,9 @@ package dasouza.telum.item;
 
 import dasouza.telum.network.TelumNetworking;
 import dasouza.telum.util.PlayerSongManager;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -17,6 +19,7 @@ import net.minecraft.world.level.Level;
 /**
  * Item representing a learnable song sheet/scroll for the Lyre of Time.
  * Right-clicking plays the melody notes first, followed by triumph sound effects and particles.
+ * Item display names are highlighted in yellow.
  * No chat messages are displayed.
  */
 public class SongSheetItem extends Item {
@@ -38,6 +41,11 @@ public class SongSheetItem extends Item {
 
     public String getSongTitle() {
         return songTitle;
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.YELLOW);
     }
 
     @Override

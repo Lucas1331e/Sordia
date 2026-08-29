@@ -57,7 +57,15 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
                 final int slotIdx = col + row * 3;
                 this.addSlot(new Slot(inputSlots, slotIdx, 30 + col * 18, 17 + row * 18) {
                     @Override
+                    public boolean isActive() {
+                        ToolType targetTool = getSelectedToolType();
+                        Map<Integer, PartType> pattern = getPatternForTool(targetTool);
+                        return pattern != null && pattern.containsKey(slotIdx);
+                    }
+
+                    @Override
                     public boolean mayPlace(ItemStack stack) {
+                        if (!isActive()) return false;
                         if (stack.is(TelumItems.LYRE_PART_LEFT) || stack.is(TelumItems.LYRE_PART_RIGHT)) {
                             return true;
                         }
@@ -116,6 +124,21 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     @Override
     public boolean clickMenuButton(Player player, int id) {
         if (id >= 0 && id < ToolType.values().length) {
+            ToolType newTool = ToolType.values()[id];
+            Map<Integer, PartType> newPattern = getPatternForTool(newTool);
+
+            for (int i = 0; i < 9; i++) {
+                if (newPattern == null || !newPattern.containsKey(i)) {
+                    ItemStack stack = inputSlots.getItem(i);
+                    if (!stack.isEmpty()) {
+                        if (player != null && !player.level().isClientSide()) {
+                            player.getInventory().placeItemBackInInventory(stack.copy());
+                        }
+                        inputSlots.setItem(i, ItemStack.EMPTY);
+                    }
+                }
+            }
+
             this.selectedToolIndex = id;
             updateResult();
             return true;
@@ -272,7 +295,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
 
     private String getHandleTexture(PartMaterial mat, ToolType tool) {
         if (mat == PartMaterial.SKELETON) return "handle_skeleton";
-        if (mat == PartMaterial.ENDERMAN) return "handle_enderman";
+        if (mat == PartMaterial.SPIDER) return "eye_spider";
         String suffix = mat.getMaterialName() + "_stick";
         if (tool == ToolType.SWORD) return suffix + "_sword";
         if (tool == ToolType.TRIDENT) return suffix + "_trident";
@@ -295,6 +318,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
 
     private String getEyeTexture(PartMaterial mat) {
         if (mat == PartMaterial.SPIDER) return "eye_spider";
+        if (mat == PartMaterial.ENDERMAN) return "eye_enderman";
         return switch (mat) {
             case WOOD -> "wooden_eye";
             default -> mat.getMaterialName() + "_eye";
@@ -303,6 +327,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
 
     private String getTridentEyeTexture(PartMaterial mat) {
         if (mat == PartMaterial.SPIDER) return "eye_spider";
+        if (mat == PartMaterial.ENDERMAN) return "eye_enderman";
         if (mat == PartMaterial.BLAZE) return "blaze_trident_eye";
         return switch (mat) {
             case WOOD -> "wooden_eye_trident";
@@ -311,7 +336,9 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getPickaxeLeftHeadTexture(PartMaterial mat) {
+        if (mat == PartMaterial.GREED) return "head_greed";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
+        if (mat == PartMaterial.ZOMBIE) return "head_zombie";
         return switch (mat) {
             case WOOD -> "wooden_pickaxe_head_left";
             case GOLD -> "golden_pickaxe_head_left";
@@ -320,7 +347,9 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getPickaxeRightHeadTexture(PartMaterial mat) {
+        if (mat == PartMaterial.GREED) return "head_greed";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
+        if (mat == PartMaterial.ZOMBIE) return "head_zombie";
         return switch (mat) {
             case WOOD -> "wooden_pickaxe_head_right";
             case GOLD -> "golden_pickaxe_head_right";
@@ -329,7 +358,9 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getAxeHeadTexture(PartMaterial mat) {
+        if (mat == PartMaterial.GREED) return "head_greed";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
+        if (mat == PartMaterial.ZOMBIE) return "head_zombie";
         return switch (mat) {
             case WOOD -> "wooden_axe_head";
             case GOLD -> "golden_axe_head";
@@ -338,7 +369,9 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getShovelHeadTexture(PartMaterial mat) {
+        if (mat == PartMaterial.GREED) return "head_greed";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
+        if (mat == PartMaterial.ZOMBIE) return "head_zombie";
         return switch (mat) {
             case WOOD -> "wooden_shovel_head";
             case GOLD -> "golden_shovel_head";
@@ -347,7 +380,9 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getHoeHeadTexture(PartMaterial mat) {
+        if (mat == PartMaterial.GREED) return "head_greed";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
+        if (mat == PartMaterial.ZOMBIE) return "head_zombie";
         return switch (mat) {
             case WOOD -> "wooden_hoe_head";
             case GOLD -> "golden_hoe_head";
@@ -356,7 +391,9 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getBladeTexture(PartMaterial mat) {
+        if (mat == PartMaterial.GREED) return "head_greed";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
+        if (mat == PartMaterial.ZOMBIE) return "head_zombie";
         return switch (mat) {
             case WOOD -> "wooden_blade";
             case GOLD -> "golden_blade";
@@ -365,7 +402,10 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getTridentHeadTexture(PartMaterial mat) {
-        if (mat == PartMaterial.CREEPER) return "creeper_trident_head";
+        if (mat == PartMaterial.GREED) return "head_greed";
+        if (mat == PartMaterial.CREEPER) return "head_creeper";
+        if (mat == PartMaterial.ZOMBIE) return "head_zombie";
+        if (mat == PartMaterial.AMETHYST) return "head_amethyst";
         if (mat == PartMaterial.PRISMARINE) return "prismarine_head_trident";
         if (mat == PartMaterial.SKULK) return "sculk_trident_head";
         if (mat == PartMaterial.WIND) return "wind_trident_head";

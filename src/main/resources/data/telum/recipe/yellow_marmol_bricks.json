@@ -1,0 +1,12 @@
+﻿{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    { "item": "minecraft:yellow_dye" },
+    { "item": "telum:marmol_bricks" }
+  ],
+  "result": {
+    "id": "telum:yellow_marmol_bricks",
+    "count": 1
+  }
+}

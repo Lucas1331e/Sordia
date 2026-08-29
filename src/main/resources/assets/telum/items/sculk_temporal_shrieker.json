@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "telum:block/sculk_temporal_shrieker_can_summon"
+  }
+}

@@ -1,0 +1,13 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP",
+    "SP",
+    "SS"
+  ],
+  "key": {
+    "P": { "item": "minecraft:gold_ingot" },
+    "S": { "item": "minecraft:stick" }
+  },
+  "result": { "id": "telum:grip_gold", "count": 2 }
+}

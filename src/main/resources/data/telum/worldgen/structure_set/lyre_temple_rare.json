@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "telum:lyre_temple_rare",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 40,
+    "separation": 16,
+    "salt": 4819503
+  }
+}

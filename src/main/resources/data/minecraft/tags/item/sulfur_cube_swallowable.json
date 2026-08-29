@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "telum:yellow_marmol_block",
+    "telum:yellow_marmol_bricks",
+    "telum:yellow_marmol_gilded_block",
+    "telum:yellow_marmol_pillar",
+    "telum:yellow_marmol_slab",
+    "telum:yellow_marmol_stairs",
+    "telum:yellow_marmol_wall",
+    "telum:yellow_marmol_brick_slab",
+    "telum:yellow_marmol_brick_stairs",
+    "telum:yellow_marmol_brick_wall",
+    "telum:deepslate_temporal_polished",
+    "telum:deepslate_temporal_tiles",
+    "telum:temporal_deepslate_brick",
+    "telum:temporal_barrel",
+    "telum:suspicious_temporal_sculk",
+    "telum:sculk_temporal_shrieker"
+  ]
+}

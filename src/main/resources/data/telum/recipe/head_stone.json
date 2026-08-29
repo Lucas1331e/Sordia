@@ -1,0 +1,12 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    " E "
+  ],
+  "key": {
+    "P": { "item": "minecraft:cobblestone" },
+    "E": { "item": "minecraft:stone" }
+  },
+  "result": { "id": "telum:head_stone", "count": 1 }
+}

@@ -1,0 +1,5063 @@
+﻿{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 0,
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "telum:item/empty"
+        },
+        "cases": [
+      {
+        "when": "blaze_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_axe_head"
+        }
+      },
+      {
+        "when": "blaze_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_blade"
+        }
+      },
+      {
+        "when": "blaze_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_eye"
+        }
+      },
+      {
+        "when": "blaze_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_eye_trident"
+        }
+      },
+      {
+        "when": "blaze_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_handle"
+        }
+      },
+      {
+        "when": "blaze_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_head_generic"
+        }
+      },
+      {
+        "when": "blaze_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_hoe_head"
+        }
+      },
+      {
+        "when": "blaze_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "blaze_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "blaze_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_shovel_head"
+        }
+      },
+      {
+        "when": "blaze_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_stick"
+        }
+      },
+      {
+        "when": "blaze_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_stick_sword"
+        }
+      },
+      {
+        "when": "blaze_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_stick_trident"
+        }
+      },
+      {
+        "when": "blaze_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_sword_handle"
+        }
+      },
+      {
+        "when": "blaze_trident_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_trident_eye"
+        }
+      },
+      {
+        "when": "blaze_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_trident_head"
+        }
+      },
+      {
+        "when": "copper_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_axe_head"
+        }
+      },
+      {
+        "when": "copper_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_blade"
+        }
+      },
+      {
+        "when": "copper_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_eye"
+        }
+      },
+      {
+        "when": "copper_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_eye_trident"
+        }
+      },
+      {
+        "when": "copper_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_handle"
+        }
+      },
+      {
+        "when": "copper_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_head_generic"
+        }
+      },
+      {
+        "when": "copper_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_hoe_head"
+        }
+      },
+      {
+        "when": "copper_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "copper_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "copper_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_shovel_head"
+        }
+      },
+      {
+        "when": "copper_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_stick"
+        }
+      },
+      {
+        "when": "copper_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_stick_sword"
+        }
+      },
+      {
+        "when": "copper_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_stick_trident"
+        }
+      },
+      {
+        "when": "copper_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_sword_handle"
+        }
+      },
+      {
+        "when": "creeper_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_trident_head"
+        }
+      },
+      {
+        "when": "diamond_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_axe_head"
+        }
+      },
+      {
+        "when": "diamond_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_blade"
+        }
+      },
+      {
+        "when": "diamond_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_eye"
+        }
+      },
+      {
+        "when": "diamond_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_eye_trident"
+        }
+      },
+      {
+        "when": "diamond_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_handle"
+        }
+      },
+      {
+        "when": "diamond_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_head_generic"
+        }
+      },
+      {
+        "when": "diamond_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_hoe_head"
+        }
+      },
+      {
+        "when": "diamond_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "diamond_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "diamond_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_shovel_head"
+        }
+      },
+      {
+        "when": "diamond_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_stick"
+        }
+      },
+      {
+        "when": "diamond_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_stick_sword"
+        }
+      },
+      {
+        "when": "diamond_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_stick_trident"
+        }
+      },
+      {
+        "when": "diamond_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_sword_handle"
+        }
+      },
+      {
+        "when": "eye_spider",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_spider"
+        }
+      },
+      {
+        "when": "golden_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_axe_head"
+        }
+      },
+      {
+        "when": "golden_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_blade"
+        }
+      },
+      {
+        "when": "golden_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_hoe_head"
+        }
+      },
+      {
+        "when": "golden_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "golden_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "golden_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_shovel_head"
+        }
+      },
+      {
+        "when": "golden_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_sword_handle"
+        }
+      },
+      {
+        "when": "gold_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_eye"
+        }
+      },
+      {
+        "when": "gold_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_eye_trident"
+        }
+      },
+      {
+        "when": "gold_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_handle"
+        }
+      },
+      {
+        "when": "gold_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_head_generic"
+        }
+      },
+      {
+        "when": "gold_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_stick"
+        }
+      },
+      {
+        "when": "gold_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_stick_sword"
+        }
+      },
+      {
+        "when": "gold_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_stick_trident"
+        }
+      },
+      {
+        "when": "grip_zombie",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/grip_zombie"
+        }
+      },
+      {
+        "when": "handle_enderman",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_enderman"
+        }
+      },
+      {
+        "when": "handle_skeleton",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_skeleton"
+        }
+      },
+      {
+        "when": "head_creeper",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_creeper"
+        }
+      },
+      {
+        "when": "iron_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_axe_head"
+        }
+      },
+      {
+        "when": "iron_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_blade"
+        }
+      },
+      {
+        "when": "iron_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_eye"
+        }
+      },
+      {
+        "when": "iron_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_eye_trident"
+        }
+      },
+      {
+        "when": "iron_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_handle"
+        }
+      },
+      {
+        "when": "iron_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_head_generic"
+        }
+      },
+      {
+        "when": "iron_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_hoe_head"
+        }
+      },
+      {
+        "when": "iron_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "iron_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "iron_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_shovel_head"
+        }
+      },
+      {
+        "when": "iron_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_stick"
+        }
+      },
+      {
+        "when": "iron_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_stick_sword"
+        }
+      },
+      {
+        "when": "iron_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_stick_trident"
+        }
+      },
+      {
+        "when": "iron_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_sword_handle"
+        }
+      },
+      {
+        "when": "netherite_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_axe_head"
+        }
+      },
+      {
+        "when": "netherite_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_blade"
+        }
+      },
+      {
+        "when": "netherite_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_eye"
+        }
+      },
+      {
+        "when": "netherite_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_eye_trident"
+        }
+      },
+      {
+        "when": "netherite_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_handle"
+        }
+      },
+      {
+        "when": "netherite_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_head_generic"
+        }
+      },
+      {
+        "when": "netherite_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_hoe_head"
+        }
+      },
+      {
+        "when": "netherite_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "netherite_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "netherite_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_shovel_head"
+        }
+      },
+      {
+        "when": "netherite_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_stick"
+        }
+      },
+      {
+        "when": "netherite_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_stick_sword"
+        }
+      },
+      {
+        "when": "netherite_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_stick_trident"
+        }
+      },
+      {
+        "when": "netherite_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_sword_handle"
+        }
+      },
+      {
+        "when": "prismarine_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_axe_head"
+        }
+      },
+      {
+        "when": "prismarine_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_blade"
+        }
+      },
+      {
+        "when": "prismarine_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_eye"
+        }
+      },
+      {
+        "when": "prismarine_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_eye_trident"
+        }
+      },
+      {
+        "when": "prismarine_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_handle"
+        }
+      },
+      {
+        "when": "prismarine_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_head_generic"
+        }
+      },
+      {
+        "when": "prismarine_head_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_head_trident"
+        }
+      },
+      {
+        "when": "prismarine_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_hoe_head"
+        }
+      },
+      {
+        "when": "prismarine_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "prismarine_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "prismarine_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_shovel_head"
+        }
+      },
+      {
+        "when": "prismarine_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_stick"
+        }
+      },
+      {
+        "when": "prismarine_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_stick_sword"
+        }
+      },
+      {
+        "when": "prismarine_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_stick_trident"
+        }
+      },
+      {
+        "when": "prismarine_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_sword_handle"
+        }
+      },
+      {
+        "when": "sculk_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sculk_trident_head"
+        }
+      },
+      {
+        "when": "skulk_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_axe_head"
+        }
+      },
+      {
+        "when": "skulk_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_blade"
+        }
+      },
+      {
+        "when": "skulk_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_eye"
+        }
+      },
+      {
+        "when": "skulk_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_eye_trident"
+        }
+      },
+      {
+        "when": "skulk_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_handle"
+        }
+      },
+      {
+        "when": "skulk_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_head_generic"
+        }
+      },
+      {
+        "when": "skulk_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_hoe_head"
+        }
+      },
+      {
+        "when": "skulk_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "skulk_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "skulk_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_shovel_head"
+        }
+      },
+      {
+        "when": "skulk_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_stick"
+        }
+      },
+      {
+        "when": "skulk_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_stick_sword"
+        }
+      },
+      {
+        "when": "skulk_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_stick_trident"
+        }
+      },
+      {
+        "when": "skulk_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_sword_handle"
+        }
+      },
+      {
+        "when": "stone_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_axe_head"
+        }
+      },
+      {
+        "when": "stone_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_blade"
+        }
+      },
+      {
+        "when": "stone_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_eye"
+        }
+      },
+      {
+        "when": "stone_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_eye_trident"
+        }
+      },
+      {
+        "when": "stone_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_handle"
+        }
+      },
+      {
+        "when": "stone_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_head_generic"
+        }
+      },
+      {
+        "when": "stone_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_hoe_head"
+        }
+      },
+      {
+        "when": "stone_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "stone_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "stone_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_shovel_head"
+        }
+      },
+      {
+        "when": "stone_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_stick"
+        }
+      },
+      {
+        "when": "stone_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_stick_sword"
+        }
+      },
+      {
+        "when": "stone_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_stick_trident"
+        }
+      },
+      {
+        "when": "stone_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_sword_handle"
+        }
+      },
+      {
+        "when": "sulfur_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_axe_head"
+        }
+      },
+      {
+        "when": "sulfur_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_blade"
+        }
+      },
+      {
+        "when": "sulfur_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_eye"
+        }
+      },
+      {
+        "when": "sulfur_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_eye_trident"
+        }
+      },
+      {
+        "when": "sulfur_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_handle"
+        }
+      },
+      {
+        "when": "sulfur_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_head_generic"
+        }
+      },
+      {
+        "when": "sulfur_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_hoe_head"
+        }
+      },
+      {
+        "when": "sulfur_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "sulfur_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "sulfur_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_shovel_head"
+        }
+      },
+      {
+        "when": "sulfur_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_stick"
+        }
+      },
+      {
+        "when": "sulfur_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_stick_sword"
+        }
+      },
+      {
+        "when": "sulfur_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_stick_trident"
+        }
+      },
+      {
+        "when": "sulfur_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_sword_handle"
+        }
+      },
+      {
+        "when": "wind_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_axe_head"
+        }
+      },
+      {
+        "when": "wind_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_blade"
+        }
+      },
+      {
+        "when": "wind_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_eye"
+        }
+      },
+      {
+        "when": "wind_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_eye_trident"
+        }
+      },
+      {
+        "when": "wind_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_handle"
+        }
+      },
+      {
+        "when": "wind_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_head_generic"
+        }
+      },
+      {
+        "when": "wind_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_hoe_head"
+        }
+      },
+      {
+        "when": "wind_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "wind_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "wind_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_shovel_head"
+        }
+      },
+      {
+        "when": "wind_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_stick"
+        }
+      },
+      {
+        "when": "wind_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_stick_sword"
+        }
+      },
+      {
+        "when": "wind_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_stick_trident"
+        }
+      },
+      {
+        "when": "wind_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_sword_handle"
+        }
+      },
+      {
+        "when": "wind_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_trident_head"
+        }
+      },
+      {
+        "when": "wooden_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_axe_head"
+        }
+      },
+      {
+        "when": "wooden_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_blade"
+        }
+      },
+      {
+        "when": "wooden_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_eye"
+        }
+      },
+      {
+        "when": "wooden_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_eye_trident"
+        }
+      },
+      {
+        "when": "wooden_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_hoe_head"
+        }
+      },
+      {
+        "when": "wooden_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "wooden_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "wooden_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_shovel_head"
+        }
+      },
+      {
+        "when": "wooden_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_sword_handle"
+        }
+      },
+      {
+        "when": "wood_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_handle"
+        }
+      },
+      {
+        "when": "wood_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_head_generic"
+        }
+      },
+      {
+        "when": "wood_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_stick"
+        }
+      },
+      {
+        "when": "wood_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_stick_sword"
+        }
+      },
+      {
+        "when": "wood_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_stick_trident"
+        }
+      }
+        ]
+      },
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 1,
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "telum:item/empty"
+        },
+        "cases": [
+      {
+        "when": "blaze_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_axe_head"
+        }
+      },
+      {
+        "when": "blaze_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_blade"
+        }
+      },
+      {
+        "when": "blaze_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_eye"
+        }
+      },
+      {
+        "when": "blaze_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_eye_trident"
+        }
+      },
+      {
+        "when": "blaze_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_handle"
+        }
+      },
+      {
+        "when": "blaze_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_head_generic"
+        }
+      },
+      {
+        "when": "blaze_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_hoe_head"
+        }
+      },
+      {
+        "when": "blaze_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "blaze_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "blaze_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_shovel_head"
+        }
+      },
+      {
+        "when": "blaze_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_stick"
+        }
+      },
+      {
+        "when": "blaze_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_stick_sword"
+        }
+      },
+      {
+        "when": "blaze_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_stick_trident"
+        }
+      },
+      {
+        "when": "blaze_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_sword_handle"
+        }
+      },
+      {
+        "when": "blaze_trident_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_trident_eye"
+        }
+      },
+      {
+        "when": "blaze_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_trident_head"
+        }
+      },
+      {
+        "when": "copper_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_axe_head"
+        }
+      },
+      {
+        "when": "copper_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_blade"
+        }
+      },
+      {
+        "when": "copper_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_eye"
+        }
+      },
+      {
+        "when": "copper_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_eye_trident"
+        }
+      },
+      {
+        "when": "copper_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_handle"
+        }
+      },
+      {
+        "when": "copper_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_head_generic"
+        }
+      },
+      {
+        "when": "copper_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_hoe_head"
+        }
+      },
+      {
+        "when": "copper_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "copper_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "copper_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_shovel_head"
+        }
+      },
+      {
+        "when": "copper_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_stick"
+        }
+      },
+      {
+        "when": "copper_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_stick_sword"
+        }
+      },
+      {
+        "when": "copper_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_stick_trident"
+        }
+      },
+      {
+        "when": "copper_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_sword_handle"
+        }
+      },
+      {
+        "when": "creeper_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_trident_head"
+        }
+      },
+      {
+        "when": "diamond_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_axe_head"
+        }
+      },
+      {
+        "when": "diamond_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_blade"
+        }
+      },
+      {
+        "when": "diamond_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_eye"
+        }
+      },
+      {
+        "when": "diamond_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_eye_trident"
+        }
+      },
+      {
+        "when": "diamond_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_handle"
+        }
+      },
+      {
+        "when": "diamond_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_head_generic"
+        }
+      },
+      {
+        "when": "diamond_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_hoe_head"
+        }
+      },
+      {
+        "when": "diamond_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "diamond_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "diamond_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_shovel_head"
+        }
+      },
+      {
+        "when": "diamond_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_stick"
+        }
+      },
+      {
+        "when": "diamond_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_stick_sword"
+        }
+      },
+      {
+        "when": "diamond_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_stick_trident"
+        }
+      },
+      {
+        "when": "diamond_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_sword_handle"
+        }
+      },
+      {
+        "when": "eye_spider",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_spider"
+        }
+      },
+      {
+        "when": "golden_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_axe_head"
+        }
+      },
+      {
+        "when": "golden_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_blade"
+        }
+      },
+      {
+        "when": "golden_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_hoe_head"
+        }
+      },
+      {
+        "when": "golden_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "golden_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "golden_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_shovel_head"
+        }
+      },
+      {
+        "when": "golden_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_sword_handle"
+        }
+      },
+      {
+        "when": "gold_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_eye"
+        }
+      },
+      {
+        "when": "gold_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_eye_trident"
+        }
+      },
+      {
+        "when": "gold_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_handle"
+        }
+      },
+      {
+        "when": "gold_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_head_generic"
+        }
+      },
+      {
+        "when": "gold_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_stick"
+        }
+      },
+      {
+        "when": "gold_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_stick_sword"
+        }
+      },
+      {
+        "when": "gold_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_stick_trident"
+        }
+      },
+      {
+        "when": "grip_zombie",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/grip_zombie"
+        }
+      },
+      {
+        "when": "handle_enderman",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_enderman"
+        }
+      },
+      {
+        "when": "handle_skeleton",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_skeleton"
+        }
+      },
+      {
+        "when": "head_creeper",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_creeper"
+        }
+      },
+      {
+        "when": "iron_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_axe_head"
+        }
+      },
+      {
+        "when": "iron_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_blade"
+        }
+      },
+      {
+        "when": "iron_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_eye"
+        }
+      },
+      {
+        "when": "iron_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_eye_trident"
+        }
+      },
+      {
+        "when": "iron_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_handle"
+        }
+      },
+      {
+        "when": "iron_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_head_generic"
+        }
+      },
+      {
+        "when": "iron_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_hoe_head"
+        }
+      },
+      {
+        "when": "iron_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "iron_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "iron_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_shovel_head"
+        }
+      },
+      {
+        "when": "iron_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_stick"
+        }
+      },
+      {
+        "when": "iron_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_stick_sword"
+        }
+      },
+      {
+        "when": "iron_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_stick_trident"
+        }
+      },
+      {
+        "when": "iron_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_sword_handle"
+        }
+      },
+      {
+        "when": "netherite_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_axe_head"
+        }
+      },
+      {
+        "when": "netherite_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_blade"
+        }
+      },
+      {
+        "when": "netherite_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_eye"
+        }
+      },
+      {
+        "when": "netherite_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_eye_trident"
+        }
+      },
+      {
+        "when": "netherite_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_handle"
+        }
+      },
+      {
+        "when": "netherite_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_head_generic"
+        }
+      },
+      {
+        "when": "netherite_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_hoe_head"
+        }
+      },
+      {
+        "when": "netherite_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "netherite_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "netherite_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_shovel_head"
+        }
+      },
+      {
+        "when": "netherite_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_stick"
+        }
+      },
+      {
+        "when": "netherite_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_stick_sword"
+        }
+      },
+      {
+        "when": "netherite_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_stick_trident"
+        }
+      },
+      {
+        "when": "netherite_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_sword_handle"
+        }
+      },
+      {
+        "when": "prismarine_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_axe_head"
+        }
+      },
+      {
+        "when": "prismarine_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_blade"
+        }
+      },
+      {
+        "when": "prismarine_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_eye"
+        }
+      },
+      {
+        "when": "prismarine_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_eye_trident"
+        }
+      },
+      {
+        "when": "prismarine_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_handle"
+        }
+      },
+      {
+        "when": "prismarine_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_head_generic"
+        }
+      },
+      {
+        "when": "prismarine_head_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_head_trident"
+        }
+      },
+      {
+        "when": "prismarine_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_hoe_head"
+        }
+      },
+      {
+        "when": "prismarine_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "prismarine_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "prismarine_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_shovel_head"
+        }
+      },
+      {
+        "when": "prismarine_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_stick"
+        }
+      },
+      {
+        "when": "prismarine_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_stick_sword"
+        }
+      },
+      {
+        "when": "prismarine_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_stick_trident"
+        }
+      },
+      {
+        "when": "prismarine_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_sword_handle"
+        }
+      },
+      {
+        "when": "sculk_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sculk_trident_head"
+        }
+      },
+      {
+        "when": "skulk_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_axe_head"
+        }
+      },
+      {
+        "when": "skulk_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_blade"
+        }
+      },
+      {
+        "when": "skulk_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_eye"
+        }
+      },
+      {
+        "when": "skulk_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_eye_trident"
+        }
+      },
+      {
+        "when": "skulk_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_handle"
+        }
+      },
+      {
+        "when": "skulk_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_head_generic"
+        }
+      },
+      {
+        "when": "skulk_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_hoe_head"
+        }
+      },
+      {
+        "when": "skulk_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "skulk_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "skulk_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_shovel_head"
+        }
+      },
+      {
+        "when": "skulk_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_stick"
+        }
+      },
+      {
+        "when": "skulk_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_stick_sword"
+        }
+      },
+      {
+        "when": "skulk_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_stick_trident"
+        }
+      },
+      {
+        "when": "skulk_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_sword_handle"
+        }
+      },
+      {
+        "when": "stone_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_axe_head"
+        }
+      },
+      {
+        "when": "stone_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_blade"
+        }
+      },
+      {
+        "when": "stone_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_eye"
+        }
+      },
+      {
+        "when": "stone_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_eye_trident"
+        }
+      },
+      {
+        "when": "stone_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_handle"
+        }
+      },
+      {
+        "when": "stone_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_head_generic"
+        }
+      },
+      {
+        "when": "stone_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_hoe_head"
+        }
+      },
+      {
+        "when": "stone_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "stone_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "stone_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_shovel_head"
+        }
+      },
+      {
+        "when": "stone_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_stick"
+        }
+      },
+      {
+        "when": "stone_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_stick_sword"
+        }
+      },
+      {
+        "when": "stone_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_stick_trident"
+        }
+      },
+      {
+        "when": "stone_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_sword_handle"
+        }
+      },
+      {
+        "when": "sulfur_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_axe_head"
+        }
+      },
+      {
+        "when": "sulfur_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_blade"
+        }
+      },
+      {
+        "when": "sulfur_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_eye"
+        }
+      },
+      {
+        "when": "sulfur_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_eye_trident"
+        }
+      },
+      {
+        "when": "sulfur_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_handle"
+        }
+      },
+      {
+        "when": "sulfur_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_head_generic"
+        }
+      },
+      {
+        "when": "sulfur_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_hoe_head"
+        }
+      },
+      {
+        "when": "sulfur_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "sulfur_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "sulfur_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_shovel_head"
+        }
+      },
+      {
+        "when": "sulfur_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_stick"
+        }
+      },
+      {
+        "when": "sulfur_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_stick_sword"
+        }
+      },
+      {
+        "when": "sulfur_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_stick_trident"
+        }
+      },
+      {
+        "when": "sulfur_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_sword_handle"
+        }
+      },
+      {
+        "when": "wind_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_axe_head"
+        }
+      },
+      {
+        "when": "wind_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_blade"
+        }
+      },
+      {
+        "when": "wind_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_eye"
+        }
+      },
+      {
+        "when": "wind_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_eye_trident"
+        }
+      },
+      {
+        "when": "wind_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_handle"
+        }
+      },
+      {
+        "when": "wind_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_head_generic"
+        }
+      },
+      {
+        "when": "wind_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_hoe_head"
+        }
+      },
+      {
+        "when": "wind_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "wind_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "wind_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_shovel_head"
+        }
+      },
+      {
+        "when": "wind_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_stick"
+        }
+      },
+      {
+        "when": "wind_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_stick_sword"
+        }
+      },
+      {
+        "when": "wind_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_stick_trident"
+        }
+      },
+      {
+        "when": "wind_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_sword_handle"
+        }
+      },
+      {
+        "when": "wind_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_trident_head"
+        }
+      },
+      {
+        "when": "wooden_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_axe_head"
+        }
+      },
+      {
+        "when": "wooden_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_blade"
+        }
+      },
+      {
+        "when": "wooden_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_eye"
+        }
+      },
+      {
+        "when": "wooden_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_eye_trident"
+        }
+      },
+      {
+        "when": "wooden_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_hoe_head"
+        }
+      },
+      {
+        "when": "wooden_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "wooden_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "wooden_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_shovel_head"
+        }
+      },
+      {
+        "when": "wooden_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_sword_handle"
+        }
+      },
+      {
+        "when": "wood_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_handle"
+        }
+      },
+      {
+        "when": "wood_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_head_generic"
+        }
+      },
+      {
+        "when": "wood_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_stick"
+        }
+      },
+      {
+        "when": "wood_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_stick_sword"
+        }
+      },
+      {
+        "when": "wood_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_stick_trident"
+        }
+      }
+        ]
+      },
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 2,
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "telum:item/empty"
+        },
+        "cases": [
+      {
+        "when": "blaze_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_axe_head"
+        }
+      },
+      {
+        "when": "blaze_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_blade"
+        }
+      },
+      {
+        "when": "blaze_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_eye"
+        }
+      },
+      {
+        "when": "blaze_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_eye_trident"
+        }
+      },
+      {
+        "when": "blaze_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_handle"
+        }
+      },
+      {
+        "when": "blaze_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_head_generic"
+        }
+      },
+      {
+        "when": "blaze_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_hoe_head"
+        }
+      },
+      {
+        "when": "blaze_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "blaze_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "blaze_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_shovel_head"
+        }
+      },
+      {
+        "when": "blaze_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_stick"
+        }
+      },
+      {
+        "when": "blaze_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_stick_sword"
+        }
+      },
+      {
+        "when": "blaze_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_stick_trident"
+        }
+      },
+      {
+        "when": "blaze_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_sword_handle"
+        }
+      },
+      {
+        "when": "blaze_trident_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_trident_eye"
+        }
+      },
+      {
+        "when": "blaze_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_trident_head"
+        }
+      },
+      {
+        "when": "copper_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_axe_head"
+        }
+      },
+      {
+        "when": "copper_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_blade"
+        }
+      },
+      {
+        "when": "copper_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_eye"
+        }
+      },
+      {
+        "when": "copper_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_eye_trident"
+        }
+      },
+      {
+        "when": "copper_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_handle"
+        }
+      },
+      {
+        "when": "copper_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_head_generic"
+        }
+      },
+      {
+        "when": "copper_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_hoe_head"
+        }
+      },
+      {
+        "when": "copper_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "copper_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "copper_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_shovel_head"
+        }
+      },
+      {
+        "when": "copper_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_stick"
+        }
+      },
+      {
+        "when": "copper_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_stick_sword"
+        }
+      },
+      {
+        "when": "copper_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_stick_trident"
+        }
+      },
+      {
+        "when": "copper_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_sword_handle"
+        }
+      },
+      {
+        "when": "creeper_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_trident_head"
+        }
+      },
+      {
+        "when": "diamond_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_axe_head"
+        }
+      },
+      {
+        "when": "diamond_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_blade"
+        }
+      },
+      {
+        "when": "diamond_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_eye"
+        }
+      },
+      {
+        "when": "diamond_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_eye_trident"
+        }
+      },
+      {
+        "when": "diamond_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_handle"
+        }
+      },
+      {
+        "when": "diamond_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_head_generic"
+        }
+      },
+      {
+        "when": "diamond_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_hoe_head"
+        }
+      },
+      {
+        "when": "diamond_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "diamond_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "diamond_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_shovel_head"
+        }
+      },
+      {
+        "when": "diamond_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_stick"
+        }
+      },
+      {
+        "when": "diamond_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_stick_sword"
+        }
+      },
+      {
+        "when": "diamond_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_stick_trident"
+        }
+      },
+      {
+        "when": "diamond_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_sword_handle"
+        }
+      },
+      {
+        "when": "eye_spider",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_spider"
+        }
+      },
+      {
+        "when": "golden_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_axe_head"
+        }
+      },
+      {
+        "when": "golden_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_blade"
+        }
+      },
+      {
+        "when": "golden_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_hoe_head"
+        }
+      },
+      {
+        "when": "golden_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "golden_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "golden_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_shovel_head"
+        }
+      },
+      {
+        "when": "golden_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_sword_handle"
+        }
+      },
+      {
+        "when": "gold_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_eye"
+        }
+      },
+      {
+        "when": "gold_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_eye_trident"
+        }
+      },
+      {
+        "when": "gold_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_handle"
+        }
+      },
+      {
+        "when": "gold_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_head_generic"
+        }
+      },
+      {
+        "when": "gold_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_stick"
+        }
+      },
+      {
+        "when": "gold_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_stick_sword"
+        }
+      },
+      {
+        "when": "gold_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_stick_trident"
+        }
+      },
+      {
+        "when": "grip_zombie",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/grip_zombie"
+        }
+      },
+      {
+        "when": "handle_enderman",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_enderman"
+        }
+      },
+      {
+        "when": "handle_skeleton",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_skeleton"
+        }
+      },
+      {
+        "when": "head_creeper",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_creeper"
+        }
+      },
+      {
+        "when": "iron_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_axe_head"
+        }
+      },
+      {
+        "when": "iron_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_blade"
+        }
+      },
+      {
+        "when": "iron_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_eye"
+        }
+      },
+      {
+        "when": "iron_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_eye_trident"
+        }
+      },
+      {
+        "when": "iron_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_handle"
+        }
+      },
+      {
+        "when": "iron_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_head_generic"
+        }
+      },
+      {
+        "when": "iron_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_hoe_head"
+        }
+      },
+      {
+        "when": "iron_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "iron_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "iron_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_shovel_head"
+        }
+      },
+      {
+        "when": "iron_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_stick"
+        }
+      },
+      {
+        "when": "iron_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_stick_sword"
+        }
+      },
+      {
+        "when": "iron_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_stick_trident"
+        }
+      },
+      {
+        "when": "iron_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_sword_handle"
+        }
+      },
+      {
+        "when": "netherite_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_axe_head"
+        }
+      },
+      {
+        "when": "netherite_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_blade"
+        }
+      },
+      {
+        "when": "netherite_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_eye"
+        }
+      },
+      {
+        "when": "netherite_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_eye_trident"
+        }
+      },
+      {
+        "when": "netherite_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_handle"
+        }
+      },
+      {
+        "when": "netherite_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_head_generic"
+        }
+      },
+      {
+        "when": "netherite_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_hoe_head"
+        }
+      },
+      {
+        "when": "netherite_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "netherite_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "netherite_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_shovel_head"
+        }
+      },
+      {
+        "when": "netherite_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_stick"
+        }
+      },
+      {
+        "when": "netherite_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_stick_sword"
+        }
+      },
+      {
+        "when": "netherite_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_stick_trident"
+        }
+      },
+      {
+        "when": "netherite_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_sword_handle"
+        }
+      },
+      {
+        "when": "prismarine_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_axe_head"
+        }
+      },
+      {
+        "when": "prismarine_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_blade"
+        }
+      },
+      {
+        "when": "prismarine_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_eye"
+        }
+      },
+      {
+        "when": "prismarine_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_eye_trident"
+        }
+      },
+      {
+        "when": "prismarine_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_handle"
+        }
+      },
+      {
+        "when": "prismarine_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_head_generic"
+        }
+      },
+      {
+        "when": "prismarine_head_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_head_trident"
+        }
+      },
+      {
+        "when": "prismarine_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_hoe_head"
+        }
+      },
+      {
+        "when": "prismarine_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "prismarine_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "prismarine_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_shovel_head"
+        }
+      },
+      {
+        "when": "prismarine_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_stick"
+        }
+      },
+      {
+        "when": "prismarine_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_stick_sword"
+        }
+      },
+      {
+        "when": "prismarine_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_stick_trident"
+        }
+      },
+      {
+        "when": "prismarine_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_sword_handle"
+        }
+      },
+      {
+        "when": "sculk_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sculk_trident_head"
+        }
+      },
+      {
+        "when": "skulk_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_axe_head"
+        }
+      },
+      {
+        "when": "skulk_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_blade"
+        }
+      },
+      {
+        "when": "skulk_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_eye"
+        }
+      },
+      {
+        "when": "skulk_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_eye_trident"
+        }
+      },
+      {
+        "when": "skulk_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_handle"
+        }
+      },
+      {
+        "when": "skulk_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_head_generic"
+        }
+      },
+      {
+        "when": "skulk_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_hoe_head"
+        }
+      },
+      {
+        "when": "skulk_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "skulk_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "skulk_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_shovel_head"
+        }
+      },
+      {
+        "when": "skulk_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_stick"
+        }
+      },
+      {
+        "when": "skulk_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_stick_sword"
+        }
+      },
+      {
+        "when": "skulk_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_stick_trident"
+        }
+      },
+      {
+        "when": "skulk_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_sword_handle"
+        }
+      },
+      {
+        "when": "stone_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_axe_head"
+        }
+      },
+      {
+        "when": "stone_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_blade"
+        }
+      },
+      {
+        "when": "stone_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_eye"
+        }
+      },
+      {
+        "when": "stone_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_eye_trident"
+        }
+      },
+      {
+        "when": "stone_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_handle"
+        }
+      },
+      {
+        "when": "stone_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_head_generic"
+        }
+      },
+      {
+        "when": "stone_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_hoe_head"
+        }
+      },
+      {
+        "when": "stone_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "stone_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "stone_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_shovel_head"
+        }
+      },
+      {
+        "when": "stone_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_stick"
+        }
+      },
+      {
+        "when": "stone_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_stick_sword"
+        }
+      },
+      {
+        "when": "stone_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_stick_trident"
+        }
+      },
+      {
+        "when": "stone_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_sword_handle"
+        }
+      },
+      {
+        "when": "sulfur_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_axe_head"
+        }
+      },
+      {
+        "when": "sulfur_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_blade"
+        }
+      },
+      {
+        "when": "sulfur_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_eye"
+        }
+      },
+      {
+        "when": "sulfur_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_eye_trident"
+        }
+      },
+      {
+        "when": "sulfur_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_handle"
+        }
+      },
+      {
+        "when": "sulfur_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_head_generic"
+        }
+      },
+      {
+        "when": "sulfur_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_hoe_head"
+        }
+      },
+      {
+        "when": "sulfur_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "sulfur_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "sulfur_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_shovel_head"
+        }
+      },
+      {
+        "when": "sulfur_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_stick"
+        }
+      },
+      {
+        "when": "sulfur_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_stick_sword"
+        }
+      },
+      {
+        "when": "sulfur_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_stick_trident"
+        }
+      },
+      {
+        "when": "sulfur_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_sword_handle"
+        }
+      },
+      {
+        "when": "wind_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_axe_head"
+        }
+      },
+      {
+        "when": "wind_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_blade"
+        }
+      },
+      {
+        "when": "wind_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_eye"
+        }
+      },
+      {
+        "when": "wind_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_eye_trident"
+        }
+      },
+      {
+        "when": "wind_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_handle"
+        }
+      },
+      {
+        "when": "wind_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_head_generic"
+        }
+      },
+      {
+        "when": "wind_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_hoe_head"
+        }
+      },
+      {
+        "when": "wind_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "wind_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "wind_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_shovel_head"
+        }
+      },
+      {
+        "when": "wind_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_stick"
+        }
+      },
+      {
+        "when": "wind_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_stick_sword"
+        }
+      },
+      {
+        "when": "wind_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_stick_trident"
+        }
+      },
+      {
+        "when": "wind_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_sword_handle"
+        }
+      },
+      {
+        "when": "wind_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_trident_head"
+        }
+      },
+      {
+        "when": "wooden_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_axe_head"
+        }
+      },
+      {
+        "when": "wooden_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_blade"
+        }
+      },
+      {
+        "when": "wooden_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_eye"
+        }
+      },
+      {
+        "when": "wooden_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_eye_trident"
+        }
+      },
+      {
+        "when": "wooden_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_hoe_head"
+        }
+      },
+      {
+        "when": "wooden_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "wooden_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "wooden_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_shovel_head"
+        }
+      },
+      {
+        "when": "wooden_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_sword_handle"
+        }
+      },
+      {
+        "when": "wood_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_handle"
+        }
+      },
+      {
+        "when": "wood_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_head_generic"
+        }
+      },
+      {
+        "when": "wood_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_stick"
+        }
+      },
+      {
+        "when": "wood_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_stick_sword"
+        }
+      },
+      {
+        "when": "wood_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_stick_trident"
+        }
+      }
+        ]
+      },
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 3,
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "telum:item/empty"
+        },
+        "cases": [
+      {
+        "when": "blaze_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_axe_head"
+        }
+      },
+      {
+        "when": "blaze_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_blade"
+        }
+      },
+      {
+        "when": "blaze_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_eye"
+        }
+      },
+      {
+        "when": "blaze_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_eye_trident"
+        }
+      },
+      {
+        "when": "blaze_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_handle"
+        }
+      },
+      {
+        "when": "blaze_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_head_generic"
+        }
+      },
+      {
+        "when": "blaze_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_hoe_head"
+        }
+      },
+      {
+        "when": "blaze_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "blaze_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "blaze_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_shovel_head"
+        }
+      },
+      {
+        "when": "blaze_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_stick"
+        }
+      },
+      {
+        "when": "blaze_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_stick_sword"
+        }
+      },
+      {
+        "when": "blaze_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_stick_trident"
+        }
+      },
+      {
+        "when": "blaze_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_sword_handle"
+        }
+      },
+      {
+        "when": "blaze_trident_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_trident_eye"
+        }
+      },
+      {
+        "when": "blaze_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/blaze_trident_head"
+        }
+      },
+      {
+        "when": "copper_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_axe_head"
+        }
+      },
+      {
+        "when": "copper_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_blade"
+        }
+      },
+      {
+        "when": "copper_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_eye"
+        }
+      },
+      {
+        "when": "copper_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_eye_trident"
+        }
+      },
+      {
+        "when": "copper_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_handle"
+        }
+      },
+      {
+        "when": "copper_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_head_generic"
+        }
+      },
+      {
+        "when": "copper_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_hoe_head"
+        }
+      },
+      {
+        "when": "copper_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "copper_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "copper_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_shovel_head"
+        }
+      },
+      {
+        "when": "copper_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_stick"
+        }
+      },
+      {
+        "when": "copper_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_stick_sword"
+        }
+      },
+      {
+        "when": "copper_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_stick_trident"
+        }
+      },
+      {
+        "when": "copper_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/copper_sword_handle"
+        }
+      },
+      {
+        "when": "creeper_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_trident_head"
+        }
+      },
+      {
+        "when": "diamond_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_axe_head"
+        }
+      },
+      {
+        "when": "diamond_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_blade"
+        }
+      },
+      {
+        "when": "diamond_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_eye"
+        }
+      },
+      {
+        "when": "diamond_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_eye_trident"
+        }
+      },
+      {
+        "when": "diamond_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_handle"
+        }
+      },
+      {
+        "when": "diamond_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_head_generic"
+        }
+      },
+      {
+        "when": "diamond_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_hoe_head"
+        }
+      },
+      {
+        "when": "diamond_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "diamond_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "diamond_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_shovel_head"
+        }
+      },
+      {
+        "when": "diamond_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_stick"
+        }
+      },
+      {
+        "when": "diamond_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_stick_sword"
+        }
+      },
+      {
+        "when": "diamond_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_stick_trident"
+        }
+      },
+      {
+        "when": "diamond_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/diamond_sword_handle"
+        }
+      },
+      {
+        "when": "eye_spider",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_spider"
+        }
+      },
+      {
+        "when": "golden_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_axe_head"
+        }
+      },
+      {
+        "when": "golden_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_blade"
+        }
+      },
+      {
+        "when": "golden_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_hoe_head"
+        }
+      },
+      {
+        "when": "golden_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "golden_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "golden_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_shovel_head"
+        }
+      },
+      {
+        "when": "golden_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/golden_sword_handle"
+        }
+      },
+      {
+        "when": "gold_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_eye"
+        }
+      },
+      {
+        "when": "gold_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_eye_trident"
+        }
+      },
+      {
+        "when": "gold_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_handle"
+        }
+      },
+      {
+        "when": "gold_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_head_generic"
+        }
+      },
+      {
+        "when": "gold_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_stick"
+        }
+      },
+      {
+        "when": "gold_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_stick_sword"
+        }
+      },
+      {
+        "when": "gold_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/gold_stick_trident"
+        }
+      },
+      {
+        "when": "grip_zombie",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/grip_zombie"
+        }
+      },
+      {
+        "when": "handle_enderman",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_enderman"
+        }
+      },
+      {
+        "when": "handle_skeleton",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_skeleton"
+        }
+      },
+      {
+        "when": "head_creeper",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_creeper"
+        }
+      },
+      {
+        "when": "iron_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_axe_head"
+        }
+      },
+      {
+        "when": "iron_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_blade"
+        }
+      },
+      {
+        "when": "iron_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_eye"
+        }
+      },
+      {
+        "when": "iron_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_eye_trident"
+        }
+      },
+      {
+        "when": "iron_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_handle"
+        }
+      },
+      {
+        "when": "iron_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_head_generic"
+        }
+      },
+      {
+        "when": "iron_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_hoe_head"
+        }
+      },
+      {
+        "when": "iron_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "iron_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "iron_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_shovel_head"
+        }
+      },
+      {
+        "when": "iron_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_stick"
+        }
+      },
+      {
+        "when": "iron_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_stick_sword"
+        }
+      },
+      {
+        "when": "iron_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_stick_trident"
+        }
+      },
+      {
+        "when": "iron_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/iron_sword_handle"
+        }
+      },
+      {
+        "when": "netherite_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_axe_head"
+        }
+      },
+      {
+        "when": "netherite_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_blade"
+        }
+      },
+      {
+        "when": "netherite_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_eye"
+        }
+      },
+      {
+        "when": "netherite_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_eye_trident"
+        }
+      },
+      {
+        "when": "netherite_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_handle"
+        }
+      },
+      {
+        "when": "netherite_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_head_generic"
+        }
+      },
+      {
+        "when": "netherite_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_hoe_head"
+        }
+      },
+      {
+        "when": "netherite_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "netherite_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "netherite_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_shovel_head"
+        }
+      },
+      {
+        "when": "netherite_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_stick"
+        }
+      },
+      {
+        "when": "netherite_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_stick_sword"
+        }
+      },
+      {
+        "when": "netherite_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_stick_trident"
+        }
+      },
+      {
+        "when": "netherite_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/netherite_sword_handle"
+        }
+      },
+      {
+        "when": "prismarine_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_axe_head"
+        }
+      },
+      {
+        "when": "prismarine_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_blade"
+        }
+      },
+      {
+        "when": "prismarine_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_eye"
+        }
+      },
+      {
+        "when": "prismarine_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_eye_trident"
+        }
+      },
+      {
+        "when": "prismarine_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_handle"
+        }
+      },
+      {
+        "when": "prismarine_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_head_generic"
+        }
+      },
+      {
+        "when": "prismarine_head_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_head_trident"
+        }
+      },
+      {
+        "when": "prismarine_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_hoe_head"
+        }
+      },
+      {
+        "when": "prismarine_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "prismarine_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "prismarine_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_shovel_head"
+        }
+      },
+      {
+        "when": "prismarine_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_stick"
+        }
+      },
+      {
+        "when": "prismarine_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_stick_sword"
+        }
+      },
+      {
+        "when": "prismarine_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_stick_trident"
+        }
+      },
+      {
+        "when": "prismarine_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/prismarine_sword_handle"
+        }
+      },
+      {
+        "when": "sculk_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sculk_trident_head"
+        }
+      },
+      {
+        "when": "skulk_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_axe_head"
+        }
+      },
+      {
+        "when": "skulk_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_blade"
+        }
+      },
+      {
+        "when": "skulk_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_eye"
+        }
+      },
+      {
+        "when": "skulk_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_eye_trident"
+        }
+      },
+      {
+        "when": "skulk_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_handle"
+        }
+      },
+      {
+        "when": "skulk_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_head_generic"
+        }
+      },
+      {
+        "when": "skulk_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_hoe_head"
+        }
+      },
+      {
+        "when": "skulk_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "skulk_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "skulk_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_shovel_head"
+        }
+      },
+      {
+        "when": "skulk_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_stick"
+        }
+      },
+      {
+        "when": "skulk_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_stick_sword"
+        }
+      },
+      {
+        "when": "skulk_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_stick_trident"
+        }
+      },
+      {
+        "when": "skulk_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skulk_sword_handle"
+        }
+      },
+      {
+        "when": "stone_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_axe_head"
+        }
+      },
+      {
+        "when": "stone_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_blade"
+        }
+      },
+      {
+        "when": "stone_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_eye"
+        }
+      },
+      {
+        "when": "stone_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_eye_trident"
+        }
+      },
+      {
+        "when": "stone_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_handle"
+        }
+      },
+      {
+        "when": "stone_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_head_generic"
+        }
+      },
+      {
+        "when": "stone_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_hoe_head"
+        }
+      },
+      {
+        "when": "stone_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "stone_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "stone_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_shovel_head"
+        }
+      },
+      {
+        "when": "stone_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_stick"
+        }
+      },
+      {
+        "when": "stone_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_stick_sword"
+        }
+      },
+      {
+        "when": "stone_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_stick_trident"
+        }
+      },
+      {
+        "when": "stone_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/stone_sword_handle"
+        }
+      },
+      {
+        "when": "sulfur_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_axe_head"
+        }
+      },
+      {
+        "when": "sulfur_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_blade"
+        }
+      },
+      {
+        "when": "sulfur_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_eye"
+        }
+      },
+      {
+        "when": "sulfur_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_eye_trident"
+        }
+      },
+      {
+        "when": "sulfur_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_handle"
+        }
+      },
+      {
+        "when": "sulfur_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_head_generic"
+        }
+      },
+      {
+        "when": "sulfur_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_hoe_head"
+        }
+      },
+      {
+        "when": "sulfur_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "sulfur_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "sulfur_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_shovel_head"
+        }
+      },
+      {
+        "when": "sulfur_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_stick"
+        }
+      },
+      {
+        "when": "sulfur_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_stick_sword"
+        }
+      },
+      {
+        "when": "sulfur_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_stick_trident"
+        }
+      },
+      {
+        "when": "sulfur_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/sulfur_sword_handle"
+        }
+      },
+      {
+        "when": "wind_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_axe_head"
+        }
+      },
+      {
+        "when": "wind_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_blade"
+        }
+      },
+      {
+        "when": "wind_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_eye"
+        }
+      },
+      {
+        "when": "wind_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_eye_trident"
+        }
+      },
+      {
+        "when": "wind_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_handle"
+        }
+      },
+      {
+        "when": "wind_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_head_generic"
+        }
+      },
+      {
+        "when": "wind_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_hoe_head"
+        }
+      },
+      {
+        "when": "wind_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "wind_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "wind_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_shovel_head"
+        }
+      },
+      {
+        "when": "wind_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_stick"
+        }
+      },
+      {
+        "when": "wind_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_stick_sword"
+        }
+      },
+      {
+        "when": "wind_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_stick_trident"
+        }
+      },
+      {
+        "when": "wind_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_sword_handle"
+        }
+      },
+      {
+        "when": "wind_trident_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wind_trident_head"
+        }
+      },
+      {
+        "when": "wooden_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_axe_head"
+        }
+      },
+      {
+        "when": "wooden_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_blade"
+        }
+      },
+      {
+        "when": "wooden_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_eye"
+        }
+      },
+      {
+        "when": "wooden_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_eye_trident"
+        }
+      },
+      {
+        "when": "wooden_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_hoe_head"
+        }
+      },
+      {
+        "when": "wooden_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "wooden_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "wooden_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_shovel_head"
+        }
+      },
+      {
+        "when": "wooden_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wooden_sword_handle"
+        }
+      },
+      {
+        "when": "wood_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_handle"
+        }
+      },
+      {
+        "when": "wood_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_head_generic"
+        }
+      },
+      {
+        "when": "wood_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_stick"
+        }
+      },
+      {
+        "when": "wood_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_stick_sword"
+        }
+      },
+      {
+        "when": "wood_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/wood_stick_trident"
+        }
+      }
+        ]
+      }
+    ]
+  }
+}

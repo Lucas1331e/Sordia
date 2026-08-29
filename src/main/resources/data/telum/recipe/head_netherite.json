@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    " E "
+  ],
+  "key": {
+    "P": { "item": "minecraft:netherite_ingot" },
+    "E": { "item": "minecraft:netherite_scrap" }
+  },
+  "result": { "id": "telum:head_netherite", "count": 1 }
+}

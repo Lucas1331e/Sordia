@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "can_summon=false,shrieking=false,waterlogged=false": {
+      "model": "telum:block/sculk_temporal_shrieker"
+    },
+    "can_summon=false,shrieking=false,waterlogged=true": {
+      "model": "telum:block/sculk_temporal_shrieker"
+    },
+    "can_summon=false,shrieking=true,waterlogged=false": {
+      "model": "telum:block/sculk_temporal_shrieker"
+    },
+    "can_summon=false,shrieking=true,waterlogged=true": {
+      "model": "telum:block/sculk_temporal_shrieker"
+    },
+    "can_summon=true,shrieking=false,waterlogged=false": {
+      "model": "telum:block/sculk_temporal_shrieker_can_summon"
+    },
+    "can_summon=true,shrieking=false,waterlogged=true": {
+      "model": "telum:block/sculk_temporal_shrieker_can_summon"
+    },
+    "can_summon=true,shrieking=true,waterlogged=false": {
+      "model": "telum:block/sculk_temporal_shrieker_can_summon"
+    },
+    "can_summon=true,shrieking=true,waterlogged=true": {
+      "model": "telum:block/sculk_temporal_shrieker_can_summon"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "telum:block/marmol_lectern"
+    },
+    "facing=south": {
+      "model": "telum:block/marmol_lectern",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "telum:block/marmol_lectern",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "telum:block/marmol_lectern",
+      "y": 90
+    }
+  }
+}

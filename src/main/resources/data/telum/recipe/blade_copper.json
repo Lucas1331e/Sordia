@@ -1,0 +1,13 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P",
+    "PE",
+    "P "
+  ],
+  "key": {
+    "P": { "item": "minecraft:copper_ingot" },
+    "E": { "item": "minecraft:copper_ingot" }
+  },
+  "result": { "id": "telum:blade_copper", "count": 1 }
+}

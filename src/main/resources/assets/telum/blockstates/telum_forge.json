@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "telum:block/telum_forge"
+    }
+  }
+}

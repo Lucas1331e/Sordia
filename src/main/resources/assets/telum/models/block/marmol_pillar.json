@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "telum:block/marmol_pillar_top",
+    "side": "telum:block/marmol_pillar"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "parent":  "minecraft:block/wall_inventory",
+    "textures":  {
+                     "wall":  "telum:block/yellow_marmol_bricks"
+                 }
+}

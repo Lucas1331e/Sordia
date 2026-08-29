@@ -1,0 +1,6 @@
+{
+    "parent":  "minecraft:block/cube_all",
+    "textures":  {
+                     "all":  "telum:block/deepslate_temporal_polished"
+                 }
+}

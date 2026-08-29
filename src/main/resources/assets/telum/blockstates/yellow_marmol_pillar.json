@@ -1,0 +1,7 @@
+﻿{
+  "variants": {
+    "axis=x": { "model": "telum:block/yellow_marmol_pillar", "x": 90, "y": 90 },
+    "axis=y": { "model": "telum:block/yellow_marmol_pillar" },
+    "axis=z": { "model": "telum:block/yellow_marmol_pillar", "x": 90 }
+  }
+}

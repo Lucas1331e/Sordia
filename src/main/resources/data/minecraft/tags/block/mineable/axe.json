@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "telum:temporal_barrel",
+    "telum:archeology_table",
+    "telum:echo_barrel",
+    "telum:echo_barrel_projection"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "N N",
+    "MMM"
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:redstone_torch"
+    },
+    "N": {
+      "item": "minecraft:note_block"
+    },
+    "M": {
+      "item": "telum:marmol_block"
+    }
+  },
+  "result": {
+    "id": "telum:note_comparator",
+    "count": 1
+  }
+}

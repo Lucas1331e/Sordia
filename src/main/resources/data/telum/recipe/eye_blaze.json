@@ -1,0 +1,13 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P ",
+    "PEP",
+    " P "
+  ],
+  "key": {
+    "P": { "item": "minecraft:blaze_rod" },
+    "E": { "item": "minecraft:blaze_powder" }
+  },
+  "result": { "id": "telum:eye_blaze", "count": 2 }
+}

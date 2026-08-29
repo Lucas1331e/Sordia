@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "minecraft:block/smithing_table_top",
+    "bottom": "telum:block/forge_bottom",
+    "front": "telum:block/forge_front",
+    "side": "telum:block/forge_side"
+  }
+}

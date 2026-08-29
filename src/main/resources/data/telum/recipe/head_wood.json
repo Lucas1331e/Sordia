@@ -1,0 +1,12 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    " E "
+  ],
+  "key": {
+    "P": { "item": "minecraft:oak_planks" },
+    "E": { "item": "minecraft:oak_planks" }
+  },
+  "result": { "id": "telum:head_wood", "count": 1 }
+}

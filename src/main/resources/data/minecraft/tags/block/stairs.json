@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "telum:marmol_stairs",
+    "telum:marmol_brick_stairs",
+    "telum:yellow_marmol_stairs",
+    "telum:yellow_marmol_brick_stairs"
+  ]
+}

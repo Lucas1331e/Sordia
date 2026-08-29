@@ -1,0 +1,8 @@
+{
+    "parent":  "minecraft:block/inner_stairs",
+    "textures":  {
+                     "bottom":  "telum:block/yellow_marmol_block",
+                     "side":  "telum:block/yellow_marmol_block",
+                     "top":  "telum:block/yellow_marmol_block"
+                 }
+}

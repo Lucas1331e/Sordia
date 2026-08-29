@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "telum:block/suspicious_netherrack_1"
+  }
+}

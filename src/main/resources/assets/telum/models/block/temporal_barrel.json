@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "telum:block/temporal_barrel_top",
+    "bottom": "telum:block/temporal_barrel_bottom",
+    "side": "telum:block/temporal_barrel_side"
+  },
+  "render_type": "minecraft:translucent"
+}

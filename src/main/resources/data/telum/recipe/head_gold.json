@@ -1,0 +1,12 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    " E "
+  ],
+  "key": {
+    "P": { "item": "minecraft:gold_ingot" },
+    "E": { "item": "minecraft:copper_ingot" }
+  },
+  "result": { "id": "telum:head_gold", "count": 1 }
+}

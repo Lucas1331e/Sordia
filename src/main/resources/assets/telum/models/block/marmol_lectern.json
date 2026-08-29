@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "telum:block/marmol_lectern_base",
+    "base": "telum:block/marmol_lectern_base",
+    "top": "telum:block/marmol_lectern_top",
+    "sides": "telum:block/marmol_lectern_sides",
+    "front": "telum:block/marmol_lectern_front",
+    "particle": "telum:block/marmol_lectern_top"
+  }
+}

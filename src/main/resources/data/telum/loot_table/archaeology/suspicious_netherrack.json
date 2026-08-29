@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:archaeology",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "telum:blade_blaze",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "telum:head_blaze",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "telum:handle_blaze",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "telum:grip_blaze",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "telum:eye_blaze",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:blaze_powder",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:nether_brick",
+          "weight": 10
+        }
+      ]
+    }
+  ]
+}

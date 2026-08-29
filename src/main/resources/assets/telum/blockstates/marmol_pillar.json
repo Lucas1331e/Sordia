@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "telum:block/marmol_pillar_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "telum:block/marmol_pillar"
+    },
+    "axis=z": {
+      "model": "telum:block/marmol_pillar_horizontal",
+      "x": 90
+    }
+  }
+}

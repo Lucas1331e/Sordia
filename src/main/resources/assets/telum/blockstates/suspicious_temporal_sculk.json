@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "dusted=0": { "model": "telum:block/suspicious_temporal_sculk_0" },
+    "dusted=1": { "model": "telum:block/suspicious_temporal_sculk_1" },
+    "dusted=2": { "model": "telum:block/suspicious_temporal_sculk_2" },
+    "dusted=3": { "model": "telum:block/suspicious_temporal_sculk_3" }
+  }
+}

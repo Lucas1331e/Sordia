@@ -16,9 +16,18 @@ public final class PlayerSongManager {
     private static final Map<UUID, List<BarrelSongEntry>> PLAYER_SONGS = new ConcurrentHashMap<>();
     private static final Map<UUID, Set<String>> LEARNED_SONG_IDS = new ConcurrentHashMap<>();
 
+    private static final Set<String> ALL_SONG_IDS = Set.of(
+            "backtime_song", "bed_song", "chest_song", "sculk_song", "dawn_song", "reveal_song", "void_song"
+    );
+
     public static boolean hasLearnedSong(UUID playerUuid, String songId) {
         Set<String> learned = LEARNED_SONG_IDS.get(playerUuid);
         return learned != null && learned.contains(songId);
+    }
+
+    public static boolean hasLearnedAllSongs(UUID playerUuid) {
+        Set<String> learned = LEARNED_SONG_IDS.get(playerUuid);
+        return learned != null && learned.containsAll(ALL_SONG_IDS);
     }
 
     public static void learnSong(UUID playerUuid, String songId) {

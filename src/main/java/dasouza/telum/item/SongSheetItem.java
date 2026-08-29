@@ -70,6 +70,9 @@ public class SongSheetItem extends Item {
 
             if (player instanceof ServerPlayer serverPlayer) {
                 TelumNetworking.syncSongsToPlayer(serverPlayer);
+                if (PlayerSongManager.hasLearnedAllSongs(serverPlayer.getUUID())) {
+                    dasouza.telum.advancement.TelumAdvancements.grantAdvancement(serverPlayer, dasouza.telum.Telum.id("all_songs"));
+                }
             }
         }
 

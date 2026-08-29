@@ -90,6 +90,15 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
 
             @Override
             public void onTake(Player player, ItemStack stack) {
+                if (player instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+                    AssembledToolData toolData = stack.get(TelumComponents.ASSEMBLED_TOOL);
+                    if (toolData != null) {
+                        for (ToolPartData part : toolData.parts()) {
+                            dasouza.telum.util.PlayerBookProgressManager.markMaterialCrafted(serverPlayer, part.material());
+                            dasouza.telum.util.PlayerBookProgressManager.markToolCrafted(serverPlayer, part.material());
+                        }
+                    }
+                }
                 for (int i = 0; i < 9; i++) {
                     ItemStack inputStack = inputSlots.getItem(i);
                     if (!inputStack.isEmpty()) {
@@ -247,7 +256,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
                 if (handle != null) l0 = getHandleTexture(handle.material(), ToolType.PICKAXE);
                 if (leftHead != null) l1 = getPickaxeLeftHeadTexture(leftHead.material());
                 if (rightHead != null) l2 = getPickaxeRightHeadTexture(rightHead.material());
-                if (eye != null) l3 = getEyeTexture(eye.material());
+                if (eye != null) l3 = getPickaxeEyeTexture(eye.material());
             }
             case SWORD -> {
                 ToolPartData blade = slotParts.get(1);
@@ -279,7 +288,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
                 ToolPartData handle = slotParts.get(4);
                 if (handle != null) l0 = getHandleTexture(handle.material(), ToolType.HOE);
                 if (head != null) l1 = getHoeHeadTexture(head.material());
-                if (eye != null) l2 = getEyeTexture(eye.material());
+                if (eye != null) l2 = getHoeEyeTexture(eye.material());
             }
             case TRIDENT -> {
                 ToolPartData head = slotParts.get(1);
@@ -294,8 +303,6 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getHandleTexture(PartMaterial mat, ToolType tool) {
-        if (mat == PartMaterial.SKELETON) return "handle_skeleton";
-        if (mat == PartMaterial.SPIDER) return "eye_spider";
         String suffix = mat.getMaterialName() + "_stick";
         if (tool == ToolType.SWORD) return suffix + "_sword";
         if (tool == ToolType.TRIDENT) return suffix + "_trident";
@@ -304,11 +311,13 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
 
     private String getToolGripTexture(PartMaterial mat) {
         if (mat == PartMaterial.ZOMBIE) return "grip_zombie";
+        if (mat == PartMaterial.SPIDER) return "spider_handle";
         return mat.getMaterialName() + "_handle";
     }
 
     private String getSwordGripTexture(PartMaterial mat) {
         if (mat == PartMaterial.ZOMBIE) return "grip_zombie";
+        if (mat == PartMaterial.SPIDER) return "spider_handle_sword";
         return switch (mat) {
             case WOOD -> "wooden_sword_handle";
             case GOLD -> "golden_sword_handle";
@@ -316,9 +325,19 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
         };
     }
 
+    private String getPickaxeEyeTexture(PartMaterial mat) {
+        if (mat == PartMaterial.ENDERMAN) return "enderman_eye_pickacxe";
+        return getEyeTexture(mat);
+    }
+
+    private String getHoeEyeTexture(PartMaterial mat) {
+        if (mat == PartMaterial.ENDERMAN) return "enderman_eye_hoe";
+        return getEyeTexture(mat);
+    }
+
     private String getEyeTexture(PartMaterial mat) {
-        if (mat == PartMaterial.SPIDER) return "eye_spider";
-        if (mat == PartMaterial.ENDERMAN) return "eye_enderman";
+        if (mat == PartMaterial.SPIDER) return "spider_eye";
+        if (mat == PartMaterial.ENDERMAN) return "enderman_eye";
         return switch (mat) {
             case WOOD -> "wooden_eye";
             default -> mat.getMaterialName() + "_eye";
@@ -326,8 +345,8 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getTridentEyeTexture(PartMaterial mat) {
-        if (mat == PartMaterial.SPIDER) return "eye_spider";
-        if (mat == PartMaterial.ENDERMAN) return "eye_enderman";
+        if (mat == PartMaterial.ENDERMAN) return "enderman_eye_trident";
+        if (mat == PartMaterial.SPIDER) return "spider_eye_trident";
         if (mat == PartMaterial.BLAZE) return "blaze_trident_eye";
         return switch (mat) {
             case WOOD -> "wooden_eye_trident";
@@ -338,7 +357,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     private String getPickaxeLeftHeadTexture(PartMaterial mat) {
         if (mat == PartMaterial.GREED) return "head_greed";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
-        if (mat == PartMaterial.ZOMBIE) return "head_zombie";
+        if (mat == PartMaterial.ZOMBIE) return "zombie_head_pickaxe_left";
         return switch (mat) {
             case WOOD -> "wooden_pickaxe_head_left";
             case GOLD -> "golden_pickaxe_head_left";
@@ -349,7 +368,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     private String getPickaxeRightHeadTexture(PartMaterial mat) {
         if (mat == PartMaterial.GREED) return "head_greed";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
-        if (mat == PartMaterial.ZOMBIE) return "head_zombie";
+        if (mat == PartMaterial.ZOMBIE) return "zombie_head_pickaxe_right";
         return switch (mat) {
             case WOOD -> "wooden_pickaxe_head_right";
             case GOLD -> "golden_pickaxe_head_right";
@@ -360,7 +379,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     private String getAxeHeadTexture(PartMaterial mat) {
         if (mat == PartMaterial.GREED) return "head_greed";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
-        if (mat == PartMaterial.ZOMBIE) return "head_zombie";
+        if (mat == PartMaterial.ZOMBIE) return "zombie_head_axe";
         return switch (mat) {
             case WOOD -> "wooden_axe_head";
             case GOLD -> "golden_axe_head";
@@ -371,7 +390,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     private String getShovelHeadTexture(PartMaterial mat) {
         if (mat == PartMaterial.GREED) return "head_greed";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
-        if (mat == PartMaterial.ZOMBIE) return "head_zombie";
+        if (mat == PartMaterial.ZOMBIE) return "zombie_head_shovel";
         return switch (mat) {
             case WOOD -> "wooden_shovel_head";
             case GOLD -> "golden_shovel_head";
@@ -382,7 +401,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     private String getHoeHeadTexture(PartMaterial mat) {
         if (mat == PartMaterial.GREED) return "head_greed";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
-        if (mat == PartMaterial.ZOMBIE) return "head_zombie";
+        if (mat == PartMaterial.ZOMBIE) return "zombie_head_hoe";
         return switch (mat) {
             case WOOD -> "wooden_hoe_head";
             case GOLD -> "golden_hoe_head";
@@ -393,7 +412,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     private String getBladeTexture(PartMaterial mat) {
         if (mat == PartMaterial.GREED) return "head_greed";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
-        if (mat == PartMaterial.ZOMBIE) return "head_zombie";
+        if (mat == PartMaterial.ZOMBIE) return "zombie_blade";
         return switch (mat) {
             case WOOD -> "wooden_blade";
             case GOLD -> "golden_blade";

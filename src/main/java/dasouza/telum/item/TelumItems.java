@@ -48,6 +48,7 @@ public final class TelumItems {
     public static SongSheetItem DAWN_SONG;
     public static SongSheetItem REVEAL_SONG;
     public static SongSheetItem VOID_SONG;
+    public static GuideBookItem GUIDE_BOOK;
 
     public static final ResourceKey<CreativeModeTab> TELUM_TAB_KEY = ResourceKey.create(
             Registries.CREATIVE_MODE_TAB, Telum.id("telum_tab"));
@@ -145,12 +146,17 @@ public final class TelumItems {
         VOID_SONG = new SongSheetItem(new Item.Properties().setId(voidKey), "void_song", "Balada del Vacío");
         Registry.register(BuiltInRegistries.ITEM, voidKey, VOID_SONG);
 
+        ResourceKey<Item> bookKey = ResourceKey.create(Registries.ITEM, Telum.id("guide_book"));
+        GUIDE_BOOK = new GuideBookItem(new Item.Properties().setId(bookKey).stacksTo(1));
+        Registry.register(BuiltInRegistries.ITEM, bookKey, GUIDE_BOOK);
+
         // Custom Telum Creative Tab
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TELUM_TAB_KEY,
                 FabricCreativeModeTab.builder()
                         .title(Component.translatable("itemGroup.telum"))
                         .icon(() -> new ItemStack(TelumBlocks.FORGE_ITEM))
                         .displayItems((displayContext, output) -> {
+                            output.accept(GUIDE_BOOK);
                             output.accept(TelumBlocks.FORGE_ITEM);
                             output.accept(TelumBlocks.ARCHEOLOGY_TABLE_ITEM);
                             output.accept(TelumBlocks.SUSPICIOUS_END_STONE_ITEM);
@@ -246,6 +252,7 @@ public final class TelumItems {
         });
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(output -> {
+            output.accept(GUIDE_BOOK);
             output.accept(ASSEMBLED_TOOL);
             output.accept(LYRE);
             output.accept(BACKTIME_SONG);
@@ -351,7 +358,8 @@ public final class TelumItems {
                 } else if (entity instanceof AbstractSkeleton) {
                     partToDrop = getPartItem(PartType.HANDLE, PartMaterial.SKELETON);
                 } else if (entity instanceof Zombie) {
-                    partToDrop = getPartItem(PartType.HEAD, PartMaterial.ZOMBIE);
+                    boolean dropBlade = serverLevel.getRandom().nextBoolean();
+                    partToDrop = getPartItem(dropBlade ? PartType.BLADE : PartType.HEAD, PartMaterial.ZOMBIE);
                 } else if (entity instanceof Creeper) {
                     partToDrop = getPartItem(PartType.HEAD, PartMaterial.CREEPER);
                 } else if (entity instanceof EnderMan) {
@@ -375,9 +383,9 @@ public final class TelumItems {
 
     public static boolean isPartTypeAllowed(PartMaterial material, PartType partType) {
         return switch (material) {
-            case SPIDER -> partType == PartType.EYE || partType == PartType.HANDLE;
+            case SPIDER -> partType == PartType.EYE || partType == PartType.GRIP;
             case SKELETON -> partType == PartType.HANDLE;
-            case ZOMBIE -> partType == PartType.HEAD;
+            case ZOMBIE -> partType == PartType.HEAD || partType == PartType.BLADE;
             case CREEPER -> partType == PartType.HEAD;
             case ENDERMAN -> partType == PartType.EYE;
             case AMETHYST -> partType == PartType.HEAD;

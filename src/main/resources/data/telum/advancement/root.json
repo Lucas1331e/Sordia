@@ -1,0 +1,21 @@
+{
+  "display": {
+    "icon": {
+      "id": "telum:guide_book"
+    },
+    "title": {
+      "translate": "advancements.telum.root.title"
+    },
+    "description": {
+      "translate": "advancements.telum.root.description"
+    },
+    "background": "minecraft:textures/block/deepslate_bricks.png",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

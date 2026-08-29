@@ -1,0 +1,22 @@
+{
+  "parent": "telum:root",
+  "display": {
+    "icon": {
+      "id": "telum:marmol_lectern"
+    },
+    "title": {
+      "translate": "advancements.telum.use_ancient_altar.title"
+    },
+    "description": {
+      "translate": "advancements.telum.use_ancient_altar.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

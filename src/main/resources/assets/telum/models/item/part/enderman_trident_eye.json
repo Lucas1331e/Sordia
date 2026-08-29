@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "telum:item/part/enderman_trident_eye"
+    "layer0": "telum:item/part/enderman_eye_trident"
   }
 }

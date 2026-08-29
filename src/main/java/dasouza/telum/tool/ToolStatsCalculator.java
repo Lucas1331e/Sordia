@@ -91,7 +91,7 @@ public final class ToolStatsCalculator {
 
         int durability = Math.round(BASE_DURABILITY * effectiveDurabilityMult) + diamondBonus;
         float attackDamage = toolType.getBaseDamage() * effectiveDamageMult;
-        float attackSpeed = toolType.getBaseAttackSpeed();
+        float attackSpeed = toolType.getBaseAttackSpeed() * effectiveSpeedMult;
         float miningSpeed = toolType.getBaseMiningSpeed() * effectiveSpeedMult;
 
         return new AssembledToolData(

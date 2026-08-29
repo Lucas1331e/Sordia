@@ -1,0 +1,22 @@
+{
+  "parent": "telum:root",
+  "display": {
+    "icon": {
+      "id": "telum:lyre"
+    },
+    "title": {
+      "translate": "advancements.telum.all_songs.title"
+    },
+    "description": {
+      "translate": "advancements.telum.all_songs.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

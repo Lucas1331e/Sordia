@@ -26,6 +26,34 @@
         }
       },
       {
+        "when": "amethyst_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_eye"
+        }
+      },
+      {
+        "when": "amethyst_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_eye_trident"
+        }
+      },
+      {
+        "when": "amethyst_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_head"
+        }
+      },
+      {
+        "when": "amethyst_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_head_generic"
+        }
+      },
+      {
         "when": "amethyst_hoe_head",
         "model": {
           "type": "minecraft:model",
@@ -61,374 +89,10 @@
         }
       },
       {
-        "when": "amethyst_eye",
+        "when": "blade_zombie",
         "model": {
           "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_eye"
-        }
-      },
-      {
-        "when": "amethyst_eye_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_eye_trident"
-        }
-      },
-      {
-        "when": "amethyst_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_head"
-        }
-      },
-      {
-        "when": "amethyst_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_head_generic"
-        }
-      },
-      {
-        "when": "creeper_axe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_axe_head"
-        }
-      },
-      {
-        "when": "creeper_blade",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_blade"
-        }
-      },
-      {
-        "when": "creeper_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_head_generic"
-        }
-      },
-      {
-        "when": "creeper_hoe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_hoe_head"
-        }
-      },
-      {
-        "when": "creeper_pickaxe_head_left",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_pickaxe_head_left"
-        }
-      },
-      {
-        "when": "creeper_pickaxe_head_right",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_pickaxe_head_right"
-        }
-      },
-      {
-        "when": "creeper_shovel_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_shovel_head"
-        }
-      },
-      {
-        "when": "emerald_axe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_axe_head"
-        }
-      },
-      {
-        "when": "emerald_blade",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_blade"
-        }
-      },
-      {
-        "when": "emerald_eye",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_eye"
-        }
-      },
-      {
-        "when": "emerald_eye_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_eye_trident"
-        }
-      },
-      {
-        "when": "emerald_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_handle"
-        }
-      },
-      {
-        "when": "emerald_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_head"
-        }
-      },
-      {
-        "when": "emerald_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_head_generic"
-        }
-      },
-      {
-        "when": "emerald_hoe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_hoe_head"
-        }
-      },
-      {
-        "when": "emerald_pickaxe_head_left",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_pickaxe_head_left"
-        }
-      },
-      {
-        "when": "emerald_pickaxe_head_right",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_pickaxe_head_right"
-        }
-      },
-      {
-        "when": "emerald_shovel_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_shovel_head"
-        }
-      },
-      {
-        "when": "emerald_stick",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_stick"
-        }
-      },
-      {
-        "when": "emerald_stick_sword",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_stick_sword"
-        }
-      },
-      {
-        "when": "emerald_stick_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_stick_trident"
-        }
-      },
-      {
-        "when": "emerald_sword_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_sword_handle"
-        }
-      },
-      {
-        "when": "enderman_eye",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/enderman_eye"
-        }
-      },
-      {
-        "when": "enderman_eye_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/enderman_eye_trident"
-        }
-      },
-      {
-        "when": "enderman_trident_eye",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/enderman_trident_eye"
-        }
-      },
-      {
-        "when": "eye_amethyst",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/eye_amethyst"
-        }
-      },
-      {
-        "when": "eye_enderman",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/eye_enderman"
-        }
-      },
-      {
-        "when": "greed_axe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_axe_head"
-        }
-      },
-      {
-        "when": "greed_blade",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_blade"
-        }
-      },
-      {
-        "when": "greed_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_head"
-        }
-      },
-      {
-        "when": "greed_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_head_generic"
-        }
-      },
-      {
-        "when": "greed_hoe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_hoe_head"
-        }
-      },
-      {
-        "when": "greed_pickaxe_head_left",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_pickaxe_head_left"
-        }
-      },
-      {
-        "when": "greed_pickaxe_head_right",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_pickaxe_head_right"
-        }
-      },
-      {
-        "when": "greed_shovel_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_shovel_head"
-        }
-      },
-      {
-        "when": "grip_emerald",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/grip_emerald"
-        }
-      },
-      {
-        "when": "handle_emerald",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/handle_emerald"
-        }
-      },
-      {
-        "when": "head_amethyst",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_amethyst"
-        }
-      },
-      {
-        "when": "head_emerald",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_emerald"
-        }
-      },
-      {
-        "when": "head_greed",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_greed"
-        }
-      },
-      {
-        "when": "head_zombie",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_zombie"
-        }
-      },
-      {
-        "when": "skeleton_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_handle"
-        }
-      },
-      {
-        "when": "skeleton_stick",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_stick"
-        }
-      },
-      {
-        "when": "skeleton_stick_sword",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_stick_sword"
-        }
-      },
-      {
-        "when": "skeleton_stick_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_stick_trident"
-        }
-      },
-      {
-        "when": "zombie_grip",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_grip"
-        }
-      },
-      {
-        "when": "zombie_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_head"
-        }
-      },
-      {
-        "when": "zombie_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_head_generic"
-        }
-      },
-      {
-        "when": "zombie_sword_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_sword_handle"
+          "model": "telum:item/part/blade_zombie"
         }
       },
       {
@@ -642,6 +306,55 @@
         }
       },
       {
+        "when": "creeper_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_axe_head"
+        }
+      },
+      {
+        "when": "creeper_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_blade"
+        }
+      },
+      {
+        "when": "creeper_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_head_generic"
+        }
+      },
+      {
+        "when": "creeper_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_hoe_head"
+        }
+      },
+      {
+        "when": "creeper_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "creeper_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "creeper_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_shovel_head"
+        }
+      },
+      {
         "when": "creeper_trident_head",
         "model": {
           "type": "minecraft:model",
@@ -747,10 +460,178 @@
         }
       },
       {
+        "when": "emerald_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_axe_head"
+        }
+      },
+      {
+        "when": "emerald_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_blade"
+        }
+      },
+      {
+        "when": "emerald_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_eye"
+        }
+      },
+      {
+        "when": "emerald_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_eye_trident"
+        }
+      },
+      {
+        "when": "emerald_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_handle"
+        }
+      },
+      {
+        "when": "emerald_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_head"
+        }
+      },
+      {
+        "when": "emerald_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_head_generic"
+        }
+      },
+      {
+        "when": "emerald_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_hoe_head"
+        }
+      },
+      {
+        "when": "emerald_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "emerald_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "emerald_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_shovel_head"
+        }
+      },
+      {
+        "when": "emerald_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_stick"
+        }
+      },
+      {
+        "when": "emerald_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_stick_sword"
+        }
+      },
+      {
+        "when": "emerald_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_stick_trident"
+        }
+      },
+      {
+        "when": "emerald_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_sword_handle"
+        }
+      },
+      {
+        "when": "enderman_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye"
+        }
+      },
+      {
+        "when": "enderman_eye_hoe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_hoe"
+        }
+      },
+      {
+        "when": "enderman_eye_pickacxe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_pickacxe"
+        }
+      },
+      {
+        "when": "enderman_eye_pickaxe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_pickaxe"
+        }
+      },
+      {
+        "when": "enderman_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_trident"
+        }
+      },
+      {
+        "when": "enderman_trident_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_trident_eye"
+        }
+      },
+      {
+        "when": "eye_amethyst",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_amethyst"
+        }
+      },
+      {
+        "when": "eye_enderman",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_enderman"
+        }
+      },
+      {
         "when": "eye_spider",
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/eye_spider"
+        }
+      },
+      {
+        "when": "eye_spider_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_spider_trident"
         }
       },
       {
@@ -852,10 +733,87 @@
         }
       },
       {
+        "when": "greed_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_axe_head"
+        }
+      },
+      {
+        "when": "greed_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_blade"
+        }
+      },
+      {
+        "when": "greed_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_head"
+        }
+      },
+      {
+        "when": "greed_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_head_generic"
+        }
+      },
+      {
+        "when": "greed_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_hoe_head"
+        }
+      },
+      {
+        "when": "greed_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "greed_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "greed_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_shovel_head"
+        }
+      },
+      {
+        "when": "grip_emerald",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/grip_emerald"
+        }
+      },
+      {
+        "when": "grip_spider",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/grip_spider"
+        }
+      },
+      {
         "when": "grip_zombie",
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/grip_zombie"
+        }
+      },
+      {
+        "when": "handle_emerald",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_emerald"
         }
       },
       {
@@ -873,10 +831,45 @@
         }
       },
       {
+        "when": "handle_spider",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_spider"
+        }
+      },
+      {
+        "when": "head_amethyst",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_amethyst"
+        }
+      },
+      {
         "when": "head_creeper",
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/head_creeper"
+        }
+      },
+      {
+        "when": "head_emerald",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_emerald"
+        }
+      },
+      {
+        "when": "head_greed",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_greed"
+        }
+      },
+      {
+        "when": "head_zombie",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_zombie"
         }
       },
       {
@@ -1188,6 +1181,34 @@
         }
       },
       {
+        "when": "skeleton_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_handle"
+        }
+      },
+      {
+        "when": "skeleton_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_stick"
+        }
+      },
+      {
+        "when": "skeleton_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_stick_sword"
+        }
+      },
+      {
+        "when": "skeleton_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_stick_trident"
+        }
+      },
+      {
         "when": "skulk_axe_head",
         "model": {
           "type": "minecraft:model",
@@ -1283,6 +1304,55 @@
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/skulk_sword_handle"
+        }
+      },
+      {
+        "when": "spider_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_eye"
+        }
+      },
+      {
+        "when": "spider_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_eye_trident"
+        }
+      },
+      {
+        "when": "spider_grip",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_grip"
+        }
+      },
+      {
+        "when": "spider_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_handle"
+        }
+      },
+      {
+        "when": "spider_handle_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_handle_sword"
+        }
+      },
+      {
+        "when": "spider_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_stick"
+        }
+      },
+      {
+        "when": "spider_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_stick_sword"
         }
       },
       {
@@ -1682,6 +1752,118 @@
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/wood_stick_trident"
+        }
+      },
+      {
+        "when": "zombie_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_axe_head"
+        }
+      },
+      {
+        "when": "zombie_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_blade"
+        }
+      },
+      {
+        "when": "zombie_grip",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_grip"
+        }
+      },
+      {
+        "when": "zombie_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head"
+        }
+      },
+      {
+        "when": "zombie_head_axe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_axe"
+        }
+      },
+      {
+        "when": "zombie_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_generic"
+        }
+      },
+      {
+        "when": "zombie_head_hoe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_hoe"
+        }
+      },
+      {
+        "when": "zombie_head_pickaxe_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_pickaxe_left"
+        }
+      },
+      {
+        "when": "zombie_head_pickaxe_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_pickaxe_right"
+        }
+      },
+      {
+        "when": "zombie_head_pickaxe_rightt",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_pickaxe_rightt"
+        }
+      },
+      {
+        "when": "zombie_head_shovel",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_shovel"
+        }
+      },
+      {
+        "when": "zombie_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_hoe_head"
+        }
+      },
+      {
+        "when": "zombie_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "zombie_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "zombie_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_shovel_head"
+        }
+      },
+      {
+        "when": "zombie_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_sword_handle"
         }
       }
         ]
@@ -1710,6 +1892,34 @@
         }
       },
       {
+        "when": "amethyst_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_eye"
+        }
+      },
+      {
+        "when": "amethyst_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_eye_trident"
+        }
+      },
+      {
+        "when": "amethyst_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_head"
+        }
+      },
+      {
+        "when": "amethyst_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_head_generic"
+        }
+      },
+      {
         "when": "amethyst_hoe_head",
         "model": {
           "type": "minecraft:model",
@@ -1745,374 +1955,10 @@
         }
       },
       {
-        "when": "amethyst_eye",
+        "when": "blade_zombie",
         "model": {
           "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_eye"
-        }
-      },
-      {
-        "when": "amethyst_eye_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_eye_trident"
-        }
-      },
-      {
-        "when": "amethyst_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_head"
-        }
-      },
-      {
-        "when": "amethyst_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_head_generic"
-        }
-      },
-      {
-        "when": "creeper_axe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_axe_head"
-        }
-      },
-      {
-        "when": "creeper_blade",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_blade"
-        }
-      },
-      {
-        "when": "creeper_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_head_generic"
-        }
-      },
-      {
-        "when": "creeper_hoe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_hoe_head"
-        }
-      },
-      {
-        "when": "creeper_pickaxe_head_left",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_pickaxe_head_left"
-        }
-      },
-      {
-        "when": "creeper_pickaxe_head_right",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_pickaxe_head_right"
-        }
-      },
-      {
-        "when": "creeper_shovel_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_shovel_head"
-        }
-      },
-      {
-        "when": "emerald_axe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_axe_head"
-        }
-      },
-      {
-        "when": "emerald_blade",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_blade"
-        }
-      },
-      {
-        "when": "emerald_eye",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_eye"
-        }
-      },
-      {
-        "when": "emerald_eye_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_eye_trident"
-        }
-      },
-      {
-        "when": "emerald_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_handle"
-        }
-      },
-      {
-        "when": "emerald_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_head"
-        }
-      },
-      {
-        "when": "emerald_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_head_generic"
-        }
-      },
-      {
-        "when": "emerald_hoe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_hoe_head"
-        }
-      },
-      {
-        "when": "emerald_pickaxe_head_left",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_pickaxe_head_left"
-        }
-      },
-      {
-        "when": "emerald_pickaxe_head_right",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_pickaxe_head_right"
-        }
-      },
-      {
-        "when": "emerald_shovel_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_shovel_head"
-        }
-      },
-      {
-        "when": "emerald_stick",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_stick"
-        }
-      },
-      {
-        "when": "emerald_stick_sword",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_stick_sword"
-        }
-      },
-      {
-        "when": "emerald_stick_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_stick_trident"
-        }
-      },
-      {
-        "when": "emerald_sword_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_sword_handle"
-        }
-      },
-      {
-        "when": "enderman_eye",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/enderman_eye"
-        }
-      },
-      {
-        "when": "enderman_eye_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/enderman_eye_trident"
-        }
-      },
-      {
-        "when": "enderman_trident_eye",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/enderman_trident_eye"
-        }
-      },
-      {
-        "when": "eye_amethyst",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/eye_amethyst"
-        }
-      },
-      {
-        "when": "eye_enderman",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/eye_enderman"
-        }
-      },
-      {
-        "when": "greed_axe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_axe_head"
-        }
-      },
-      {
-        "when": "greed_blade",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_blade"
-        }
-      },
-      {
-        "when": "greed_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_head"
-        }
-      },
-      {
-        "when": "greed_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_head_generic"
-        }
-      },
-      {
-        "when": "greed_hoe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_hoe_head"
-        }
-      },
-      {
-        "when": "greed_pickaxe_head_left",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_pickaxe_head_left"
-        }
-      },
-      {
-        "when": "greed_pickaxe_head_right",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_pickaxe_head_right"
-        }
-      },
-      {
-        "when": "greed_shovel_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_shovel_head"
-        }
-      },
-      {
-        "when": "grip_emerald",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/grip_emerald"
-        }
-      },
-      {
-        "when": "handle_emerald",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/handle_emerald"
-        }
-      },
-      {
-        "when": "head_amethyst",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_amethyst"
-        }
-      },
-      {
-        "when": "head_emerald",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_emerald"
-        }
-      },
-      {
-        "when": "head_greed",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_greed"
-        }
-      },
-      {
-        "when": "head_zombie",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_zombie"
-        }
-      },
-      {
-        "when": "skeleton_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_handle"
-        }
-      },
-      {
-        "when": "skeleton_stick",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_stick"
-        }
-      },
-      {
-        "when": "skeleton_stick_sword",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_stick_sword"
-        }
-      },
-      {
-        "when": "skeleton_stick_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_stick_trident"
-        }
-      },
-      {
-        "when": "zombie_grip",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_grip"
-        }
-      },
-      {
-        "when": "zombie_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_head"
-        }
-      },
-      {
-        "when": "zombie_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_head_generic"
-        }
-      },
-      {
-        "when": "zombie_sword_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_sword_handle"
+          "model": "telum:item/part/blade_zombie"
         }
       },
       {
@@ -2326,6 +2172,55 @@
         }
       },
       {
+        "when": "creeper_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_axe_head"
+        }
+      },
+      {
+        "when": "creeper_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_blade"
+        }
+      },
+      {
+        "when": "creeper_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_head_generic"
+        }
+      },
+      {
+        "when": "creeper_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_hoe_head"
+        }
+      },
+      {
+        "when": "creeper_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "creeper_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "creeper_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_shovel_head"
+        }
+      },
+      {
         "when": "creeper_trident_head",
         "model": {
           "type": "minecraft:model",
@@ -2431,10 +2326,178 @@
         }
       },
       {
+        "when": "emerald_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_axe_head"
+        }
+      },
+      {
+        "when": "emerald_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_blade"
+        }
+      },
+      {
+        "when": "emerald_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_eye"
+        }
+      },
+      {
+        "when": "emerald_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_eye_trident"
+        }
+      },
+      {
+        "when": "emerald_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_handle"
+        }
+      },
+      {
+        "when": "emerald_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_head"
+        }
+      },
+      {
+        "when": "emerald_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_head_generic"
+        }
+      },
+      {
+        "when": "emerald_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_hoe_head"
+        }
+      },
+      {
+        "when": "emerald_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "emerald_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "emerald_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_shovel_head"
+        }
+      },
+      {
+        "when": "emerald_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_stick"
+        }
+      },
+      {
+        "when": "emerald_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_stick_sword"
+        }
+      },
+      {
+        "when": "emerald_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_stick_trident"
+        }
+      },
+      {
+        "when": "emerald_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_sword_handle"
+        }
+      },
+      {
+        "when": "enderman_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye"
+        }
+      },
+      {
+        "when": "enderman_eye_hoe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_hoe"
+        }
+      },
+      {
+        "when": "enderman_eye_pickacxe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_pickacxe"
+        }
+      },
+      {
+        "when": "enderman_eye_pickaxe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_pickaxe"
+        }
+      },
+      {
+        "when": "enderman_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_trident"
+        }
+      },
+      {
+        "when": "enderman_trident_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_trident_eye"
+        }
+      },
+      {
+        "when": "eye_amethyst",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_amethyst"
+        }
+      },
+      {
+        "when": "eye_enderman",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_enderman"
+        }
+      },
+      {
         "when": "eye_spider",
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/eye_spider"
+        }
+      },
+      {
+        "when": "eye_spider_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_spider_trident"
         }
       },
       {
@@ -2536,10 +2599,87 @@
         }
       },
       {
+        "when": "greed_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_axe_head"
+        }
+      },
+      {
+        "when": "greed_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_blade"
+        }
+      },
+      {
+        "when": "greed_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_head"
+        }
+      },
+      {
+        "when": "greed_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_head_generic"
+        }
+      },
+      {
+        "when": "greed_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_hoe_head"
+        }
+      },
+      {
+        "when": "greed_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "greed_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "greed_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_shovel_head"
+        }
+      },
+      {
+        "when": "grip_emerald",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/grip_emerald"
+        }
+      },
+      {
+        "when": "grip_spider",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/grip_spider"
+        }
+      },
+      {
         "when": "grip_zombie",
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/grip_zombie"
+        }
+      },
+      {
+        "when": "handle_emerald",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_emerald"
         }
       },
       {
@@ -2557,10 +2697,45 @@
         }
       },
       {
+        "when": "handle_spider",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_spider"
+        }
+      },
+      {
+        "when": "head_amethyst",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_amethyst"
+        }
+      },
+      {
         "when": "head_creeper",
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/head_creeper"
+        }
+      },
+      {
+        "when": "head_emerald",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_emerald"
+        }
+      },
+      {
+        "when": "head_greed",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_greed"
+        }
+      },
+      {
+        "when": "head_zombie",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_zombie"
         }
       },
       {
@@ -2872,6 +3047,34 @@
         }
       },
       {
+        "when": "skeleton_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_handle"
+        }
+      },
+      {
+        "when": "skeleton_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_stick"
+        }
+      },
+      {
+        "when": "skeleton_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_stick_sword"
+        }
+      },
+      {
+        "when": "skeleton_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_stick_trident"
+        }
+      },
+      {
         "when": "skulk_axe_head",
         "model": {
           "type": "minecraft:model",
@@ -2967,6 +3170,55 @@
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/skulk_sword_handle"
+        }
+      },
+      {
+        "when": "spider_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_eye"
+        }
+      },
+      {
+        "when": "spider_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_eye_trident"
+        }
+      },
+      {
+        "when": "spider_grip",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_grip"
+        }
+      },
+      {
+        "when": "spider_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_handle"
+        }
+      },
+      {
+        "when": "spider_handle_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_handle_sword"
+        }
+      },
+      {
+        "when": "spider_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_stick"
+        }
+      },
+      {
+        "when": "spider_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_stick_sword"
         }
       },
       {
@@ -3366,6 +3618,118 @@
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/wood_stick_trident"
+        }
+      },
+      {
+        "when": "zombie_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_axe_head"
+        }
+      },
+      {
+        "when": "zombie_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_blade"
+        }
+      },
+      {
+        "when": "zombie_grip",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_grip"
+        }
+      },
+      {
+        "when": "zombie_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head"
+        }
+      },
+      {
+        "when": "zombie_head_axe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_axe"
+        }
+      },
+      {
+        "when": "zombie_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_generic"
+        }
+      },
+      {
+        "when": "zombie_head_hoe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_hoe"
+        }
+      },
+      {
+        "when": "zombie_head_pickaxe_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_pickaxe_left"
+        }
+      },
+      {
+        "when": "zombie_head_pickaxe_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_pickaxe_right"
+        }
+      },
+      {
+        "when": "zombie_head_pickaxe_rightt",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_pickaxe_rightt"
+        }
+      },
+      {
+        "when": "zombie_head_shovel",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_shovel"
+        }
+      },
+      {
+        "when": "zombie_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_hoe_head"
+        }
+      },
+      {
+        "when": "zombie_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "zombie_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "zombie_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_shovel_head"
+        }
+      },
+      {
+        "when": "zombie_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_sword_handle"
         }
       }
         ]
@@ -3394,6 +3758,34 @@
         }
       },
       {
+        "when": "amethyst_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_eye"
+        }
+      },
+      {
+        "when": "amethyst_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_eye_trident"
+        }
+      },
+      {
+        "when": "amethyst_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_head"
+        }
+      },
+      {
+        "when": "amethyst_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_head_generic"
+        }
+      },
+      {
         "when": "amethyst_hoe_head",
         "model": {
           "type": "minecraft:model",
@@ -3429,374 +3821,10 @@
         }
       },
       {
-        "when": "amethyst_eye",
+        "when": "blade_zombie",
         "model": {
           "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_eye"
-        }
-      },
-      {
-        "when": "amethyst_eye_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_eye_trident"
-        }
-      },
-      {
-        "when": "amethyst_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_head"
-        }
-      },
-      {
-        "when": "amethyst_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_head_generic"
-        }
-      },
-      {
-        "when": "creeper_axe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_axe_head"
-        }
-      },
-      {
-        "when": "creeper_blade",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_blade"
-        }
-      },
-      {
-        "when": "creeper_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_head_generic"
-        }
-      },
-      {
-        "when": "creeper_hoe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_hoe_head"
-        }
-      },
-      {
-        "when": "creeper_pickaxe_head_left",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_pickaxe_head_left"
-        }
-      },
-      {
-        "when": "creeper_pickaxe_head_right",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_pickaxe_head_right"
-        }
-      },
-      {
-        "when": "creeper_shovel_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_shovel_head"
-        }
-      },
-      {
-        "when": "emerald_axe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_axe_head"
-        }
-      },
-      {
-        "when": "emerald_blade",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_blade"
-        }
-      },
-      {
-        "when": "emerald_eye",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_eye"
-        }
-      },
-      {
-        "when": "emerald_eye_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_eye_trident"
-        }
-      },
-      {
-        "when": "emerald_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_handle"
-        }
-      },
-      {
-        "when": "emerald_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_head"
-        }
-      },
-      {
-        "when": "emerald_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_head_generic"
-        }
-      },
-      {
-        "when": "emerald_hoe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_hoe_head"
-        }
-      },
-      {
-        "when": "emerald_pickaxe_head_left",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_pickaxe_head_left"
-        }
-      },
-      {
-        "when": "emerald_pickaxe_head_right",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_pickaxe_head_right"
-        }
-      },
-      {
-        "when": "emerald_shovel_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_shovel_head"
-        }
-      },
-      {
-        "when": "emerald_stick",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_stick"
-        }
-      },
-      {
-        "when": "emerald_stick_sword",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_stick_sword"
-        }
-      },
-      {
-        "when": "emerald_stick_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_stick_trident"
-        }
-      },
-      {
-        "when": "emerald_sword_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_sword_handle"
-        }
-      },
-      {
-        "when": "enderman_eye",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/enderman_eye"
-        }
-      },
-      {
-        "when": "enderman_eye_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/enderman_eye_trident"
-        }
-      },
-      {
-        "when": "enderman_trident_eye",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/enderman_trident_eye"
-        }
-      },
-      {
-        "when": "eye_amethyst",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/eye_amethyst"
-        }
-      },
-      {
-        "when": "eye_enderman",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/eye_enderman"
-        }
-      },
-      {
-        "when": "greed_axe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_axe_head"
-        }
-      },
-      {
-        "when": "greed_blade",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_blade"
-        }
-      },
-      {
-        "when": "greed_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_head"
-        }
-      },
-      {
-        "when": "greed_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_head_generic"
-        }
-      },
-      {
-        "when": "greed_hoe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_hoe_head"
-        }
-      },
-      {
-        "when": "greed_pickaxe_head_left",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_pickaxe_head_left"
-        }
-      },
-      {
-        "when": "greed_pickaxe_head_right",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_pickaxe_head_right"
-        }
-      },
-      {
-        "when": "greed_shovel_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_shovel_head"
-        }
-      },
-      {
-        "when": "grip_emerald",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/grip_emerald"
-        }
-      },
-      {
-        "when": "handle_emerald",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/handle_emerald"
-        }
-      },
-      {
-        "when": "head_amethyst",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_amethyst"
-        }
-      },
-      {
-        "when": "head_emerald",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_emerald"
-        }
-      },
-      {
-        "when": "head_greed",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_greed"
-        }
-      },
-      {
-        "when": "head_zombie",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_zombie"
-        }
-      },
-      {
-        "when": "skeleton_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_handle"
-        }
-      },
-      {
-        "when": "skeleton_stick",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_stick"
-        }
-      },
-      {
-        "when": "skeleton_stick_sword",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_stick_sword"
-        }
-      },
-      {
-        "when": "skeleton_stick_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_stick_trident"
-        }
-      },
-      {
-        "when": "zombie_grip",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_grip"
-        }
-      },
-      {
-        "when": "zombie_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_head"
-        }
-      },
-      {
-        "when": "zombie_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_head_generic"
-        }
-      },
-      {
-        "when": "zombie_sword_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_sword_handle"
+          "model": "telum:item/part/blade_zombie"
         }
       },
       {
@@ -4010,6 +4038,55 @@
         }
       },
       {
+        "when": "creeper_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_axe_head"
+        }
+      },
+      {
+        "when": "creeper_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_blade"
+        }
+      },
+      {
+        "when": "creeper_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_head_generic"
+        }
+      },
+      {
+        "when": "creeper_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_hoe_head"
+        }
+      },
+      {
+        "when": "creeper_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "creeper_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "creeper_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_shovel_head"
+        }
+      },
+      {
         "when": "creeper_trident_head",
         "model": {
           "type": "minecraft:model",
@@ -4115,10 +4192,178 @@
         }
       },
       {
+        "when": "emerald_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_axe_head"
+        }
+      },
+      {
+        "when": "emerald_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_blade"
+        }
+      },
+      {
+        "when": "emerald_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_eye"
+        }
+      },
+      {
+        "when": "emerald_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_eye_trident"
+        }
+      },
+      {
+        "when": "emerald_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_handle"
+        }
+      },
+      {
+        "when": "emerald_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_head"
+        }
+      },
+      {
+        "when": "emerald_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_head_generic"
+        }
+      },
+      {
+        "when": "emerald_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_hoe_head"
+        }
+      },
+      {
+        "when": "emerald_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "emerald_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "emerald_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_shovel_head"
+        }
+      },
+      {
+        "when": "emerald_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_stick"
+        }
+      },
+      {
+        "when": "emerald_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_stick_sword"
+        }
+      },
+      {
+        "when": "emerald_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_stick_trident"
+        }
+      },
+      {
+        "when": "emerald_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_sword_handle"
+        }
+      },
+      {
+        "when": "enderman_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye"
+        }
+      },
+      {
+        "when": "enderman_eye_hoe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_hoe"
+        }
+      },
+      {
+        "when": "enderman_eye_pickacxe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_pickacxe"
+        }
+      },
+      {
+        "when": "enderman_eye_pickaxe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_pickaxe"
+        }
+      },
+      {
+        "when": "enderman_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_trident"
+        }
+      },
+      {
+        "when": "enderman_trident_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_trident_eye"
+        }
+      },
+      {
+        "when": "eye_amethyst",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_amethyst"
+        }
+      },
+      {
+        "when": "eye_enderman",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_enderman"
+        }
+      },
+      {
         "when": "eye_spider",
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/eye_spider"
+        }
+      },
+      {
+        "when": "eye_spider_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_spider_trident"
         }
       },
       {
@@ -4220,10 +4465,87 @@
         }
       },
       {
+        "when": "greed_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_axe_head"
+        }
+      },
+      {
+        "when": "greed_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_blade"
+        }
+      },
+      {
+        "when": "greed_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_head"
+        }
+      },
+      {
+        "when": "greed_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_head_generic"
+        }
+      },
+      {
+        "when": "greed_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_hoe_head"
+        }
+      },
+      {
+        "when": "greed_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "greed_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "greed_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_shovel_head"
+        }
+      },
+      {
+        "when": "grip_emerald",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/grip_emerald"
+        }
+      },
+      {
+        "when": "grip_spider",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/grip_spider"
+        }
+      },
+      {
         "when": "grip_zombie",
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/grip_zombie"
+        }
+      },
+      {
+        "when": "handle_emerald",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_emerald"
         }
       },
       {
@@ -4241,10 +4563,45 @@
         }
       },
       {
+        "when": "handle_spider",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_spider"
+        }
+      },
+      {
+        "when": "head_amethyst",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_amethyst"
+        }
+      },
+      {
         "when": "head_creeper",
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/head_creeper"
+        }
+      },
+      {
+        "when": "head_emerald",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_emerald"
+        }
+      },
+      {
+        "when": "head_greed",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_greed"
+        }
+      },
+      {
+        "when": "head_zombie",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_zombie"
         }
       },
       {
@@ -4556,6 +4913,34 @@
         }
       },
       {
+        "when": "skeleton_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_handle"
+        }
+      },
+      {
+        "when": "skeleton_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_stick"
+        }
+      },
+      {
+        "when": "skeleton_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_stick_sword"
+        }
+      },
+      {
+        "when": "skeleton_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_stick_trident"
+        }
+      },
+      {
         "when": "skulk_axe_head",
         "model": {
           "type": "minecraft:model",
@@ -4651,6 +5036,55 @@
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/skulk_sword_handle"
+        }
+      },
+      {
+        "when": "spider_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_eye"
+        }
+      },
+      {
+        "when": "spider_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_eye_trident"
+        }
+      },
+      {
+        "when": "spider_grip",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_grip"
+        }
+      },
+      {
+        "when": "spider_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_handle"
+        }
+      },
+      {
+        "when": "spider_handle_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_handle_sword"
+        }
+      },
+      {
+        "when": "spider_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_stick"
+        }
+      },
+      {
+        "when": "spider_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_stick_sword"
         }
       },
       {
@@ -5050,6 +5484,118 @@
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/wood_stick_trident"
+        }
+      },
+      {
+        "when": "zombie_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_axe_head"
+        }
+      },
+      {
+        "when": "zombie_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_blade"
+        }
+      },
+      {
+        "when": "zombie_grip",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_grip"
+        }
+      },
+      {
+        "when": "zombie_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head"
+        }
+      },
+      {
+        "when": "zombie_head_axe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_axe"
+        }
+      },
+      {
+        "when": "zombie_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_generic"
+        }
+      },
+      {
+        "when": "zombie_head_hoe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_hoe"
+        }
+      },
+      {
+        "when": "zombie_head_pickaxe_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_pickaxe_left"
+        }
+      },
+      {
+        "when": "zombie_head_pickaxe_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_pickaxe_right"
+        }
+      },
+      {
+        "when": "zombie_head_pickaxe_rightt",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_pickaxe_rightt"
+        }
+      },
+      {
+        "when": "zombie_head_shovel",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_shovel"
+        }
+      },
+      {
+        "when": "zombie_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_hoe_head"
+        }
+      },
+      {
+        "when": "zombie_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "zombie_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "zombie_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_shovel_head"
+        }
+      },
+      {
+        "when": "zombie_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_sword_handle"
         }
       }
         ]
@@ -5078,6 +5624,34 @@
         }
       },
       {
+        "when": "amethyst_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_eye"
+        }
+      },
+      {
+        "when": "amethyst_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_eye_trident"
+        }
+      },
+      {
+        "when": "amethyst_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_head"
+        }
+      },
+      {
+        "when": "amethyst_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/amethyst_head_generic"
+        }
+      },
+      {
         "when": "amethyst_hoe_head",
         "model": {
           "type": "minecraft:model",
@@ -5113,374 +5687,10 @@
         }
       },
       {
-        "when": "amethyst_eye",
+        "when": "blade_zombie",
         "model": {
           "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_eye"
-        }
-      },
-      {
-        "when": "amethyst_eye_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_eye_trident"
-        }
-      },
-      {
-        "when": "amethyst_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_head"
-        }
-      },
-      {
-        "when": "amethyst_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/amethyst_head_generic"
-        }
-      },
-      {
-        "when": "creeper_axe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_axe_head"
-        }
-      },
-      {
-        "when": "creeper_blade",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_blade"
-        }
-      },
-      {
-        "when": "creeper_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_head_generic"
-        }
-      },
-      {
-        "when": "creeper_hoe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_hoe_head"
-        }
-      },
-      {
-        "when": "creeper_pickaxe_head_left",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_pickaxe_head_left"
-        }
-      },
-      {
-        "when": "creeper_pickaxe_head_right",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_pickaxe_head_right"
-        }
-      },
-      {
-        "when": "creeper_shovel_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/creeper_shovel_head"
-        }
-      },
-      {
-        "when": "emerald_axe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_axe_head"
-        }
-      },
-      {
-        "when": "emerald_blade",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_blade"
-        }
-      },
-      {
-        "when": "emerald_eye",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_eye"
-        }
-      },
-      {
-        "when": "emerald_eye_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_eye_trident"
-        }
-      },
-      {
-        "when": "emerald_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_handle"
-        }
-      },
-      {
-        "when": "emerald_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_head"
-        }
-      },
-      {
-        "when": "emerald_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_head_generic"
-        }
-      },
-      {
-        "when": "emerald_hoe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_hoe_head"
-        }
-      },
-      {
-        "when": "emerald_pickaxe_head_left",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_pickaxe_head_left"
-        }
-      },
-      {
-        "when": "emerald_pickaxe_head_right",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_pickaxe_head_right"
-        }
-      },
-      {
-        "when": "emerald_shovel_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_shovel_head"
-        }
-      },
-      {
-        "when": "emerald_stick",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_stick"
-        }
-      },
-      {
-        "when": "emerald_stick_sword",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_stick_sword"
-        }
-      },
-      {
-        "when": "emerald_stick_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_stick_trident"
-        }
-      },
-      {
-        "when": "emerald_sword_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/emerald_sword_handle"
-        }
-      },
-      {
-        "when": "enderman_eye",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/enderman_eye"
-        }
-      },
-      {
-        "when": "enderman_eye_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/enderman_eye_trident"
-        }
-      },
-      {
-        "when": "enderman_trident_eye",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/enderman_trident_eye"
-        }
-      },
-      {
-        "when": "eye_amethyst",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/eye_amethyst"
-        }
-      },
-      {
-        "when": "eye_enderman",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/eye_enderman"
-        }
-      },
-      {
-        "when": "greed_axe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_axe_head"
-        }
-      },
-      {
-        "when": "greed_blade",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_blade"
-        }
-      },
-      {
-        "when": "greed_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_head"
-        }
-      },
-      {
-        "when": "greed_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_head_generic"
-        }
-      },
-      {
-        "when": "greed_hoe_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_hoe_head"
-        }
-      },
-      {
-        "when": "greed_pickaxe_head_left",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_pickaxe_head_left"
-        }
-      },
-      {
-        "when": "greed_pickaxe_head_right",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_pickaxe_head_right"
-        }
-      },
-      {
-        "when": "greed_shovel_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/greed_shovel_head"
-        }
-      },
-      {
-        "when": "grip_emerald",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/grip_emerald"
-        }
-      },
-      {
-        "when": "handle_emerald",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/handle_emerald"
-        }
-      },
-      {
-        "when": "head_amethyst",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_amethyst"
-        }
-      },
-      {
-        "when": "head_emerald",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_emerald"
-        }
-      },
-      {
-        "when": "head_greed",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_greed"
-        }
-      },
-      {
-        "when": "head_zombie",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/head_zombie"
-        }
-      },
-      {
-        "when": "skeleton_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_handle"
-        }
-      },
-      {
-        "when": "skeleton_stick",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_stick"
-        }
-      },
-      {
-        "when": "skeleton_stick_sword",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_stick_sword"
-        }
-      },
-      {
-        "when": "skeleton_stick_trident",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/skeleton_stick_trident"
-        }
-      },
-      {
-        "when": "zombie_grip",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_grip"
-        }
-      },
-      {
-        "when": "zombie_head",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_head"
-        }
-      },
-      {
-        "when": "zombie_head_generic",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_head_generic"
-        }
-      },
-      {
-        "when": "zombie_sword_handle",
-        "model": {
-          "type": "minecraft:model",
-          "model": "telum:item/part/zombie_sword_handle"
+          "model": "telum:item/part/blade_zombie"
         }
       },
       {
@@ -5694,6 +5904,55 @@
         }
       },
       {
+        "when": "creeper_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_axe_head"
+        }
+      },
+      {
+        "when": "creeper_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_blade"
+        }
+      },
+      {
+        "when": "creeper_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_head_generic"
+        }
+      },
+      {
+        "when": "creeper_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_hoe_head"
+        }
+      },
+      {
+        "when": "creeper_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "creeper_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "creeper_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/creeper_shovel_head"
+        }
+      },
+      {
         "when": "creeper_trident_head",
         "model": {
           "type": "minecraft:model",
@@ -5799,10 +6058,178 @@
         }
       },
       {
+        "when": "emerald_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_axe_head"
+        }
+      },
+      {
+        "when": "emerald_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_blade"
+        }
+      },
+      {
+        "when": "emerald_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_eye"
+        }
+      },
+      {
+        "when": "emerald_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_eye_trident"
+        }
+      },
+      {
+        "when": "emerald_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_handle"
+        }
+      },
+      {
+        "when": "emerald_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_head"
+        }
+      },
+      {
+        "when": "emerald_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_head_generic"
+        }
+      },
+      {
+        "when": "emerald_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_hoe_head"
+        }
+      },
+      {
+        "when": "emerald_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "emerald_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "emerald_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_shovel_head"
+        }
+      },
+      {
+        "when": "emerald_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_stick"
+        }
+      },
+      {
+        "when": "emerald_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_stick_sword"
+        }
+      },
+      {
+        "when": "emerald_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_stick_trident"
+        }
+      },
+      {
+        "when": "emerald_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/emerald_sword_handle"
+        }
+      },
+      {
+        "when": "enderman_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye"
+        }
+      },
+      {
+        "when": "enderman_eye_hoe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_hoe"
+        }
+      },
+      {
+        "when": "enderman_eye_pickacxe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_pickacxe"
+        }
+      },
+      {
+        "when": "enderman_eye_pickaxe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_pickaxe"
+        }
+      },
+      {
+        "when": "enderman_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_eye_trident"
+        }
+      },
+      {
+        "when": "enderman_trident_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/enderman_trident_eye"
+        }
+      },
+      {
+        "when": "eye_amethyst",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_amethyst"
+        }
+      },
+      {
+        "when": "eye_enderman",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_enderman"
+        }
+      },
+      {
         "when": "eye_spider",
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/eye_spider"
+        }
+      },
+      {
+        "when": "eye_spider_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/eye_spider_trident"
         }
       },
       {
@@ -5904,10 +6331,87 @@
         }
       },
       {
+        "when": "greed_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_axe_head"
+        }
+      },
+      {
+        "when": "greed_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_blade"
+        }
+      },
+      {
+        "when": "greed_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_head"
+        }
+      },
+      {
+        "when": "greed_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_head_generic"
+        }
+      },
+      {
+        "when": "greed_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_hoe_head"
+        }
+      },
+      {
+        "when": "greed_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "greed_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "greed_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/greed_shovel_head"
+        }
+      },
+      {
+        "when": "grip_emerald",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/grip_emerald"
+        }
+      },
+      {
+        "when": "grip_spider",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/grip_spider"
+        }
+      },
+      {
         "when": "grip_zombie",
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/grip_zombie"
+        }
+      },
+      {
+        "when": "handle_emerald",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_emerald"
         }
       },
       {
@@ -5925,10 +6429,45 @@
         }
       },
       {
+        "when": "handle_spider",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/handle_spider"
+        }
+      },
+      {
+        "when": "head_amethyst",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_amethyst"
+        }
+      },
+      {
         "when": "head_creeper",
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/head_creeper"
+        }
+      },
+      {
+        "when": "head_emerald",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_emerald"
+        }
+      },
+      {
+        "when": "head_greed",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_greed"
+        }
+      },
+      {
+        "when": "head_zombie",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/head_zombie"
         }
       },
       {
@@ -6240,6 +6779,34 @@
         }
       },
       {
+        "when": "skeleton_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_handle"
+        }
+      },
+      {
+        "when": "skeleton_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_stick"
+        }
+      },
+      {
+        "when": "skeleton_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_stick_sword"
+        }
+      },
+      {
+        "when": "skeleton_stick_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/skeleton_stick_trident"
+        }
+      },
+      {
         "when": "skulk_axe_head",
         "model": {
           "type": "minecraft:model",
@@ -6335,6 +6902,55 @@
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/skulk_sword_handle"
+        }
+      },
+      {
+        "when": "spider_eye",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_eye"
+        }
+      },
+      {
+        "when": "spider_eye_trident",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_eye_trident"
+        }
+      },
+      {
+        "when": "spider_grip",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_grip"
+        }
+      },
+      {
+        "when": "spider_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_handle"
+        }
+      },
+      {
+        "when": "spider_handle_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_handle_sword"
+        }
+      },
+      {
+        "when": "spider_stick",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_stick"
+        }
+      },
+      {
+        "when": "spider_stick_sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/spider_stick_sword"
         }
       },
       {
@@ -6734,6 +7350,118 @@
         "model": {
           "type": "minecraft:model",
           "model": "telum:item/part/wood_stick_trident"
+        }
+      },
+      {
+        "when": "zombie_axe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_axe_head"
+        }
+      },
+      {
+        "when": "zombie_blade",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_blade"
+        }
+      },
+      {
+        "when": "zombie_grip",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_grip"
+        }
+      },
+      {
+        "when": "zombie_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head"
+        }
+      },
+      {
+        "when": "zombie_head_axe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_axe"
+        }
+      },
+      {
+        "when": "zombie_head_generic",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_generic"
+        }
+      },
+      {
+        "when": "zombie_head_hoe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_hoe"
+        }
+      },
+      {
+        "when": "zombie_head_pickaxe_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_pickaxe_left"
+        }
+      },
+      {
+        "when": "zombie_head_pickaxe_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_pickaxe_right"
+        }
+      },
+      {
+        "when": "zombie_head_pickaxe_rightt",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_pickaxe_rightt"
+        }
+      },
+      {
+        "when": "zombie_head_shovel",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_head_shovel"
+        }
+      },
+      {
+        "when": "zombie_hoe_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_hoe_head"
+        }
+      },
+      {
+        "when": "zombie_pickaxe_head_left",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_pickaxe_head_left"
+        }
+      },
+      {
+        "when": "zombie_pickaxe_head_right",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_pickaxe_head_right"
+        }
+      },
+      {
+        "when": "zombie_shovel_head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_shovel_head"
+        }
+      },
+      {
+        "when": "zombie_sword_handle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "telum:item/part/zombie_sword_handle"
         }
       }
         ]

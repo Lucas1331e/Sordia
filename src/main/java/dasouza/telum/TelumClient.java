@@ -59,6 +59,12 @@ public class TelumClient implements ClientModInitializer {
             });
         });
 
+        ClientPlayNetworking.registerGlobalReceiver(dasouza.telum.network.SyncBookProgressPayload.TYPE, (payload, context) -> {
+            context.client().execute(() -> {
+                dasouza.telum.client.ClientBookProgress.setProgress(payload.craftedMaterials(), payload.craftedTools());
+            });
+        });
+
         net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents.END_CLIENT_TICK.register(client -> {
             dasouza.telum.client.SulfurClientHudTracker.clientTick();
         });

@@ -125,6 +125,9 @@ public final class TemporalSculkZoneManager {
     public static void startZone(ServerPlayer player, BlockPos lecternPos) {
         ServerLevel level = (ServerLevel) player.level();
 
+        // Grant Ancient City Altar advancement
+        dasouza.telum.advancement.TelumAdvancements.grantAdvancement(player, dasouza.telum.Telum.id("use_ancient_altar"));
+
         // If zone already exists at this lectern, end it normally
         if (ACTIVE_ZONES.containsKey(lecternPos)) {
             endZoneNormally(player, lecternPos);

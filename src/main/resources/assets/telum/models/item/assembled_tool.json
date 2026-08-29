@@ -1,8 +1,6 @@
-﻿{
-  "parent": "minecraft:item/handheld",
+{
+  "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "telum:item/tool/tool_base",
-    "layer1": "telum:item/tool/tool_eye",
-    "layer2": "telum:item/tool/tool_head"
+    "layer0": "telum:item/empty"
   }
 }

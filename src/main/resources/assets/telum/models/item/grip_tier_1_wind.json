@@ -1,6 +1,6 @@
-﻿{
+{
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "telum:item/part/grip_tier_1_wind"
+    "layer0": "telum:item/part/wooden_sword_handle"
   }
 }

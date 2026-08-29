@@ -23,11 +23,33 @@ public final class TelumNetworking {
         PayloadTypeRegistry.clientboundPlay().register(OpenLyreScreenPayload.TYPE, OpenLyreScreenPayload.CODEC);
         PayloadTypeRegistry.clientboundPlay().register(SyncPlayerSongsPayload.TYPE, SyncPlayerSongsPayload.CODEC);
         PayloadTypeRegistry.clientboundPlay().register(SyncSulfurChargePayload.TYPE, SyncSulfurChargePayload.CODEC);
+        PayloadTypeRegistry.clientboundPlay().register(SyncBookProgressPayload.TYPE, SyncBookProgressPayload.CODEC);
+
         PayloadTypeRegistry.serverboundPlay().register(LyreGameResultPayload.TYPE, LyreGameResultPayload.CODEC);
 
         ServerPlayNetworking.registerGlobalReceiver(LyreGameResultPayload.TYPE, (payload, context) -> {
             ServerPlayer player = context.player();
             context.server().execute(() -> handleGameResult(player, payload));
+        });
+
+        net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
+            ServerPlayer player = handler.getPlayer();
+            dasouza.telum.util.PlayerBookProgressManager.syncToPlayer(player);
+
+            // Give starter Guide Book if entering world for the first time
+            if (player.addTag("telum$received_guide_book")) {
+                net.minecraft.world.item.ItemStack guideBook = new net.minecraft.world.item.ItemStack(dasouza.telum.item.TelumItems.GUIDE_BOOK);
+                if (!player.getInventory().add(guideBook)) {
+                    player.drop(guideBook, false);
+                }
+            }
+        });
+
+        // Clean up player data on disconnect to prevent memory leaks
+        net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> {
+            java.util.UUID uuid = handler.getPlayer().getUUID();
+            dasouza.telum.util.PlayerBookProgressManager.clearPlayerData(uuid);
+            dasouza.telum.item.AssembledToolItem.clearPlayerCooldowns(uuid);
         });
     }
 

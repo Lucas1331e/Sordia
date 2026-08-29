@@ -33,7 +33,7 @@ public enum PartMaterial implements StringRepresentable {
     ENDERMAN("enderman",   3, 0.9f, 1.7f, 1.5f, 1.5f, 0x160C26),
     SULFUR("sulfur",       2, 0.9f, 1.5f, 1.4f, 1.4f, 0xE5C158),
     AMETHYST("amethyst",   2, 1.3f, 1.4f, 1.2f, 1.2f, 0xC067F8),
-    GREED("greed",         3, 1.8f, 1.8f, 1.2f, 1.2f, 0xFFD700),
+    GREED("greed",         3, 1.8f, 2.6f, 0.45f, 0.45f, 0xFFD700),
     EMERALD("emerald",     3, 1.5f, 1.8f, 1.4f, 1.4f, 0x55FF55);
 
     public static final Codec<PartMaterial> CODEC = StringRepresentable.fromEnum(PartMaterial::values);

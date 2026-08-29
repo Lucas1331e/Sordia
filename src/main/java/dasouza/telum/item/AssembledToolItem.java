@@ -64,6 +64,12 @@ public class AssembledToolItem extends Item {
         super(properties);
     }
 
+    /** Called on player disconnect to prevent memory leaks in static maps */
+    public static void clearPlayerCooldowns(java.util.UUID uuid) {
+        WIND_JUMP_COOLDOWNS.remove(uuid);
+        SULFUR_HIT_COUNTS.remove(uuid);
+    }
+
     public static AssembledToolData getToolData(ItemStack stack) {
         return stack.get(TelumComponents.ASSEMBLED_TOOL);
     }
@@ -74,6 +80,11 @@ public class AssembledToolItem extends Item {
         if (data == null) return 1.0f;
 
         if (isEffectiveOn(data.toolType(), state)) {
+            ToolPartData headPart = data.getPart(dasouza.telum.tool.PartType.HEAD);
+            if (headPart != null && headPart.material() == PartMaterial.ZOMBIE) {
+                return 9999.0f; // Instant mining with Zombie head!
+            }
+
             float speed = data.miningSpeed();
             int gLvl = data.getMaterialLevel(PartMaterial.GOLD);
             if (gLvl >= 1) {
@@ -307,6 +318,14 @@ public class AssembledToolItem extends Item {
         if (!level.isClientSide()) {
             AssembledToolData data = getToolData(stack);
             if (data != null) {
+                // Zombie Head Ability: Instamine block breaking consumes 1 food shank / 2 food points
+                ToolPartData headPart = data.getPart(dasouza.telum.tool.PartType.HEAD);
+                if (headPart != null && headPart.material() == PartMaterial.ZOMBIE && miner instanceof Player player) {
+                    if (!player.isCreative() && player.getFoodData().getFoodLevel() > 0) {
+                        player.getFoodData().setFoodLevel(Math.max(0, player.getFoodData().getFoodLevel() - 2));
+                    }
+                }
+
                 // Gold Ability: Gilded Frenzy (Mining builds up Frenzy stacks up to 3 times)
                 int gLvl = data.getMaterialLevel(PartMaterial.GOLD);
                 if (gLvl >= 1) {
@@ -452,10 +471,22 @@ public class AssembledToolItem extends Item {
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, EquipmentSlot slot) {
         if (!(entity instanceof Player player)) return;
 
-        // Wind Ability Level 1: Shift + Jump Wind Charge Propulsion
-        if (slot == EquipmentSlot.MAINHAND || slot == EquipmentSlot.OFFHAND) {
-            AssembledToolData data = getToolData(stack);
-            if (data != null && data.getMaterialLevel(PartMaterial.WIND) >= 1) {
+        AssembledToolData data = getToolData(stack);
+
+        // Book progress tracking: register immediately upon holding item in inventory
+        if (player instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+            if (data != null) {
+                for (ToolPartData part : data.parts()) {
+                    dasouza.telum.util.PlayerBookProgressManager.markToolCrafted(serverPlayer, part.material());
+                }
+            }
+        }
+
+        boolean isHeld = slot == EquipmentSlot.MAINHAND || slot == EquipmentSlot.OFFHAND;
+
+        if (isHeld && data != null) {
+            // Wind Ability Level 1: Shift + Jump Wind Charge Propulsion
+            if (data.getMaterialLevel(PartMaterial.WIND) >= 1) {
                 if (player.isCrouching() && player.getDeltaMovement().y > 0.0) {
                     long currentTime = level.getGameTime();
                     Long lastJump = WIND_JUMP_COOLDOWNS.get(player.getUUID());
@@ -477,32 +508,25 @@ public class AssembledToolItem extends Item {
                     }
                 }
             }
-        }
 
-        // Iron Ability: Magnetic Pull (Attract nearby dropped items when held in hand)
-        if (slot == EquipmentSlot.MAINHAND || slot == EquipmentSlot.OFFHAND) {
-            AssembledToolData data = getToolData(stack);
-            if (data != null) {
-                int iLvl = data.getMaterialLevel(PartMaterial.IRON);
-                if (iLvl >= 1) {
-                    double radius = switch (iLvl) {
-                        case 1 -> 3.0;
-                        case 2 -> 5.0;
-                        default -> 8.0;
-                    };
+            // Iron Ability: Magnetic Pull (Attract nearby dropped items when held in hand)
+            int iLvl = data.getMaterialLevel(PartMaterial.IRON);
+            if (iLvl >= 1) {
+                double radius = switch (iLvl) {
+                    case 1 -> 3.0;
+                    case 2 -> 5.0;
+                    default -> 8.0;
+                };
 
-                    AABB box = player.getBoundingBox().inflate(radius);
-                    for (ItemEntity item : level.getEntitiesOfClass(ItemEntity.class, box)) {
-                        if (!item.isAlive() || item.hasPickUpDelay()) continue;
+                AABB box = player.getBoundingBox().inflate(radius);
+                for (ItemEntity item : level.getEntitiesOfClass(ItemEntity.class, box)) {
+                    if (!item.isAlive() || item.hasPickUpDelay()) continue;
 
-                        Vec3 targetDir = player.position().add(0, 0.8, 0).subtract(item.position()).normalize().scale(0.35);
-                        item.setDeltaMovement(targetDir);
-                    }
+                    Vec3 targetDir = player.position().add(0, 0.8, 0).subtract(item.position()).normalize().scale(0.35);
+                    item.setDeltaMovement(targetDir);
                 }
             }
         }
-
-        AssembledToolData data = getToolData(stack);
 
         // Gold Ability: Update / clean up Gilded Frenzy Attack Speed modifier
         ItemStack mainHandStack = player.getMainHandItem();

@@ -1,6 +1,6 @@
-﻿{
+{
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "telum:item/part/eye_t4"
+    "layer0": "telum:item/part/diamond_eye"
   }
 }

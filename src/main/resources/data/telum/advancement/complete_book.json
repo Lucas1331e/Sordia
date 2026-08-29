@@ -1,0 +1,22 @@
+{
+  "parent": "telum:root",
+  "display": {
+    "icon": {
+      "id": "telum:guide_book"
+    },
+    "title": {
+      "translate": "advancements.telum.complete_book.title"
+    },
+    "description": {
+      "translate": "advancements.telum.complete_book.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

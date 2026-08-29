@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "telum:item/part/zombie_head"
+    "layer0": "telum:item/part/head_zombie"
   }
 }

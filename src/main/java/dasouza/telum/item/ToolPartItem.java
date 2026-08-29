@@ -41,6 +41,14 @@ public class ToolPartItem extends Item {
     }
 
     @Override
+    public void inventoryTick(ItemStack stack, net.minecraft.server.level.ServerLevel level, net.minecraft.world.entity.Entity entity, net.minecraft.world.entity.EquipmentSlot slot) {
+        if (entity instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+            ToolPartData data = getPartData(stack);
+            if (data != null) {
+                dasouza.telum.util.PlayerBookProgressManager.markMaterialCrafted(serverPlayer, data.material());
+            }
+        }
+    }
     public Component getName(ItemStack stack) {
         ToolPartData data = getPartData(stack);
         String key = "item.telum." + data.partType().getPartName() + "_" + data.material().getMaterialName();

@@ -1,6 +1,6 @@
-﻿{
+{
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "telum:item/part/handle_t2"
+    "layer0": "telum:item/part/stone_handle"
   }
 }

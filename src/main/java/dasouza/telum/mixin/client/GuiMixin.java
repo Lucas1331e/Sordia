@@ -69,7 +69,7 @@ public class GuiMixin {
             int displayTicks = SulfurClientHudTracker.getDisplayTicks();
 
             int centerX = mc.getWindow().getGuiScaledWidth() / 2;
-            int top = mc.getWindow().getGuiScaledHeight() - 36; // Positioned subtly above center of XP bar
+            int top = mc.getWindow().getGuiScaledHeight() - 49; // Positioned cleanly above XP level text
 
             // Smooth fade out during last 10 ticks
             int alpha = 255;

@@ -128,11 +128,11 @@ public class GuideBookScreen extends Screen {
     @Override
     public boolean keyPressed(KeyEvent keyEvent) {
         int key = keyEvent.key();
-        if (key == InputConstants.KEY_LEFT) {
+        if (key == InputConstants.KEY_LEFT || key == InputConstants.KEY_A) {
             setSpread(currentSpread - 1);
             return true;
         }
-        if (key == InputConstants.KEY_RIGHT) {
+        if (key == InputConstants.KEY_RIGHT || key == InputConstants.KEY_D) {
             setSpread(currentSpread + 1);
             return true;
         }
@@ -142,6 +142,7 @@ public class GuideBookScreen extends Screen {
         }
         return super.keyPressed(keyEvent);
     }
+
 
     @Override
     public boolean mouseClicked(MouseButtonEvent event, boolean doubleClick) {
@@ -405,20 +406,21 @@ public class GuideBookScreen extends Screen {
         if (isUnlocked) {
             // Stat 1: Durabilidad (Green 0xFF008000)
             gfx.text(font, "+ " + translate("gui.telum.guide_book.durability"), x, contentY, 0xFF008000, false);
-            gfx.text(font, String.format("%.1fx", mat.getDurabilityMultiplier()), x + 65, contentY, 0xFF333333, false);
+            gfx.text(font, String.format("%.1fx", mat.getDurabilityMultiplier()), x + 76, contentY, 0xFF333333, false);
 
             // Stat 2: Daño Base (Red 0xFFCC0000)
             gfx.text(font, "> " + translate("gui.telum.guide_book.damage"), x, contentY + 12, 0xFFCC0000, false);
-            gfx.text(font, String.format("%.1fx", mat.getDamageMultiplier()), x + 65, contentY + 12, 0xFF333333, false);
+            gfx.text(font, String.format("%.1fx", mat.getDamageMultiplier()), x + 76, contentY + 12, 0xFF333333, false);
 
             // Stat 3: Vel. Minado (Aqua/Blue 0xFF0055A0)
             gfx.text(font, "* " + translate("gui.telum.guide_book.speed"), x, contentY + 24, 0xFF0055A0, false);
-            gfx.text(font, String.format("%.1fx", mat.getMiningSpeedMultiplier()), x + 65, contentY + 24, 0xFF333333, false);
+            gfx.text(font, String.format("%.1fx", mat.getMiningSpeedMultiplier()), x + 76, contentY + 24, 0xFF333333, false);
 
             // Stat 4: Nivel Minado (Gold 0xFFB8860B)
             gfx.text(font, "# " + translate("gui.telum.guide_book.level"), x, contentY + 36, 0xFFB8860B, false);
-            gfx.text(font, String.valueOf(mat.getMiningLevel()), x + 65, contentY + 36, 0xFF333333, false);
+            gfx.text(font, String.valueOf(mat.getMiningLevel()), x + 76, contentY + 36, 0xFF333333, false);
         } else {
+
             // Locked Page (Stats hidden until part acquired)
             gfx.text(font, translate("gui.telum.guide_book.locked_unknown"), x, contentY, 0xFF888888, false);
             List<String> wrappedStatsHint = wrapText(font, translate("gui.telum.guide_book.locked_stats_hint"), maxW);

@@ -2,15 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "telum:marmol_bricks"
+    "#": "telum:marmol_block"
   },
   "pattern": [
-    "#  ",
-    "## ",
-    "###"
+    "##",
+    "##"
   ],
   "result": {
     "count": 4,
-    "id": "telum:marmol_brick_stairs"
+    "id": "telum:marmol_bricks"
   }
 }

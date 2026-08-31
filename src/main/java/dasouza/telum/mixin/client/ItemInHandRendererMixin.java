@@ -23,7 +23,13 @@ public abstract class ItemInHandRendererMixin {
         if (mc.player != null) {
             ItemStack currentMain = mc.player.getMainHandItem();
             if (this.mainHandItem != null && !this.mainHandItem.isEmpty() && currentMain != null && !currentMain.isEmpty()) {
-                if (this.mainHandItem.getItem() instanceof AssembledToolItem || this.mainHandItem.getItem() instanceof ToolPartItem) {
+                if (this.mainHandItem.getItem() instanceof AssembledToolItem && currentMain.getItem() instanceof AssembledToolItem) {
+                    dasouza.telum.component.AssembledToolData d1 = AssembledToolItem.getToolData(this.mainHandItem);
+                    dasouza.telum.component.AssembledToolData d2 = AssembledToolItem.getToolData(currentMain);
+                    if (java.util.Objects.equals(d1, d2)) {
+                        this.mainHandItem = currentMain.copy();
+                    }
+                } else if (this.mainHandItem.getItem() instanceof ToolPartItem && currentMain.getItem() instanceof ToolPartItem) {
                     if (this.mainHandItem.is(currentMain.getItem())) {
                         this.mainHandItem = currentMain.copy();
                     }
@@ -32,7 +38,13 @@ public abstract class ItemInHandRendererMixin {
 
             ItemStack currentOff = mc.player.getOffhandItem();
             if (this.offHandItem != null && !this.offHandItem.isEmpty() && currentOff != null && !currentOff.isEmpty()) {
-                if (this.offHandItem.getItem() instanceof AssembledToolItem || this.offHandItem.getItem() instanceof ToolPartItem) {
+                if (this.offHandItem.getItem() instanceof AssembledToolItem && currentOff.getItem() instanceof AssembledToolItem) {
+                    dasouza.telum.component.AssembledToolData d1 = AssembledToolItem.getToolData(this.offHandItem);
+                    dasouza.telum.component.AssembledToolData d2 = AssembledToolItem.getToolData(currentOff);
+                    if (java.util.Objects.equals(d1, d2)) {
+                        this.offHandItem = currentOff.copy();
+                    }
+                } else if (this.offHandItem.getItem() instanceof ToolPartItem && currentOff.getItem() instanceof ToolPartItem) {
                     if (this.offHandItem.is(currentOff.getItem())) {
                         this.offHandItem = currentOff.copy();
                     }
@@ -41,4 +53,5 @@ public abstract class ItemInHandRendererMixin {
         }
     }
 }
+
 

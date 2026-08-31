@@ -1,7 +1,0 @@
-﻿{
-  "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "pattern": [ "B  ", "BB ", "BBB" ],
-  "key": { "B": "telum:yellow_marmol_block" },
-  "result": { "id": "telum:yellow_marmol_stairs", "count": 4 }
-}

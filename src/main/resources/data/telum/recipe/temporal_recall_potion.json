@@ -1,26 +1,19 @@
-{
+﻿{
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": "minecraft:gold_ingot",
+    "M": "telum:marmol_block",
+    "C": "minecraft:clock",
+    "B": "minecraft:glass_bottle"
+  },
   "pattern": [
     "GMG",
     "GCG",
     "GBG"
   ],
-  "key": {
-    "G": {
-      "item": "minecraft:gold_ingot"
-    },
-    "M": {
-      "item": "telum:marmol_block"
-    },
-    "C": {
-      "item": "minecraft:clock"
-    },
-    "B": {
-      "item": "minecraft:glass_bottle"
-    }
-  },
   "result": {
-    "id": "telum:temporal_recall_potion",
-    "count": 1
+    "count": 1,
+    "id": "telum:temporal_recall_potion"
   }
 }

@@ -45,6 +45,31 @@ public final class TelumComponents {
                     .build()
     );
 
+    /**
+     * Component stored on assembled tools to track active enchantment mode (0 = Silk Touch, 1 = Fortune).
+     */
+    public static final DataComponentType<Integer> ENCHANTMENT_MODE = Registry.register(
+            BuiltInRegistries.DATA_COMPONENT_TYPE,
+            Telum.id("enchantment_mode"),
+            DataComponentType.<Integer>builder()
+                    .persistent(com.mojang.serialization.Codec.INT)
+                    .build()
+    );
+
+    /**
+     * Component stored on assembled tools to track active Bone Instamine Charge.
+     */
+    public static final DataComponentType<Boolean> BONE_CHARGED = Registry.register(
+            BuiltInRegistries.DATA_COMPONENT_TYPE,
+            Telum.id("bone_charged"),
+            DataComponentType.<Boolean>builder()
+                    .persistent(com.mojang.serialization.Codec.BOOL)
+                    .build()
+    );
+
+
+
+
 
     /**
      * Forces static initialization of this class, triggering registration.

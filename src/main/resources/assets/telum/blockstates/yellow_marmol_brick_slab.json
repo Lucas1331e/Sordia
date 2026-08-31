@@ -1,7 +1,0 @@
-﻿{
-  "variants": {
-    "type=bottom": { "model": "telum:block/yellow_marmol_brick_slab" },
-    "type=double": { "model": "telum:block/yellow_marmol_bricks" },
-    "type=top":    { "model": "telum:block/yellow_marmol_brick_slab_top" }
-  }
-}

@@ -389,7 +389,8 @@ public final class TelumItems {
             case CREEPER -> partType == PartType.HEAD;
             case ENDERMAN -> partType == PartType.EYE;
             case AMETHYST -> partType == PartType.HEAD;
-            case GREED -> partType == PartType.HEAD;
+            case GREED -> partType == PartType.HEAD || partType == PartType.BLADE;
+
             default -> true;
         };
     }

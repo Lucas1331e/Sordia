@@ -14,9 +14,18 @@ import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import dasouza.telum.tool.PartType;
+
+import dasouza.telum.tool.ToolType;
+import net.minecraft.world.level.block.Blocks;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Mixin(Block.class)
 public abstract class BlockLootMixin {
@@ -41,12 +50,30 @@ public abstract class BlockLootMixin {
                         ItemEnchantments existing = toolCopy.getOrDefault(net.minecraft.core.component.DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
                         ItemEnchantments.Mutable mutable = new ItemEnchantments.Mutable(existing);
 
-                        if (amethystLvl >= 1) {
+                        int mode = itemStack.getOrDefault(dasouza.telum.component.TelumComponents.ENCHANTMENT_MODE, 0);
+
+                        boolean applySilkTouch = false;
+                        boolean applyFortune = false;
+
+                        if (amethystLvl >= 1 && emeraldLvl >= 1) {
+                            // Dual Amethyst + Emerald tool: Mode 0 = Silk Touch, Mode 1 = Fortune
+                            if (mode == 0) {
+                                applySilkTouch = true;
+                            } else {
+                                applyFortune = true;
+                            }
+                        } else if (amethystLvl >= 1) {
+                            applySilkTouch = true;
+                        } else if (emeraldLvl >= 1) {
+                            applyFortune = true;
+                        }
+
+                        if (applySilkTouch) {
                             var silkOpt = registryOpt.get().get(Enchantments.SILK_TOUCH);
                             silkOpt.ifPresent(holder -> mutable.set(holder, Math.max(1, mutable.getLevel(holder))));
                         }
 
-                        if (emeraldLvl >= 1) {
+                        if (applyFortune) {
                             var fortuneOpt = registryOpt.get().get(Enchantments.FORTUNE);
                             fortuneOpt.ifPresent(holder -> mutable.set(holder, Math.max(emeraldLvl, mutable.getLevel(holder))));
                         }
@@ -60,3 +87,5 @@ public abstract class BlockLootMixin {
         return tool;
     }
 }
+
+

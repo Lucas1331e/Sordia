@@ -1,8 +1,0 @@
-﻿{
-    "parent":  "minecraft:block/cube_all",
-    "textures":  {
-                     "all":  "telum:block/yellow_marmol_block"
-                 }
-,
-  "render_type": "minecraft:translucent"
-}

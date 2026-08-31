@@ -1,17 +1,19 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+
   "key": {
-    "I": "minecraft:iron_ingot",
+    "E": "minecraft:echo_shard",
+    "B": "minecraft:barrel",
     "M": "telum:marmol_block"
   },
   "pattern": [
-    "III",
-    "M M",
+    "EEE",
+    "MBM",
     "MMM"
   ],
   "result": {
     "count": 1,
-    "id": "telum:telum_forge"
+    "id": "telum:echo_barrel"
   }
 }

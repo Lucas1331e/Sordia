@@ -1,20 +1,17 @@
-{
+﻿{
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "minecraft:dragon_breath",
+    "S": "telum:piece_of_sordia"
+  },
   "pattern": [
     " D ",
     "DSD",
     " D "
   ],
-  "key": {
-    "D": {
-      "item": "minecraft:dragon_breath"
-    },
-    "S": {
-      "item": "telum:piece_of_sordia"
-    }
-  },
   "result": {
-    "id": "telum:dragon_sordia",
-    "count": 1
+    "count": 1,
+    "id": "telum:dragon_sordia"
   }
 }

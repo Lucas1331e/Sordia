@@ -745,17 +745,6 @@ public final class TemporalSculkZoneManager {
     }
 
     private static BlockState getTemporalVariantForState(BlockState state, RandomSource rng) {
-        if (state.is(TelumBlocks.MARMOL_BLOCK)) return TelumBlocks.YELLOW_MARMOL_BLOCK.defaultBlockState();
-        if (state.is(TelumBlocks.MARMOL_BRICKS)) return TelumBlocks.YELLOW_MARMOL_BRICKS.defaultBlockState();
-        if (state.is(TelumBlocks.MARMOL_GILDED_BLOCK)) return TelumBlocks.YELLOW_MARMOL_GILDED_BLOCK.defaultBlockState();
-        if (state.is(TelumBlocks.MARMOL_PILLAR)) return TelumBlocks.YELLOW_MARMOL_PILLAR.defaultBlockState();
-        if (state.is(TelumBlocks.MARMOL_SLAB)) return TelumBlocks.YELLOW_MARMOL_SLAB.defaultBlockState();
-        if (state.is(TelumBlocks.MARMOL_STAIRS)) return TelumBlocks.YELLOW_MARMOL_STAIRS.defaultBlockState();
-        if (state.is(TelumBlocks.MARMOL_WALL)) return TelumBlocks.YELLOW_MARMOL_WALL.defaultBlockState();
-        if (state.is(TelumBlocks.MARMOL_BRICK_SLAB)) return TelumBlocks.YELLOW_MARMOL_BRICK_SLAB.defaultBlockState();
-        if (state.is(TelumBlocks.MARMOL_BRICK_STAIRS)) return TelumBlocks.YELLOW_MARMOL_BRICK_STAIRS.defaultBlockState();
-        if (state.is(TelumBlocks.MARMOL_BRICK_WALL)) return TelumBlocks.YELLOW_MARMOL_BRICK_WALL.defaultBlockState();
-
         if (state.is(Blocks.DEEPSLATE_BRICKS)) return TelumBlocks.TEMPORAL_DEEPSLATE_BRICK.defaultBlockState();
         if (state.is(Blocks.DEEPSLATE_TILES)) return TelumBlocks.DEEPSLATE_TEMPORAL_TILES.defaultBlockState();
         if (state.is(Blocks.POLISHED_DEEPSLATE) || state.is(Blocks.DEEPSLATE) || state.is(Blocks.COBBLED_DEEPSLATE)) {
@@ -763,4 +752,5 @@ public final class TemporalSculkZoneManager {
         }
         return null;
     }
+
 }

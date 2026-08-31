@@ -1,14 +1,14 @@
 ﻿{
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "pattern": [
-    "BBB"
-  ],
   "key": {
-    "B": "telum:marmol_block"
+    "#": "telum:marmol_block"
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "id": "telum:marmol_slab",
-    "count": 6
+    "count": 6,
+    "id": "telum:marmol_slab"
   }
 }

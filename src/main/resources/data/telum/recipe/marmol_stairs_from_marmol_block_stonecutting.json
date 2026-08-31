@@ -1,0 +1,8 @@
+﻿{
+  "type": "minecraft:stonecutting",
+  "ingredient": "telum:marmol_block",
+  "result": {
+    "count": 1,
+    "id": "telum:marmol_stairs"
+  }
+}

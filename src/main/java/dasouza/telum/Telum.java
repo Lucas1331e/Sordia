@@ -35,7 +35,9 @@ public class Telum implements ModInitializer {
 		dasouza.telum.worldgen.TelumWorldGen.initialize();
 		dasouza.telum.util.SulfurCubeRewindManager.initialize();
 		dasouza.telum.util.VoidProtectionManager.initialize();
+		dasouza.telum.command.TelumCommands.initialize();
 	}
+
 
 	public static Identifier id(String path) {
 		return Identifier.fromNamespaceAndPath(MOD_ID, path);

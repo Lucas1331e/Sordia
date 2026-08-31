@@ -355,7 +355,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getPickaxeLeftHeadTexture(PartMaterial mat) {
-        if (mat == PartMaterial.GREED) return "head_greed";
+        if (mat == PartMaterial.GREED) return "greed_pickaxe_head_left";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
         if (mat == PartMaterial.ZOMBIE) return "zombie_head_pickaxe_left";
         return switch (mat) {
@@ -366,7 +366,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getPickaxeRightHeadTexture(PartMaterial mat) {
-        if (mat == PartMaterial.GREED) return "head_greed";
+        if (mat == PartMaterial.GREED) return "greed_pickaxe_head_right";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
         if (mat == PartMaterial.ZOMBIE) return "zombie_head_pickaxe_right";
         return switch (mat) {
@@ -377,7 +377,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getAxeHeadTexture(PartMaterial mat) {
-        if (mat == PartMaterial.GREED) return "head_greed";
+        if (mat == PartMaterial.GREED) return "greed_axe_head";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
         if (mat == PartMaterial.ZOMBIE) return "zombie_head_axe";
         return switch (mat) {
@@ -388,7 +388,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getShovelHeadTexture(PartMaterial mat) {
-        if (mat == PartMaterial.GREED) return "head_greed";
+        if (mat == PartMaterial.GREED) return "greed_shovel_head";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
         if (mat == PartMaterial.ZOMBIE) return "zombie_head_shovel";
         return switch (mat) {
@@ -399,7 +399,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getHoeHeadTexture(PartMaterial mat) {
-        if (mat == PartMaterial.GREED) return "head_greed";
+        if (mat == PartMaterial.GREED) return "greed_hoe_head";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
         if (mat == PartMaterial.ZOMBIE) return "zombie_head_hoe";
         return switch (mat) {
@@ -410,7 +410,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
     }
 
     private String getBladeTexture(PartMaterial mat) {
-        if (mat == PartMaterial.GREED) return "head_greed";
+        if (mat == PartMaterial.GREED) return "greed_blade";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
         if (mat == PartMaterial.ZOMBIE) return "zombie_blade";
         return switch (mat) {
@@ -424,6 +424,7 @@ public class ForgeScreenHandler extends AbstractContainerMenu {
         if (mat == PartMaterial.GREED) return "head_greed";
         if (mat == PartMaterial.CREEPER) return "head_creeper";
         if (mat == PartMaterial.ZOMBIE) return "head_zombie";
+
         if (mat == PartMaterial.AMETHYST) return "head_amethyst";
         if (mat == PartMaterial.PRISMARINE) return "prismarine_head_trident";
         if (mat == PartMaterial.SKULK) return "sculk_trident_head";

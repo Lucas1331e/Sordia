@@ -27,8 +27,10 @@
 		"NoteBlockMixin",
 		"ItemEntityMixin",
 		"EntityEndermanLootMixin",
-		"LivingEntityGreedDamageMixin"
+		"LivingEntityGreedDamageMixin",
+		"LivingEntityDeathDropMixin"
 	],
+
 	"client": [
 		"client.SpinAttackEffectLayerMixin",
 		"client.GuiMixin",

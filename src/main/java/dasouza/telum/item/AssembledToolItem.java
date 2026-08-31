@@ -41,11 +41,15 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
+
+
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
@@ -56,6 +60,7 @@ public class AssembledToolItem extends Item {
 
     private static final Map<UUID, Long> WIND_JUMP_COOLDOWNS = new HashMap<>();
     private static final Map<UUID, Integer> SULFUR_HIT_COUNTS = new HashMap<>();
+    private static final Map<UUID, ItemStack> LAST_MAINHAND_STACKS = new HashMap<>();
 
     public static final Identifier GILDED_FRENZY_ATTACK_SPEED_ID = Telum.id("gilded_frenzy_attack_speed");
     public static final Identifier VENOMOUS_FURY_ATTACK_DAMAGE_ID = Telum.id("venomous_fury_attack_damage");
@@ -68,7 +73,11 @@ public class AssembledToolItem extends Item {
     public static void clearPlayerCooldowns(java.util.UUID uuid) {
         WIND_JUMP_COOLDOWNS.remove(uuid);
         SULFUR_HIT_COUNTS.remove(uuid);
+        LAST_MAINHAND_STACKS.remove(uuid);
     }
+
+
+
 
     public static AssembledToolData getToolData(ItemStack stack) {
         return stack.get(TelumComponents.ASSEMBLED_TOOL);
@@ -85,7 +94,19 @@ public class AssembledToolItem extends Item {
                 return 9999.0f; // Instant mining with Zombie head!
             }
 
+            if (stack.getOrDefault(TelumComponents.BONE_CHARGED, false)) {
+                return 9999.0f; // Instant mining with Bone Instamine Charge!
+            }
+
+
             float speed = data.miningSpeed();
+            if (state.is(Blocks.BUDDING_AMETHYST) || state.is(Blocks.AMETHYST_BLOCK)) {
+                int aLvl = data.getMaterialLevel(PartMaterial.AMETHYST);
+                if (aLvl >= 1) {
+                    return Math.max(speed * 2.5f, 15.0f);
+                }
+            }
+
             int gLvl = data.getMaterialLevel(PartMaterial.GOLD);
             if (gLvl >= 1) {
                 GildedFrenzyData frenzy = stack.get(TelumComponents.GILDED_FRENZY);
@@ -101,6 +122,7 @@ public class AssembledToolItem extends Item {
             }
             return speed;
         }
+
         return 1.0f;
     }
 
@@ -108,8 +130,22 @@ public class AssembledToolItem extends Item {
     public boolean isCorrectToolForDrops(ItemStack stack, BlockState state) {
         AssembledToolData data = getToolData(stack);
         if (data == null) return false;
-        return isEffectiveOn(data.toolType(), state);
+        if (!isEffectiveOn(data.toolType(), state)) return false;
+
+        int level = data.miningLevel();
+        if (state.is(BlockTags.NEEDS_DIAMOND_TOOL)) {
+            return level >= 3;
+        }
+        if (state.is(BlockTags.NEEDS_IRON_TOOL)) {
+            return level >= 2;
+        }
+        if (state.is(BlockTags.NEEDS_STONE_TOOL)) {
+            return level >= 1;
+        }
+        return true;
     }
+
+
 
     @Override
     public void hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
@@ -296,14 +332,20 @@ public class AssembledToolItem extends Item {
                 }
             }
 
-            // Skeleton Ability: Fragile Precision (+3.0 crit damage, extra durability loss)
+            // Skeleton Ability: 25% chance for a Special Critical Hit on full attack charge or normal crit (NOT on spammed hits)
             int skeletonLvl = data.getMaterialLevel(PartMaterial.SKELETON);
             if (skeletonLvl >= 1 && attacker instanceof Player player) {
+                float attackScale = dasouza.telum.util.AttackScaleTracker.getLastAttackScale();
                 boolean isCrit = player.fallDistance > 0.0F && !player.onGround() && !player.onClimbable() && !player.isInWater() && !player.hasEffect(MobEffects.BLINDNESS) && !player.isPassenger();
-                if (isCrit) {
-                    target.hurt(attacker.damageSources().playerAttack(player), 3.0f);
-                    if (player.level() instanceof ServerLevel serverLevel) {
-                        serverLevel.sendParticles(ParticleTypes.CRIT, target.getX(), target.getY() + 1.0, target.getZ(), 8, 0.2, 0.2, 0.2, 0.1);
+                boolean isFullCharge = attackScale >= 0.9f;
+
+                if ((isFullCharge || isCrit) && attacker.level().getRandom().nextFloat() < 0.25f) {
+                    float bonusDamage = 4.0f * skeletonLvl;
+                    target.hurt(attacker.damageSources().playerAttack(player), bonusDamage);
+                    if (attacker.level() instanceof ServerLevel serverLevel) {
+                        serverLevel.sendParticles(ParticleTypes.CRIT, target.getX(), target.getY() + 1.0, target.getZ(), 12, 0.3, 0.3, 0.3, 0.15);
+                        serverLevel.sendParticles(ParticleTypes.POOF, target.getX(), target.getY() + 1.0, target.getZ(), 6, 0.2, 0.2, 0.2, 0.05);
+                        serverLevel.playSound(null, target.getX(), target.getY(), target.getZ(), SoundEvents.SKELETON_HURT, SoundSource.PLAYERS, 1.0f, 1.2f);
                     }
                 }
                 stack.hurtAndBreak(1, attacker, EquipmentSlot.MAINHAND);
@@ -318,7 +360,24 @@ public class AssembledToolItem extends Item {
         if (!level.isClientSide()) {
             AssembledToolData data = getToolData(stack);
             if (data != null) {
+                // Skeleton Ability: 25% chance on mining a compatible block to charge instamine for the NEXT block
+                int skeletonLvl = data.getMaterialLevel(PartMaterial.SKELETON);
+                if (skeletonLvl >= 1 && isEffectiveOn(data.toolType(), state)) {
+                    boolean wasCharged = stack.getOrDefault(TelumComponents.BONE_CHARGED, false);
+                    if (wasCharged) {
+                        // Consume instamine charge on compatible block break!
+                        stack.set(TelumComponents.BONE_CHARGED, false);
+                    } else {
+                        // 25% chance to gain charge on compatible block break!
+                        if (level.getRandom().nextFloat() < 0.25f) {
+                            stack.set(TelumComponents.BONE_CHARGED, true);
+                            level.playSound(null, pos, SoundEvents.BONE_BLOCK_BREAK, SoundSource.BLOCKS, 1.0f, 1.4f);
+                        }
+                    }
+                }
+
                 // Zombie Head Ability: Instamine block breaking consumes 1 food shank / 2 food points
+
                 ToolPartData headPart = data.getPart(dasouza.telum.tool.PartType.HEAD);
                 if (headPart != null && headPart.material() == PartMaterial.ZOMBIE && miner instanceof Player player) {
                     if (!player.isCreative() && player.getFoodData().getFoodLevel() > 0) {
@@ -349,6 +408,32 @@ public class AssembledToolItem extends Item {
                     }
                 }
 
+                // Greed Ability: Raw Gold Drop (20% chance per Greed level to drop Raw Gold when mining ores)
+                int greedLvl = data.getMaterialLevel(PartMaterial.GREED);
+                if (greedLvl >= 1 && isOreBlock(state)) {
+                    float chance = 0.20f * greedLvl;
+                    if (level.getRandom().nextFloat() < chance) {
+                        int count = 1 + (greedLvl > 1 ? level.getRandom().nextInt(greedLvl) : 0);
+                        ItemEntity entity = new ItemEntity(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, new ItemStack(Items.RAW_GOLD, count));
+                        level.addFreshEntity(entity);
+                    }
+                }
+
+
+
+
+                // Amethyst Ability / Feature: Pickaxe with Amethyst head/part drops Budding Amethyst block on mine!
+
+                if (state.is(Blocks.BUDDING_AMETHYST) && data.getMaterialLevel(PartMaterial.AMETHYST) >= 1 && miner instanceof Player player) {
+                    if (!player.isCreative()) {
+                        ItemEntity entity = new ItemEntity(level,
+                                pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
+                                new ItemStack(Blocks.BUDDING_AMETHYST));
+                        level.addFreshEntity(entity);
+                        level.playSound(null, pos, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.0f, 1.4f);
+                    }
+                }
+
                 // Stone Ability: Solid Core (Chance to save durability)
                 int sLvl = data.getMaterialLevel(PartMaterial.STONE);
                 if (sLvl >= 1) {
@@ -361,6 +446,7 @@ public class AssembledToolItem extends Item {
                         return true; // Skip durability damage!
                     }
                 }
+
             }
 
             stack.hurtAndBreak(1, miner, EquipmentSlot.MAINHAND);
@@ -395,6 +481,10 @@ public class AssembledToolItem extends Item {
 
         if (data != null) {
             Player player = context.getPlayer();
+            if (toggleEnchantmentModeIfApplicable(stack, player, level)) {
+                return InteractionResult.SUCCESS;
+            }
+
 
             // 1. Log Stripping (Axe OR any tool with a Wood part)
             int wLvl = data.getMaterialLevel(PartMaterial.WOOD);
@@ -482,7 +572,22 @@ public class AssembledToolItem extends Item {
             }
         }
 
+        if (slot == EquipmentSlot.MAINHAND) {
+            ItemStack currentMain = player.getMainHandItem();
+            ItemStack lastMain = LAST_MAINHAND_STACKS.get(player.getUUID());
+            if (lastMain != currentMain) {
+                if (lastMain != null && lastMain.getOrDefault(TelumComponents.BONE_CHARGED, false)) {
+                    lastMain.set(TelumComponents.BONE_CHARGED, false);
+                }
+                LAST_MAINHAND_STACKS.put(player.getUUID(), currentMain);
+                player.resetAttackStrengthTicker();
+            }
+        }
+
+
         boolean isHeld = slot == EquipmentSlot.MAINHAND || slot == EquipmentSlot.OFFHAND;
+
+
 
         if (isHeld && data != null) {
             // Wind Ability Level 1: Shift + Jump Wind Charge Propulsion
@@ -595,6 +700,8 @@ public class AssembledToolItem extends Item {
             else if (nLvl >= 3) knockbackRes = 0.4f;
         }
 
+        float speedModifier = attackSpeed - 4.0f;
+
         ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder()
                 .add(Attributes.ATTACK_DAMAGE,
                         new AttributeModifier(
@@ -605,9 +712,10 @@ public class AssembledToolItem extends Item {
                 .add(Attributes.ATTACK_SPEED,
                         new AttributeModifier(
                                 BASE_ATTACK_SPEED_ID,
-                                attackSpeed,
+                                speedModifier,
                                 AttributeModifier.Operation.ADD_VALUE),
                         EquipmentSlotGroup.MAINHAND);
+
 
         // Swords get sweeping damage ratio (like vanilla SwordItem)
         if (toolType == ToolType.SWORD) {
@@ -711,6 +819,13 @@ public class AssembledToolItem extends Item {
             }
         }
 
+        if (data.getMaterialLevel(PartMaterial.AMETHYST) >= 1 && data.getMaterialLevel(PartMaterial.EMERALD) >= 1) {
+            int mode = stack.getOrDefault(TelumComponents.ENCHANTMENT_MODE, 0);
+            String modeName = (mode == 0) ? "§dToque de Seda (Silk Touch)" : "§aFortuna III (Fortune III)";
+            tooltip.accept(Component.literal("  §e✦ Modo Activo: ").append(Component.literal(modeName)));
+        }
+
+
         // 3. Tool Parts List
         tooltip.accept(Component.empty());
         tooltip.accept(Component.translatable("tooltip.telum.parts").withStyle(ChatFormatting.GRAY));
@@ -722,7 +837,8 @@ public class AssembledToolItem extends Item {
 
         // 4. Compact 2-Column Tool Stats Summary with Icons & Material Mining Level Name
         String miningLevelName = getMiningLevelName(data.miningLevel());
-        float attackSpeedVal = 4.0f + data.attackSpeed();
+        float attackSpeedVal = data.attackSpeed();
+
 
         // Row 1: ⚔ Daño | ⚡ Vel. Ataque
         Component row1 = Component.literal("  ⚔ Daño: ")
@@ -772,10 +888,43 @@ public class AssembledToolItem extends Item {
                 .withStyle(matColor));
     }
 
+    private boolean toggleEnchantmentModeIfApplicable(ItemStack stack, Player player, Level level) {
+        if (player != null && player.isCrouching()) {
+            AssembledToolData data = getToolData(stack);
+            if (data != null) {
+                int aLvl = data.getMaterialLevel(PartMaterial.AMETHYST);
+                int eLvl = data.getMaterialLevel(PartMaterial.EMERALD);
+                if (aLvl >= 1 && eLvl >= 1) {
+                    int currentMode = stack.getOrDefault(TelumComponents.ENCHANTMENT_MODE, 0);
+                    int nextMode = (currentMode == 0) ? 1 : 0;
+                    stack.set(TelumComponents.ENCHANTMENT_MODE, nextMode);
+
+                    if (!level.isClientSide() && player instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+                        if (nextMode == 0) {
+                            serverPlayer.sendSystemMessage(Component.literal("§d✦ [Telum] Modo de Encantamiento: Toque de Seda (Silk Touch)"), true);
+                            level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.PLAYERS, 1.0f, 1.4f);
+                        } else {
+                            serverPlayer.sendSystemMessage(Component.literal("§a✦ [Telum] Modo de Encantamiento: Fortuna (Fortune)"), true);
+                            level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.PLAYERS, 1.0f, 1.8f);
+                        }
+                    }
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
     @Override
     public InteractionResult use(Level level, Player player, net.minecraft.world.InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
+        if (toggleEnchantmentModeIfApplicable(stack, player, level)) {
+            return InteractionResult.SUCCESS;
+        }
+
         AssembledToolData data = getToolData(stack);
+
         if (data != null && data.toolType() == ToolType.TRIDENT) {
             ToolPartData headPart = data.getPart(dasouza.telum.tool.PartType.HEAD);
             PartMaterial headMat = headPart != null ? headPart.material() : null;
@@ -990,12 +1139,82 @@ public class AssembledToolItem extends Item {
     }
 
     private boolean isEffectiveOn(ToolType toolType, BlockState state) {
+        if (state == null) return false;
+        SoundType sound = state.getSoundType();
+        boolean isStoneOrMetalSound = sound == SoundType.STONE || sound == SoundType.DEEPSLATE 
+                || sound == SoundType.DEEPSLATE_TILES || sound == SoundType.DEEPSLATE_BRICKS 
+                || sound == SoundType.METAL || sound == SoundType.NETHER_ORE 
+                || sound == SoundType.NETHERRACK || sound == SoundType.TUFF 
+                || sound == SoundType.BASALT || sound == SoundType.COPPER 
+                || sound == SoundType.ANVIL || sound == SoundType.AMETHYST 
+                || sound == SoundType.AMETHYST_CLUSTER || sound == SoundType.CALCITE 
+                || sound == SoundType.DRIPSTONE_BLOCK || sound == SoundType.GLASS;
+
         return switch (toolType) {
-            case PICKAXE -> state.is(BlockTags.MINEABLE_WITH_PICKAXE);
-            case AXE -> state.is(BlockTags.MINEABLE_WITH_AXE);
-            case SHOVEL -> state.is(BlockTags.MINEABLE_WITH_SHOVEL);
-            case HOE -> state.is(BlockTags.MINEABLE_WITH_HOE);
+            case PICKAXE -> isStoneOrMetalSound
+                         || state.is(BlockTags.MINEABLE_WITH_PICKAXE)
+                         || state.is(BlockTags.NEEDS_STONE_TOOL)
+                         || state.is(BlockTags.NEEDS_IRON_TOOL)
+                         || state.is(BlockTags.NEEDS_DIAMOND_TOOL)
+                         || state.is(BlockTags.COPPER_ORES)
+                         || state.is(Blocks.COAL_ORE)
+                         || state.is(Blocks.DEEPSLATE_COAL_ORE)
+                         || state.is(Blocks.IRON_ORE)
+                         || state.is(Blocks.DEEPSLATE_IRON_ORE)
+                         || state.is(Blocks.GOLD_ORE)
+                         || state.is(Blocks.DEEPSLATE_GOLD_ORE)
+                         || state.is(Blocks.DIAMOND_ORE)
+                         || state.is(Blocks.DEEPSLATE_DIAMOND_ORE)
+                         || state.is(Blocks.REDSTONE_ORE)
+                         || state.is(Blocks.DEEPSLATE_REDSTONE_ORE)
+                         || state.is(Blocks.LAPIS_ORE)
+                         || state.is(Blocks.DEEPSLATE_LAPIS_ORE)
+                         || state.is(Blocks.EMERALD_ORE)
+                         || state.is(Blocks.DEEPSLATE_EMERALD_ORE)
+                         || state.is(Blocks.SANDSTONE)
+                         || state.is(Blocks.RED_SANDSTONE)
+                         || state.is(Blocks.CHISELED_SANDSTONE)
+                         || state.is(Blocks.CUT_SANDSTONE)
+                         || state.is(Blocks.SMOOTH_SANDSTONE)
+                         || state.is(Blocks.SANDSTONE_STAIRS)
+                         || state.is(Blocks.SANDSTONE_SLAB)
+                         || state.is(Blocks.RED_SANDSTONE_STAIRS)
+                         || state.is(Blocks.RED_SANDSTONE_SLAB)
+                         || state.is(Blocks.TERRACOTTA)
+                         || state.is(Blocks.NETHERRACK)
+                         || state.is(Blocks.NETHER_BRICKS)
+                         || state.is(Blocks.END_STONE)
+                         || state.is(Blocks.OBSIDIAN)
+                         || state.is(Blocks.CRYING_OBSIDIAN)
+                         || state.is(Blocks.BUDDING_AMETHYST)
+                         || state.is(Blocks.AMETHYST_BLOCK);
+            case AXE -> sound == SoundType.WOOD || sound == SoundType.BAMBOO || sound == SoundType.NETHER_WOOD || state.is(BlockTags.MINEABLE_WITH_AXE);
+            case SHOVEL -> sound == SoundType.GRAVEL || sound == SoundType.SAND || sound == SoundType.GRASS || sound == SoundType.SNOW || sound == SoundType.MUD || state.is(BlockTags.MINEABLE_WITH_SHOVEL);
+            case HOE -> sound == SoundType.CROP || sound == SoundType.SPONGE || sound == SoundType.MOSS || state.is(BlockTags.MINEABLE_WITH_HOE);
             case SWORD, TRIDENT -> true;
         };
     }
+
+    private boolean isOreBlock(BlockState state) {
+        if (state == null) return false;
+        if (state.getSoundType() == SoundType.NETHER_ORE) return true;
+        return state.is(BlockTags.COPPER_ORES)
+                || state.is(Blocks.COAL_ORE) || state.is(Blocks.DEEPSLATE_COAL_ORE)
+                || state.is(Blocks.IRON_ORE) || state.is(Blocks.DEEPSLATE_IRON_ORE)
+                || state.is(Blocks.GOLD_ORE) || state.is(Blocks.DEEPSLATE_GOLD_ORE)
+                || state.is(Blocks.DIAMOND_ORE) || state.is(Blocks.DEEPSLATE_DIAMOND_ORE)
+                || state.is(Blocks.REDSTONE_ORE) || state.is(Blocks.DEEPSLATE_REDSTONE_ORE)
+                || state.is(Blocks.LAPIS_ORE) || state.is(Blocks.DEEPSLATE_LAPIS_ORE)
+                || state.is(Blocks.EMERALD_ORE) || state.is(Blocks.DEEPSLATE_EMERALD_ORE)
+                || state.is(Blocks.COPPER_ORE) || state.is(Blocks.DEEPSLATE_COPPER_ORE)
+                || state.is(Blocks.NETHER_GOLD_ORE) || state.is(Blocks.NETHER_QUARTZ_ORE)
+                || state.is(Blocks.ANCIENT_DEBRIS);
+    }
+
+
 }
+
+
+
+
+
